@@ -2,12 +2,12 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://vladigleba.github.io
-title: Hungry and Foolish
-subtitle: Utilizing the power of the web for good
-author: Vladi Gleba
+url: http://pauloluan.github.io/blog
+title: Diário de programador
+subtitle: Códigos, anotações e pensamentos.
+author: Paulo Luan
 simple_search: http://google.com/search
-description: "I'm Vladi Gleba, a developer and maker of things for the internet."
+description: O mundo precisa saber disto...
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -16,23 +16,23 @@ description: "I'm Vladi Gleba, a developer and maker of things for the internet.
 date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /atom.xml
+subscribe_rss: /blog/atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: pauloluan.inova@gmail.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
-root: /
+root: /blog
 permalink: /blog/:year/:month/:day/:title/
 source: source
-destination: public
+destination: public/blog
 plugins: plugins
 code_dir: downloads/code
-category_dir: blog/topics
+category_dir: blog/categories
 markdown: rdiscount
 rdiscount:
   extensions:
@@ -41,12 +41,13 @@ rdiscount:
     - smart
 pygments: false # default python pygments have been replaced by pygments.rb
 
-paginate: 5          # Posts per page on the blog index
+paginate: 20          # Posts per page on the blog index
 pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
 recent_posts: 5       # Posts in the sidebar Recent Posts section
-excerpt_link: "Read on"  # "Continue reading" link text at the bottom of excerpted articles
+excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
 
-titlecase: true       # Converts page and post titles to titlecase
+#titlecase: true       # Converts page and post titles to titlecase
+sidebar: collapse
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
@@ -63,17 +64,14 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # ----------------------- #
 
 # Github repositories
-github_user:
+github_user: http://github.com/PauloLuan/
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
 
-# Tapir
-tapir_token: 527999f1c852060200000001
-
 # Twitter
 twitter_user:
-twitter_tweet_button: false
+twitter_tweet_button: true
 
 # Google +1
 google_plus_one: false
@@ -93,11 +91,11 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: vladigleba
+disqus_short_name: diariodeprogramador
 disqus_show_comment_count: true
 
 # Google Analytics
-google_analytics_tracking_id: UA-37472806-2
+google_analytics_tracking_id: UA-41007005-1
 
 # Facebook Like
-facebook_like: false
+facebook_like: true
