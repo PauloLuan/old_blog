@@ -4,7 +4,7 @@
   <title><![CDATA[Diário de programador]]></title>
   <link href="http://PauloLuan.github.io//github/atom.xml" rel="self"/>
   <link href="http://PauloLuan.github.io//github/"/>
-  <updated>2015-04-29T13:21:54+00:00</updated>
+  <updated>2015-04-29T13:24:28+00:00</updated>
   <id>http://PauloLuan.github.io//github/</id>
   <author>
     <name><![CDATA[Paulo Luan]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Fazendo deploy de aplicações gulp no GH-Pages]]></title>
+    <title type="html"><![CDATA[Crie aplicações utilizando Gulp e faça deploy no Github gratuitamente.]]></title>
     <summary><![CDATA[]]></summary>
     <link href="http://PauloLuan.github.io//github/blog/2015/04/29/fazendo-deploy-de-aplicacoes-gulp-no-gh-pages/"/>
     <updated>2015-04-29T12:46:00+00:00</updated>
