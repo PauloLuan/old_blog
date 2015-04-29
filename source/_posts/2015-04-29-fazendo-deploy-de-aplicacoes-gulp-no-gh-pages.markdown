@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Fazendo deploy de aplicações gulp no GH-Pages"
+title: "Crie aplicações utilizando Gulp e faça deploy no Github gratuitamente."
 date: 2015-04-29 12:46
 comments: true
-categories: [gulp, js, node, bower]
+categories: [gulp, js, node, bower, yeoman, gh-pages, github]
 ---
 {% img /images/gulp.png %}
 
