@@ -4,7 +4,7 @@
   <title><![CDATA[Diário de programador]]></title>
   <link href="http://PauloLuan.github.io//github/atom.xml" rel="self"/>
   <link href="http://PauloLuan.github.io//github/"/>
-  <updated>2015-04-29T13:24:28+00:00</updated>
+  <updated>2015-04-29T14:37:15+00:00</updated>
   <id>http://PauloLuan.github.io//github/</id>
   <author>
     <name><![CDATA[Paulo Luan]]></name>
@@ -12,6 +12,114 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Crie aplicações nativas para Android e IOS usando Javascript]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2015/04/29/crie-aplicacoes-nativas-para-android-e-ios-usando-javascript/"/>
+    <updated>2015-04-29T13:29:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2015/04/29/crie-aplicacoes-nativas-para-android-e-ios-usando-javascript</id>
+    <content type="html"><![CDATA[<p><img src="http://PauloLuan.github.io//github/images/titanium.png"></p>
+
+<p>Não deixem que te enganem, usar Phonegap com frameworks web faz com que sua aplicação tenha uma desempenho ridiculamente ruim, é até bonito pra palestrar nos eventos e te ludibriar, mas se você quer uma aplicação que tenha desempenho e que seja multiplataforma use um cara que faça aplicações nativas como o <a href="http://www.appcelerator.com/product/">Titanium</a> ou <a href="https://facebook.github.io/react-native/">ReactNative</a>. Neste tutorial vamos ver como funciona o Titanium.</p>
+
+<!-- more -->
+
+
+<p>Sou pragmático, odeio ler artigos grandes que falam um monte de bláblá pra pouco código. Então vamos direto ao ponto, para você aprender a programar na parada você vai ter que ler códigos prontos e que funcione, então se você quer ver código antes de ler o artigo ai vai uma dica de ouro, clone os repositórios abaixo, eles contém códigos funcionais de exemplos com Titanium, as instruções sobre como rodar estão muito bem descritas <a href="https://github.com/appcelerator/alloy#getting-started">aqui</a> se vira aí manolo ;) :</p>
+
+<p><a href="https://github.com/appcelerator/alloy/tree/master/test/apps">https://github.com/appcelerator/alloy/tree/master/test/apps</a>
+<a href="https://github.com/appcelerator/KitchenSink">https://github.com/appcelerator/KitchenSink</a></p>
+
+<h2>Titanium</h2>
+
+<p>Titanium Mobile é uma plataforma híbrida nativa que permite que a aplicação seja compilada para as plataformas Android e IOS, além de um esforço inicial para BlackBerry. Utiliza a linguagem de programação javascript, mas, apesar desta premissa os aplicativos não são executados por meio de um navegador, em vez disto a arquitetura da linguagem de programação é utilizada para interpretar os códigos desenvolvidos.</p>
+
+<p>O funcionamento básico de uma aplicação Titanium é uma base de código javascript que é interpretada em tempo de execução por um interpretador que é embutido na aplicação no momento de sua compilação. Já o código-fonte visual é compilado para a respectiva plataforma, mantendo o comportamento e aparência da plataforma de destino, como explícito no capítulo de arquiteturas híbridas de interfaces gráficas nativas.</p>
+
+<p>Em uma aplicação Titanium grande parte do código-fonte é utilizado por ambas as plataformas, mas como cada sistema operacional possui alguns comportamentos e funcionalidades específicas, estes códigos podem ser tratados de maneira separada, de forma a permitir a exploração de determinada funcionalidade sem comprometer o restante da aplicação.</p>
+
+<p>O Titanium é open-source e o seu código-fonte está disponível em <a href="https://github.com/appcelerator,">https://github.com/appcelerator,</a> além da ferramenta em si, diversos códigos de aplicações de templates podem ser utilizadas como forma de iniciação ao aprendizado (como citado no começo do artigo).</p>
+
+<p>Um fator que diferencia o Titanium das demais plataformas é a facilidade de customização dos componentes visuais, que é refletida na qualidade final da aplicação desenvolvida.  O portfólio  <a href="http://www.builtwithtitanium.com/">Built with Titanium</a> (construído com Titanium) permite analisar uma quantidade razoável de aplicativos que foram desenvolvidos utilizando a plataforma, a melhor forma de avaliar se uma plataforma ou framework é bom, é vendo as aplicações que foram feitas e colocadas em produção.</p>
+
+<p>Uma loja de componentes, chamada Marketplace, permite a comercialização de componentes para a plataforma, seja ela desktop (componentes para a IDE) ou para mobile, como componentes visuais, bibliotecas, entre outros.</p>
+
+<p>No site da empresa <a href="http://www.appcelerator.com/developers">Appcelerator</a>, uma vasta documentação se faz presente, contendo a análise detalhada de todos os componentes seguidos de seu exemplo prático. Além da documentação comum, existe um <a href="https://university.appcelerator.com/">treinamento gratuito</a> para a certificação de desenvolvedor Titanium, que mostra a fundo a arquitetura da aplicação e seus derivados.</p>
+
+<p>A empresa Appcelerator é parceira da international data corporation (IDC) e anualmente faz pesquisas sobre o mercado de desenvolvimento móvel, mostrando através de indicadores, os dados relevantes sobre os rumos que o mercado móvel está sendo direcionado. Todas as pesquisas são abertas e encontram-se disponível no site <a href="http://www.appcelerator.com/thinkmobile/surveys.">http://www.appcelerator.com/thinkmobile/surveys.</a></p>
+
+<h2>Prática</h2>
+
+<p>Você vai ter que ter o NodeJS instalado na sua máquina, se estiver no Linux eu recomendo o <a href="https://github.com/creationix/nvm">NVM</a> e se estiver no windows use o <a href="http://pauloluan.github.io/blog/blog/2015/04/28/apt-get-no-windows/">Chocolatey</a>.</p>
+
+<p>Para instalar leia o README dos projetos <a href="https://github.com/appcelerator/titanium/blob/master/README.md">titanium</a> e <a href="https://github.com/appcelerator/alloy/blob/master/README.md">Alloy</a></p>
+
+<p>Como sou bonzinho, vou dar uns toques abaixo:</p>
+
+<h2>Configurando o SKD do Android</h2>
+
+<p>Instale o JAVA7 no seu computador (pra facilitar sua vida use o <a href="http://pauloluan.github.io/blog/blog/2015/04/28/apt-get-no-windows/">Chocolatey</a> se estive no windows, mas é claro que você está no Linux, isso é óbvio).</p>
+
+<p><a href="https://spring.io/guides/gs/android/">Eu traduzi daqui essa parte</a></p>
+
+<p>1 No <a href="http://developer.android.com/sdk/index.html">site do android</a> Faça o download do arquivo para o seu sistema operacional.</p>
+
+<p>2 Descompacte o arquivo em um local de sua escolha. Por exemplo, no Linux ou Mac, você pode colocá-lo na raiz do seu diretório de usuário. Consulte o site <a href="http://developer.android.com/sdk/installing/index.html">Android Developers</a> para obter detalhes de instalação adicionais.</p>
+
+<p>3 Configure a variável de ambiente ANDROID_HOME com base onde você descompactou a parada. Para fazer isso siga os passos:</p>
+
+<p>Mac OS X</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>  <span class="nb">export </span><span class="nv">ANDROID_HOME</span><span class="o">=</span>/&lt;installation location&gt;/android-sdk-macosx
+</span><span class='line'>  <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PATH</span><span class="k">}</span>:<span class="nv">$ANDROID_HOME</span>/tools:<span class="nv">$ANDROID_HOME</span>/platform-tools
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Linux</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>  <span class="nb">export </span><span class="nv">ANDROID_HOME</span><span class="o">=</span>/&lt;installation location&gt;/android-sdk-linux
+</span><span class='line'>  <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PATH</span><span class="k">}</span>:<span class="nv">$ANDROID_HOME</span>/tools:<span class="nv">$ANDROID_HOME</span>/platform-tools
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Windows</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>  <span class="nb">set </span><span class="nv">ANDROID_HOME</span><span class="o">=</span>C:<span class="se">\&lt;</span>installation location&gt;<span class="se">\a</span>ndroid-sdk-windows
+</span><span class='line'>  <span class="nb">set </span><span class="nv">PATH</span><span class="o">=</span>%PATH%;%ANDROID_HOME%<span class="se">\t</span>ools;%ANDROID_HOME%<span class="se">\p</span>latform-tools
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>O download do Android SDK não inclui os SDK&rsquo;s das plataformas específicas. Para executar o código neste tutorial, você precisa baixar e instalar a plataforma SDK mais recente. Para fazer isso siga comigo:</p>
+
+<ol>
+<li>Abra um terminal e digite: <code>android</code> (se não funcíonar é sinal de que você não configurou direito a variável de ambiente).</li>
+<li>Selecione <code>Tools</code>.</li>
+<li>Selecione a última versão do SDK disponível.</li>
+<li>A partir da pasta <code>Extras</code>, selecione o checkbox <code>Android Support Library</code>.</li>
+<li>Clique no botão <code>Install packages…</code> e a instalação vai começar (e vai demorar um pouco hein&hellip;).</li>
+</ol>
+
+
+<h2>Configurando Titanium e Alloy:</h2>
+
+<p>Instale o Titanium e Alloy <code>npm install -g titanium alloy</code></p>
+
+<p>Crie uma conta na appcelerator e logue depois no terminal <code>ti login &lt;usuario&gt; &lt;senha&gt;</code></p>
+
+<p>Baixe o SDK do titanium <code>titanium sdk install</code> ele vai baixar a ultima versão.</p>
+
+<p>Faça o setup do titanium: <code>titanium setup</code></p>
+
+<p>Tudo pronto agora é só pegar aquele <a href="https://github.com/appcelerator/alloy#getting-started">README</a> que eu falei pra você ler do Alloy e executar os exemplos com <a href="https://github.com/appcelerator/alloy/tree/master/test/apps">Alloy</a> e <a href="https://github.com/appcelerator/KitchenSink">Titanium puro</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Crie aplicações utilizando Gulp e faça deploy no Github gratuitamente.]]></title>

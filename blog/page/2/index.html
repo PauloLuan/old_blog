@@ -74,6 +74,70 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/blog/2013/01/21/clonando-apenas-um-subdiretorio-no-git/">Clonando apenas um subdiretório no GIT</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-21T09:42:10+00:00" pubdate data-updated="true">Jan 21<span>st</span>, 2013</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/metodologias/'>Metodologias</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2013/01/21/clonando-apenas-um-subdiretorio-no-git/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone &lt; URL DO REPOSITÓRIO &gt;
+</span><span class='line'><span class="nb">cd</span> &lt; DIRETÓRIO &gt;
+</span><span class='line'>git config core.sparsecheckout <span class="nb">true</span>
+</span><span class='line'><span class="nb">echo</span> &lt;NOME DA PASTA QUE VOCÊ QUER&gt; &gt;&gt; .git/info/sparse-checkout
+</span><span class='line'>git <span class="nb">read</span>-tree -m -u HEAD
+</span></code></pre></td></tr></table></div></figure>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/blog/2013/01/21/clonando-apenas-um-subdiretorio-no-git/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/blog/2012/12/04/verificando-diferenca-de-horario-em-java/">Verificando diferença de horário em Java</a></h1>
     
     
@@ -1745,63 +1809,6 @@ for item in db.my_collection.find().sort(&ldquo;x&rdquo;, pymongo.ASCENDING):
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/blog/2012/03/06/site-com-diversos-exemplos-de-modelagem-de-bancos-de-dados/">Site com diversos exemplos de Modelagem de Bancos de Dados.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-06T12:24:02+00:00" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time>
-        
-
-<span class="categories">
-  published in 
-  
-    <a class='category' href='/blog/blog/categories/voce-nao-pode-morrer-sem-saber/'>Você não pode morrer sem saber!</a>
-  
-</span>
-
-
-        
-          <a href="/blog/blog/2012/03/06/site-com-diversos-exemplos-de-modelagem-de-bancos-de-dados/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Para aqueles que assim como eu gostam de obter idéias a partir de exemplos prontos, eu indico um super site (esse vai mudar sua vida também hein!)</p>
-
-<p>é o <a href="http://www.databaseanswers.org/data_models/index.htm">Data Base Answers!</a> (<a href="http://www.databaseanswers.org/data_models/index.htm">http://www.databaseanswers.org/data_models/index.htm</a>)</p>
-
-<p>Nele você encontra modelos prontos de Banco de Dados para todos os tipos de sistemas! :D eu estou impressionado com a quantidade de coisas que tem lá, são mais de 900 Base de dados modeladas para você tirar uma idéia e criar a modelagem de seu banco de dados.</p>
-
-<p>Aproveitem! gostou? comente ;) um grande abraço!</p>
-
-<p>Att,
-Paulo Luan</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       
@@ -1841,6 +1848,10 @@ Paulo Luan</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/blog/2015/04/29/crie-aplicacoes-nativas-para-android-e-ios-usando-javascript/">Crie aplicações nativas para Android e IOS usando Javascript</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/blog/2015/04/29/fazendo-deploy-de-aplicacoes-gulp-no-gh-pages/">Crie aplicações utilizando Gulp e faça deploy no Github gratuitamente.</a>
       </li>
     
@@ -1854,10 +1865,6 @@ Paulo Luan</p>
     
       <li class="post">
         <a href="/blog/blog/2013/11/11/node-web-modules/">Node web modules</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/blog/2013/11/07/aumente-o-desempenho-do-mac-removendo-efeitos-de-animacao/">Aumente o desempenho do Mac Removendo efeitos de animação</a>
       </li>
     
   </ul>

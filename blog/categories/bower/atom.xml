@@ -4,7 +4,7 @@
   <title><![CDATA[Topic: bower | Diário de programador]]></title>
   <link href="http://PauloLuan.github.io//github/blog/categories/bower/atom.xml" rel="self"/>
   <link href="http://PauloLuan.github.io//github/"/>
-  <updated>2015-04-29T13:25:11+00:00</updated>
+  <updated>2015-04-29T14:37:15+00:00</updated>
   <id>http://PauloLuan.github.io//github/</id>
   <author>
     <name><![CDATA[Paulo Luan]]></name>
@@ -18,7 +18,7 @@
     <link href="http://PauloLuan.github.io//github/blog/2015/04/29/fazendo-deploy-de-aplicacoes-gulp-no-gh-pages/"/>
     <updated>2015-04-29T12:46:00+00:00</updated>
     <id>http://PauloLuan.github.io//github/blog/2015/04/29/fazendo-deploy-de-aplicacoes-gulp-no-gh-pages</id>
-    <content type="html"><![CDATA[<p>{% img /images/gulp.png %}</p>
+    <content type="html"><![CDATA[<p><img src="/images/gulp.png"></p>
 
 <p>Crie aplicações web estáticas seguindo as melhores práticas do mercado, e faça o deploy gratuitamente no Github através do GH-Pages</p>
 
@@ -53,17 +53,25 @@
 
 <p>No arquivo <code>gulp.js</code> adicione o seguinte trecho:</p>
 
-<p>{% codeblock lang:js %}
-var ghPages = require(&lsquo;gulp-gh-pages&rsquo;);</p>
-
-<p>gulp.task(&lsquo;deploy&rsquo;, function() {
-  return gulp.src(&lsquo;./dist/<em>*/</em>&rsquo;)</p>
-
-<pre><code>.pipe(ghPages());
-</code></pre>
-
-<p>});
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">ghPages</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">gulp</span><span class="o">-</span><span class="nx">gh</span><span class="o">-</span><span class="nx">pages</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;);</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">deploy</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;.</span><span class="o">/</span><span class="nx">dist</span><span class="o">/&lt;</span><span class="nx">em</span><span class="o">&gt;*</span><span class="err">/&lt;/em&gt;&amp;rsquo;)&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">ghPages</span><span class="p">());</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Agora para fazer o deploy, basta digitar: <code>gulp deploy</code> e a pasta <code>dist</code> será publicada automaticamente no branch gh-pages.</p>
 ]]></content>
