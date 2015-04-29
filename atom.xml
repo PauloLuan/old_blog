@@ -4,7 +4,7 @@
   <title><![CDATA[Diário de programador]]></title>
   <link href="http://PauloLuan.github.io//github/atom.xml" rel="self"/>
   <link href="http://PauloLuan.github.io//github/"/>
-  <updated>2015-04-29T12:09:12+00:00</updated>
+  <updated>2015-04-29T13:21:54+00:00</updated>
   <id>http://PauloLuan.github.io//github/</id>
   <author>
     <name><![CDATA[Paulo Luan]]></name>
@@ -12,6 +12,65 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Fazendo deploy de aplicações gulp no GH-Pages]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2015/04/29/fazendo-deploy-de-aplicacoes-gulp-no-gh-pages/"/>
+    <updated>2015-04-29T12:46:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2015/04/29/fazendo-deploy-de-aplicacoes-gulp-no-gh-pages</id>
+    <content type="html"><![CDATA[<p><img src="http://PauloLuan.github.io//github/images/gulp.png"></p>
+
+<p>Crie aplicações web estáticas seguindo as melhores práticas do mercado, e faça o deploy gratuitamente no Github através do GH-Pages</p>
+
+<!-- more -->
+
+
+<p>Vamos utilizar um <a href="https://github.com/yeoman/generator-gulp-webapp">gerador</a> de estruturas de aplicações web do gulp, ele vai gerar um site estático com as melhores práticas utilizando <a href="http://gulpjs.com/">gulp</a>.</p>
+
+<p>Vamos seguir o <a href="https://github.com/yeoman/generator-gulp-webapp#getting-started">Getting Started</a> disposto na documentação do github:</p>
+
+<p>Instale as dependencias globais (yeoman e bower): <code>npm install --global yo bower</code></p>
+
+<p>Instale o gerador: <code>npm install --global generator-gulp-webapp</code></p>
+
+<p>Digite <code>yo gulp-webapp</code> para criar o esqueleto da webapp.</p>
+
+<p>Digite <code>gulp serve</code> para visualizar o site e ele automaticamente verifica se algum arquivo foi modificado e dispõe sem precisar reiniciar o servidor.</p>
+
+<p>Digite <code>bower install --save &lt;package&gt;</code> para instalar as dependências para o frontend</p>
+
+<p>Digite <code>gulp</code> para criar a aplicação pronta para o deploy, ele gera uma pasta chamada <code>dist</code> da qual terão todos os css e js minificados prontos para o deploy em produção.</p>
+
+<p>Esta pasta <code>dist</code> você pode jogar em um servidor de sites estáticos como nginx ou apache, mas no meu caso eu queria usar o serviço do github-pages.</p>
+
+<p>O github dispõe de um serviço chamado <a href="https://pages.github.com/">Github-Pages</a> do qual você pode publicar sites estáticos (CSS, JS e HTML) de graça, é bom para que você possa publicar o front end no github pages e colocar sua API em algum outro servidor, perfeito pra usar com AngularJS por exemplo.</p>
+
+<p>Para publicar essa pasta <code>dist</code> no gh-pages existe um <a href="https://www.npmjs.com/package/gulp-gh-pages">plugin</a> que você adiciona como tarefa para que com um comando você consiga fazer o deploy automático.</p>
+
+<p>Na pasta do projeto gerado digite: <code>npm install --save-dev gulp-gh-pages</code></p>
+
+<p>isso ira baixar a dependência e ainda modificar o arquivo <code>packages.json</code> automaticamente, de forma a deixar versionado corretamente as dependências da aplicação.</p>
+
+<p>No arquivo <code>gulp.js</code> adicione o seguinte trecho:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kd">var</span> <span class="nx">ghPages</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gulp-gh-pages&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;deploy&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span><span class="s1">&#39;./dist/**/*&#39;</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">ghPages</span><span class="p">());</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Agora para fazer o deploy, basta digitar: <code>gulp deploy</code> e a pasta <code>dist</code> será publicada automaticamente no branch gh-pages.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Apt-get no Windows]]></title>
@@ -684,82 +743,6 @@
 <p></p>
 
 <p><a href="http://eminetto.github.com/blog/2012/04/25/git-sparse-checkouts/">Fonte</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Verificando diferença de horário em Java]]></title>
-    <link href="http://PauloLuan.github.io//github/blog/2012/12/04/verificando-diferenca-de-horario-em-java/"/>
-    <updated>2012-12-04T10:46:50+00:00</updated>
-    <id>http://PauloLuan.github.io//github/blog/2012/12/04/verificando-diferenca-de-horario-em-java</id>
-    <content type="html"><![CDATA[<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">verificaDiferenca</span><span class="o">()</span> <span class="o">{</span>
-</span><span class='line'>      <span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="s">&quot;08/12/2003&quot;</span><span class="o">;</span>
-</span><span class='line'>      <span class="n">String</span> <span class="n">hora_saida</span> <span class="o">=</span> <span class="s">&quot;19:00:00&quot;</span><span class="o">;</span>
-</span><span class='line'>
-</span><span class='line'>      <span class="n">SimpleDateFormat</span> <span class="n">sdf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimpleDateFormat</span><span class="o">(</span><span class="s">&quot;dd/MM/yyyy HH:mm:ss&quot;</span><span class="o">);</span>
-</span><span class='line'>      <span class="n">SimpleDateFormat</span> <span class="n">df</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimpleDateFormat</span><span class="o">(</span><span class="s">&quot;HH:mm:ss&quot;</span><span class="o">);</span>
-</span><span class='line'>      <span class="n">Date</span> <span class="n">hora</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
-</span><span class='line'>      <span class="n">Date</span> <span class="n">horaS</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
-</span><span class='line'>      <span class="n">Date</span> <span class="n">diferenca</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
-</span><span class='line'>
-</span><span class='line'>      <span class="k">try</span> <span class="o">{</span>
-</span><span class='line'>          <span class="n">horaS</span> <span class="o">=</span> <span class="n">sdf</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">data</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">hora_saida</span><span class="o">);</span>
-</span><span class='line'>      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">ParseException</span> <span class="n">p</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>          <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">p</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
-</span><span class='line'>      <span class="o">}</span>
-</span><span class='line'>
-</span><span class='line'>      <span class="n">diferenca</span><span class="o">.</span><span class="na">setTime</span><span class="o">(</span><span class="n">hora</span><span class="o">.</span><span class="na">getTime</span><span class="o">()</span> <span class="o">-</span> <span class="n">horaS</span><span class="o">.</span><span class="na">getTime</span><span class="o">());</span>
-</span><span class='line'>
-</span><span class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;hora saida &quot;</span> <span class="o">+</span> <span class="n">sdf</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">horaS</span><span class="o">));</span>
-</span><span class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;hora retorno &quot;</span> <span class="o">+</span> <span class="n">sdf</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">hora</span><span class="o">));</span>
-</span><span class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;diferenca &quot;</span> <span class="o">+</span> <span class="n">df</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">diferenca</span><span class="o">));</span>
-</span><span class='line'>
-</span><span class='line'>      <span class="kt">long</span> <span class="n">difMilli</span> <span class="o">=</span> <span class="n">hora</span><span class="o">.</span><span class="na">getTime</span><span class="o">()</span> <span class="o">-</span> <span class="n">horaS</span><span class="o">.</span><span class="na">getTime</span><span class="o">();</span>
-</span><span class='line'>      <span class="kt">int</span> <span class="n">timeInSeconds</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">difMilli</span> <span class="o">/</span> <span class="mi">1000</span><span class="o">;</span>
-</span><span class='line'>      <span class="kt">int</span> <span class="n">hours</span><span class="o">,</span> <span class="n">minutes</span><span class="o">,</span> <span class="n">seconds</span><span class="o">;</span>
-</span><span class='line'>      <span class="n">hours</span> <span class="o">=</span> <span class="n">timeInSeconds</span> <span class="o">/</span> <span class="mi">3600</span><span class="o">;</span>
-</span><span class='line'>      <span class="n">timeInSeconds</span> <span class="o">=</span> <span class="n">timeInSeconds</span> <span class="o">-</span> <span class="o">(</span><span class="n">hours</span> <span class="o">*</span> <span class="mi">3600</span><span class="o">);</span>
-</span><span class='line'>      <span class="n">minutes</span> <span class="o">=</span> <span class="n">timeInSeconds</span> <span class="o">/</span> <span class="mi">60</span><span class="o">;</span>
-</span><span class='line'>      <span class="n">timeInSeconds</span> <span class="o">=</span> <span class="n">timeInSeconds</span> <span class="o">-</span> <span class="o">(</span><span class="n">minutes</span> <span class="o">*</span> <span class="mi">60</span><span class="o">);</span>
-</span><span class='line'>      <span class="n">seconds</span> <span class="o">=</span> <span class="n">timeInSeconds</span><span class="o">;</span>
-</span><span class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">hours</span> <span class="o">+</span> <span class="s">&quot; hour(s) &quot;</span> <span class="o">+</span> <span class="n">minutes</span> <span class="o">+</span> <span class="s">&quot; minute(s) &quot;</span><span class="o">+</span> <span class="n">seconds</span> <span class="o">+</span> <span class="s">&quot; second(s)&quot;</span><span class="o">);</span>
-</span><span class='line'>  <span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Fonte: <a href="http://javafree.uol.com.br/topic-2263-diferencas-entre-data-e-horarios.html">http://javafree.uol.com.br/topic-2263-diferencas-entre-data-e-horarios.html</a></p>
 ]]></content>
   </entry>
   

@@ -263,6 +263,12 @@
         <lastmod>2015-04-29T12:08:54+00:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://PauloLuan.github.io//github/blog/2015/04/29/fazendo-deploy-de-aplicacoes-gulp-no-gh-pages/
+        </loc>
+        <lastmod>2015-04-29T13:19:51+00:00</lastmod>
+    </url>
+    <url>
         <loc>http://PauloLuan.github.io//github/atom_search.xml</loc>
         <lastmod>2015-04-29T11:49:44+00:00</lastmod>
     </url>
@@ -276,7 +282,7 @@
     </url>
     <url>
         <loc>http://PauloLuan.github.io//github/</loc>
-        <lastmod>2015-04-29T12:08:54+00:00</lastmod>
+        <lastmod>2015-04-29T13:19:51+00:00</lastmod>
     </url>
     <url>
         <loc>http://PauloLuan.github.io//github/search.html</loc>
@@ -284,6 +290,6 @@
     </url>
     <url>
         <loc>http://PauloLuan.github.io//github/blog/archives/</loc>
-        <lastmod>2015-04-29T12:08:54+00:00</lastmod>
+        <lastmod>2015-04-29T13:19:51+00:00</lastmod>
     </url>
 </urlset>

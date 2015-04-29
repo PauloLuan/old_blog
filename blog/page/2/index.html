@@ -74,6 +74,121 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/blog/2012/12/04/verificando-diferenca-de-horario-em-java/">Verificando diferença de horário em Java</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-04T10:46:50+00:00" pubdate data-updated="true">Dec 4<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/java/'>Java</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/12/04/verificando-diferenca-de-horario-em-java/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">verificaDiferenca</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="s">&quot;08/12/2003&quot;</span><span class="o">;</span>
+</span><span class='line'>      <span class="n">String</span> <span class="n">hora_saida</span> <span class="o">=</span> <span class="s">&quot;19:00:00&quot;</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">SimpleDateFormat</span> <span class="n">sdf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimpleDateFormat</span><span class="o">(</span><span class="s">&quot;dd/MM/yyyy HH:mm:ss&quot;</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">SimpleDateFormat</span> <span class="n">df</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimpleDateFormat</span><span class="o">(</span><span class="s">&quot;HH:mm:ss&quot;</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">Date</span> <span class="n">hora</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
+</span><span class='line'>      <span class="n">Date</span> <span class="n">horaS</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
+</span><span class='line'>      <span class="n">Date</span> <span class="n">diferenca</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">horaS</span> <span class="o">=</span> <span class="n">sdf</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">data</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">hora_saida</span><span class="o">);</span>
+</span><span class='line'>      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">ParseException</span> <span class="n">p</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">p</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+</span><span class='line'>      <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">diferenca</span><span class="o">.</span><span class="na">setTime</span><span class="o">(</span><span class="n">hora</span><span class="o">.</span><span class="na">getTime</span><span class="o">()</span> <span class="o">-</span> <span class="n">horaS</span><span class="o">.</span><span class="na">getTime</span><span class="o">());</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;hora saida &quot;</span> <span class="o">+</span> <span class="n">sdf</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">horaS</span><span class="o">));</span>
+</span><span class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;hora retorno &quot;</span> <span class="o">+</span> <span class="n">sdf</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">hora</span><span class="o">));</span>
+</span><span class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;diferenca &quot;</span> <span class="o">+</span> <span class="n">df</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">diferenca</span><span class="o">));</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="kt">long</span> <span class="n">difMilli</span> <span class="o">=</span> <span class="n">hora</span><span class="o">.</span><span class="na">getTime</span><span class="o">()</span> <span class="o">-</span> <span class="n">horaS</span><span class="o">.</span><span class="na">getTime</span><span class="o">();</span>
+</span><span class='line'>      <span class="kt">int</span> <span class="n">timeInSeconds</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">difMilli</span> <span class="o">/</span> <span class="mi">1000</span><span class="o">;</span>
+</span><span class='line'>      <span class="kt">int</span> <span class="n">hours</span><span class="o">,</span> <span class="n">minutes</span><span class="o">,</span> <span class="n">seconds</span><span class="o">;</span>
+</span><span class='line'>      <span class="n">hours</span> <span class="o">=</span> <span class="n">timeInSeconds</span> <span class="o">/</span> <span class="mi">3600</span><span class="o">;</span>
+</span><span class='line'>      <span class="n">timeInSeconds</span> <span class="o">=</span> <span class="n">timeInSeconds</span> <span class="o">-</span> <span class="o">(</span><span class="n">hours</span> <span class="o">*</span> <span class="mi">3600</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">minutes</span> <span class="o">=</span> <span class="n">timeInSeconds</span> <span class="o">/</span> <span class="mi">60</span><span class="o">;</span>
+</span><span class='line'>      <span class="n">timeInSeconds</span> <span class="o">=</span> <span class="n">timeInSeconds</span> <span class="o">-</span> <span class="o">(</span><span class="n">minutes</span> <span class="o">*</span> <span class="mi">60</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">seconds</span> <span class="o">=</span> <span class="n">timeInSeconds</span><span class="o">;</span>
+</span><span class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">hours</span> <span class="o">+</span> <span class="s">&quot; hour(s) &quot;</span> <span class="o">+</span> <span class="n">minutes</span> <span class="o">+</span> <span class="s">&quot; minute(s) &quot;</span><span class="o">+</span> <span class="n">seconds</span> <span class="o">+</span> <span class="s">&quot; second(s)&quot;</span><span class="o">);</span>
+</span><span class='line'>  <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Fonte: <a href="http://javafree.uol.com.br/topic-2263-diferencas-entre-data-e-horarios.html">http://javafree.uol.com.br/topic-2263-diferencas-entre-data-e-horarios.html</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/blog/2012/11/08/conseguindo-o-endereco-de-ip-e-mac-do-cliente-em-java/">Conseguindo o endereço de IP e Mac do cliente em Java</a></h1>
     
     
@@ -1687,61 +1802,6 @@ Paulo Luan</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/blog/2012/02/17/como-aprender-a-programar/">Como aprender a programar.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-02-17T08:35:51+00:00" pubdate data-updated="true">Feb 17<span>th</span>, 2012</time>
-        
-
-<span class="categories">
-  published in 
-  
-    <a class='category' href='/blog/blog/categories/programacao/'>Programação</a>
-  
-</span>
-
-
-        
-          <a href="/blog/blog/2012/02/17/como-aprender-a-programar/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Programar é algo realmente prazeroso! É incrível e realmente espetacular ter uma idéia, pensar e construir do zero um programa.</p>
-
-<p>Aliás se você nunca programou já imaginou como funciona a construção de um software? Quem se simpatiza por informática com certeza se dará bem com programação, que é uma área bastante interessante, muda constantemente (sempre você aprende coisas novas, o seu trabalho nunca vai ser igual! :D), ganha bastante dinheiro (ebaaa rs), é divertido! E a demanda de mercado é bastante grande pra esta área.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/blog/2012/02/17/como-aprender-a-programar/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       
@@ -1781,6 +1841,10 @@ Paulo Luan</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/blog/2015/04/29/fazendo-deploy-de-aplicacoes-gulp-no-gh-pages/">Fazendo deploy de aplicações gulp no GH-Pages</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/blog/2015/04/28/apt-get-no-windows/">Apt-get no Windows</a>
       </li>
     
@@ -1794,10 +1858,6 @@ Paulo Luan</p>
     
       <li class="post">
         <a href="/blog/blog/2013/11/07/aumente-o-desempenho-do-mac-removendo-efeitos-de-animacao/">Aumente o desempenho do Mac Removendo efeitos de animação</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/blog/2013/11/04/configurando-ambiente-para-desenvolvimento-android/">Configurando ambiente para desenvolvimento Android</a>
       </li>
     
   </ul>
