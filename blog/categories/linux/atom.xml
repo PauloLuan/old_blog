@@ -4,7 +4,7 @@
   <title><![CDATA[Topic: linux | Diário de programador]]></title>
   <link href="http://PauloLuan.github.io//github/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://PauloLuan.github.io//github/"/>
-  <updated>2015-04-29T11:53:11+00:00</updated>
+  <updated>2015-04-29T12:09:12+00:00</updated>
   <id>http://PauloLuan.github.io//github/</id>
   <author>
     <name><![CDATA[Paulo Luan]]></name>
@@ -18,7 +18,9 @@
     <link href="http://PauloLuan.github.io//github/blog/2015/04/28/apt-get-no-windows/"/>
     <updated>2015-04-28T20:23:00+00:00</updated>
     <id>http://PauloLuan.github.io//github/blog/2015/04/28/apt-get-no-windows</id>
-    <content type="html"><![CDATA[<p>Transforme o seu windows em um Linux-Like com o chocolatey, com ele você poderá instalar vários aplicativos através de um comando simples no terminal. Nunca mais instale o asktoolbar (ou hao123) por engano ;)</p>
+    <content type="html"><![CDATA[<p><img src="/images/chocolatey.png"></p>
+
+<p>Transforme o seu windows em um Linux-Like com o chocolatey, com ele você poderá instalar vários aplicativos através de um comando simples no terminal. Nunca mais instale o asktoolbar (ou hao123) por engano ;)</p>
 
 <!-- more -->
 
