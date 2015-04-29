@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Topic: Você não pode morrer sem saber! | Diário de programador]]></title>
+  <link href="http://PauloLuan.github.io//github/blog/categories/voce-nao-pode-morrer-sem-saber/atom.xml" rel="self"/>
+  <link href="http://PauloLuan.github.io//github/"/>
+  <updated>2015-04-29T11:53:11+00:00</updated>
+  <id>http://PauloLuan.github.io//github/</id>
+  <author>
+    <name><![CDATA[Paulo Luan]]></name>
+    <email><![CDATA[pauloluan.inova@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Cuidados com WHOIS, não comprem na Hostgator.]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/04/01/cuidados-com-whois-nao-comprem-na-hostgator/"/>
+    <updated>2013-04-01T18:18:37+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/04/01/cuidados-com-whois-nao-comprem-na-hostgator</id>
+    <content type="html"><![CDATA[<p>Há tempos atrás eu havia registrado um domínio na Hostgator bem como o seu plano de hospedagem, o que eu não sabia era do temeroso &ldquo;Who Is&rdquo;.</p>
+
+<!-- more -->
+
+
+<p>Segunda a Wikipedia:</p>
+
+<blockquote><p><strong>WHOIS</strong> (<em>pronuncia-se &ldquo;ruís&rdquo; no Brasil</em>) é um protocolo <a href="http://pt.wikipedia.org/wiki/Protocolo_TCP">TCP</a> (porta 43) específico para consultar informações de contato e <a href="http://pt.wikipedia.org/wiki/DNS">DNS</a> sobre entidades na <a href="http://pt.wikipedia.org/wiki/Internet">internet</a>. Uma entidade na internet pode ser um nome de <a href="http://pt.wikipedia.org/wiki/Dom%C3%ADnio">domínio</a>, um endereço <a href="http://pt.wikipedia.org/wiki/IP">IP</a> ou um <a href="http://pt.wikipedia.org/wiki/AS">AS</a> (Sistema Autônomo). O protocolo WHOIS apresenta três tipos de contatos para uma entidade: Contato Administrativo (<em>Admin Contact</em>), Contato Técnico (<em>Technical Contact</em>) e Contato de Cobrança (<em>Registrant Contact</em>). Estes contatos são informações de responsabilidade do provedor de internet, que as nomeia de acordo com as políticas internas de sua rede.</p></blockquote>
+
+<p>Pois bem, quando você registra um domínio você coloca diversas informações pessoais como endereço, telefone e nome completo, achando que a empresa que está lhe fornecendo os serviços de hospdagem guardará os seus dados com toda a segurança. Isto NÃO acontece. Acontece que a empresa coloca estas informações nos dados do WhoIS de seu site, o que significa que todos os seus dados pessoais estarão livres para o mundo inteiro consultar.</p>
+
+<p>Entrei em contato com a empresa para solicitar a remoção destes dados, e depois de muitas conversas, muita enrolação, muito blablabla eles NÃO resolveram o meu problema, eles disseram que a proteção do WhoIS era um produto adicional e que custaria R$18,00 (e eu já tinha pago R$30,00 no domínio fora os R$ 203,88/ano que paguei na hospedagem) o fato é que eles não informam em nenhum momento (e em nenhum local do contrato de prestação de serviços) que os dados dos clientes são expostos no WhoIS.</p>
+
+<p>Sinceramente Desisti, só prejuízo&hellip;</p>
+
+<p>Pois bem, caso algum dia você queira fazer um site, compre o domínio na <a href="http://www.superdominios.org/home/aff.php?aff=3716">SuperDomínios, lá o domínio é muuuuuito mais barato e ainda tem a proteção do WhoIS gratuita!</a>, e como hospedagem utilizem o <a href="http://api.hostinger.com.br/redir/1043293">HostInger, que é de graça e ainda conta com vários itens que a hostgator não tem&hellip;</a> Lá a hospedagem é com PHP + MySQL, mas se for um site comum, como um portfólio, já é mais do que suficiente.</p>
+
+<p>Não errem como eu errei, conselhos sinceros de um programador que foi lesado por essas empresas FDPs.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[O que é DropBox? e como ele pode mudar minha vida?]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2012/07/15/o-que-e-dropbox-e-como-ele-pode-mudar-minha-vida/"/>
+    <updated>2012-07-15T12:26:17+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/07/15/o-que-e-dropbox-e-como-ele-pode-mudar-minha-vida</id>
+    <content type="html"><![CDATA[<p>//
+//</p>
+
+<p>DropBox é um sistema de armazenamento de arquivos na nuvem! é perfeito pois você pode acessar seus documentos de qualquer computador em qualquer lugar!! além disto, é possível fazer sincronização de vários computadores de forma automática, por exemplo, se você tem um computador no trabalho e o seu computador pessoal mas gostaria de que os dois sempre tivesse os mesmos arquivos sempre sincronizados o DropBox faz isso pra você! :D</p>
+
+<p>Você nunca mais vai perder os arquivos pois, caso aconteça algum dano no seu computador os seus arquivos estarão backupeados online!  <a href="http://db.tt/TlpQui7">acesse este Link</a> e faça a sua conta, é grátis! :D</p>
+
+<!-- more -->
+
+
+<p>E é legal que também dá pra selecionar quais pastas você quer que sincronize, logo, se você criar uma pasta &ldquo;Faculdade&rdquo; dá pra sincronizar somente esta pasta no computador da faculdade, e assim por diante. Olha só que legal <a href="https://www.dropbox.com/tour/">Este card explicativo</a> de como funciona o serviço do DropBox.</p>
+
+<p>Outro serviço semelhante é o <a href="https://drive.google.com/start">Google Drive!</a> do qual você tambem pode fazer backup nas nuvens de todos os seus arquivos.</p>
+
+<p>Abraços!</p>
+
+<p>Paulo Luan.</p>
+
+<p>//
+//</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Site com diversos exemplos de Modelagem de Bancos de Dados.]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2012/03/06/site-com-diversos-exemplos-de-modelagem-de-bancos-de-dados/"/>
+    <updated>2012-03-06T12:24:02+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/03/06/site-com-diversos-exemplos-de-modelagem-de-bancos-de-dados</id>
+    <content type="html"><![CDATA[<p>Para aqueles que assim como eu gostam de obter idéias a partir de exemplos prontos, eu indico um super site (esse vai mudar sua vida também hein!)</p>
+
+<p>é o <a href="http://www.databaseanswers.org/data_models/index.htm">Data Base Answers!</a> (<a href="http://www.databaseanswers.org/data_models/index.htm">http://www.databaseanswers.org/data_models/index.htm</a>)</p>
+
+<p>Nele você encontra modelos prontos de Banco de Dados para todos os tipos de sistemas! :D eu estou impressionado com a quantidade de coisas que tem lá, são mais de 900 Base de dados modeladas para você tirar uma idéia e criar a modelagem de seu banco de dados.</p>
+
+<p>Aproveitem! gostou? comente ;) um grande abraço!</p>
+
+<p>Att,
+Paulo Luan</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[O que é e como utilizar um sistema de controle de versão SVN]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2012/01/16/o-que-e-e-como-utilizar-um-sistema-de-controle-de-versao-svn/"/>
+    <updated>2012-01-16T11:09:17+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/01/16/o-que-e-e-como-utilizar-um-sistema-de-controle-de-versao-svn</id>
+    <content type="html"><![CDATA[<p>Atenção: Se você nunca utilizou um sistema de controle de versões, leia este artigo! (Gostaria muito que alguém tivesse dito estas dicas quando iniciei minha faculdade, teria mudado minha vida! rs então utilizem este artigo para facilitar a sua vida! Haushaush Espero que minha experiência possa lhe ajudar ;) Se gostar agradeça nos comentários, aperte CTRL+ D e adicionem nosso blog aos seus favoritos!)</p>
+
+<!-- more -->
+
+
+<p>Iniciei meu estágio como programador java em uma empresa de softwares, desde então nunca tinha trabalhado profissionalmente como programador, e apesar da faculdade ensinar grande parte da teoria envolvendo a construção de um aplicativo, você não consegue abstrair de maneira concreta os processos reais desta construção (a faculdade é muito acadêmica, quando você trabalha como programador as coisas realmente são muito diferentes! rs).</p>
+
+<p>É fantástico o número de ferramentas que existem para facilitar e organizar o trabalho em grupo (já que é impossível fazer um grande projeto individualmente), seja ele em uma organização ou até mesmo trabalhos em grupo da faculdade, quem já fez trabalhos de programação em grupo sabe como é ruim pegar arquivos a partir de pen-drives ou emails a parte do colega, além de que imagine se o seu amigo fez uma modificação em uma classe e você também fez várias alterações? Como juntar as diversas partes dos membros do grupo de forma eficaz, sem que nada seja perdido? Como controlar cada uma das alterações para que todos os membros tenham sempre a versão mais recente do sistema? Para isto existem os <a href="http://pt.wikipedia.org/wiki/Sistema_de_controle_de_vers%C3%A3o">“Sistemas de Controle de Versão!”</a> (fico até emocionado ao falar deles! <em>&ndash;</em> uahsuhasuhash).</p>
+
+<p>Nos sistemas de controle de versão é possível manter as versões sempre atualizadas sem perder nenhum dado! Isso só é possível pois todo o sistema fica armazenado em um servidor e cada um dos membros do grupo podem realizar modificações independentes, ou seja, as diversas alterações que ocorrerem durante o desenvolvimento do software (pode ser pra qualquer tipo de documento! Mas durante o artigo demonstrarei focando no desenvolvimento de programas) não serão substituídas por demais alterações! :D isto é fantástico pois todos os usuários podem fazer modificações NO MESMO ARQUIVO sem ter medo de sobrepor o trabalho realizado por outro desenvolvedor envolvido no projeto (que coisa linda!! :D ).</p>
+
+<p>Para manter este controle de alterações os sistemas de controle de versão, utilizam diversas metodologias avançadas! neste <a href="//svnbook-pt-br.googlecode.com/svn/snapshots/1.4/svn.intro.whatis.html"> Link </a> vocês podem ler a fundo como funciona a arquitetura do SVN ;) e como acontece esta mágica! rs leiam esta matéria pois é muito esclarecedora e fornece de maneira bastante técnica os conceitos do SVN.</p>
+
+<p>Os sistemas de controle de versão mais conhecidos são: <a href="//pt.wikipedia.org/wiki/Git">GIT</a>, <a href="http://en.wikipedia.org/wiki/Mercurial"> Mercurial</a> e <a href="//en.wikipedia.org/wiki/Apache_Subversion">SVN (ou Subversion) </a>, farei a abordagem do SVN pois é o sistema que estou utilizando em meu trabalho, no entanto não posso afirmar se os outros são melhores ou piores (estudarei e farei testes entre eles para chegar a uma conclusão! ;) vou fazer um post sobre isto futuramente).</p>
+
+<p>Bom, mãos a obra! Prepare-se pois agora vamos criar um repositório SVN de verdade utilizando o Google Code! <a href="http://javafxbr.com/blog/?p=125">Clique aqui para começarmos!</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Códigos-Fontes de diversas linguagens de programação]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2012/01/13/codigos-fontes-de-diversas-linguagens-de-programacao/"/>
+    <updated>2012-01-13T10:08:45+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/01/13/codigos-fontes-de-diversas-linguagens-de-programacao</id>
+    <content type="html"><![CDATA[<p><strong>Atenção: Mais um post da série &ldquo;você não pode morrer sem saber&rdquo; ;) rs site muito bom! </strong></p>
+
+<p>Para quem é programador ou gosta de programar, sempre se encontrou (ou ainda vai encontrar) uma situação em que você necessita não apenas de uma explicação de como algo funciona, mas sim de um código que exemplifique tal situação.</p>
+
+<!-- more -->
+
+
+<p>Depois que me indicaram<a href="http://www.java2s.com/"> este site </a> minha vida mudou! (putz quanto drama haushuash) mas de verdade! é muito o bom o site! nele você encontra códigos de tudo quanto é situação que necessita, além de possuir códigos de várias linguagens de programação e até banco de dados! Então quando você necessitar de ver um exemplo de código-fonte em alguma linguagem, basta acessar <a href="http://www.java2s.com/"> www.java2s.com </a> e se divertir! (hasuhuas)</p>
+
+<p>Outro site interessante é o &ldquo;Really Big Index&rdquo; (<a href="http://docs.oracle.com/javase/tutorial/reallybigindex.html">http://docs.oracle.com/javase/tutorial/reallybigindex.html</a>). Este site reúne todos os tutoriais feitos pela Oracle em um único local, ou seja, basta que você aperte CTRL + F fazer a busca pelo item desejado e acessar o tutorial :D</p>
+
+<p>O RoseIndia (<a href="http://www.roseindia.net/">http://www.roseindia.net/</a>) é um site parecido com o Java2s, possui diversos tutoriais sobre BD, Java, Struts, Hibernate, entre outros&hellip;</p>
+
+<p>Abraços!</p>
+]]></content>
+  </entry>
+  
+</feed>

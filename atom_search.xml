@@ -1,0 +1,2299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Diário de programador]]></title>
+  <link href="http://PauloLuan.github.io//github/atom.xml" rel="self"/>
+  <link href="http://PauloLuan.github.io//github/"/>
+  <updated>2015-04-29T11:53:11+00:00</updated>
+  <id>http://PauloLuan.github.io//github/</id>
+  <author>
+    <name><![CDATA[Paulo Luan]]></name>
+    <email><![CDATA[pauloluan.inova@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Apt-get no Windows]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2015/04/28/apt-get-no-windows/"/>
+    <updated>2015-04-28T20:23:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2015/04/28/apt-get-no-windows</id>
+    <content type="html"><![CDATA[<p>Transforme o seu windows em um Linux-Like com o chocolatey, com ele você poderá instalar vários aplicativos através de um comando simples no terminal. Nunca mais instale o asktoolbar (ou hao123) por engano ;)</p>
+
+<!-- more -->
+
+
+<p>Abra o cmd com privilégios de administrador, e digite:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bat'><span class='line'><span class="p">@</span>powershell -NoProfile -ExecutionPolicy unrestricted -Command <span class="s2">&quot;iex ((new-object net.webclient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))&quot;</span> &amp;&amp; <span class="k">SET</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">%PATH%</span>;<span class="nv">%ALLUSERSPROFILE%</span>\chocolatey\bin
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Agora você pode instalar qualquer um dos pacotes disponíveis no site oficial. Para procurar os pacotes basta acessar o <a href="https://chocolatey.org/packages">site oficial</a>  e procurar, você pode instalar o chrome (não precisa mais usar o internet explorer para isto), firefox, sumatrapdf, java, flash, nodejs, git, svn e muitos outros, tudo via choco install!</p>
+
+<p>para instalar o git por exemplo:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bat'><span class='line'>choco install git -y
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ele vai instalar tudo automáticamente, a opção -y é para que ele instale sem perguntar nada, por default ele exibe o script que vai ser executado na sua máquina, pois todos os pacotes são feitos pela comunidade, logo, pode ser que dentro do script que será executado possa ter algum tipo de requisição que você não queria que seja executada, o que é muito raro, já que todos os pacotes passam por um processo de aprovação rígido pelos admins do projeto, o que por vezes gera certa lentidão na aprovação de um pacote no caso de você criar um.</p>
+
+<p>Adicionalmente, as mesmas instruções estão no site do <a href="https://chocolatey.org/">chocolatey</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Did these guys just reinvent the Web?]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2013/11/11/did-these-guys-just-reinvent-the-web/"/>
+    <updated>2013-11-11T08:42:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/11/11/did-these-guys-just-reinvent-the-web</id>
+    <content type="html"><![CDATA[<p>San Francisco startup Famo.us is doing amazing things with JavaScript, radically raising the bar on what cross-platform Web and mobile apps can do</p>
+
+<p>&ldquo;40-60fps on phones, tablets, PCs, and televisions mod a template, or piece together components no plug-ins, no WebGL, no Canvas works on modern browserseverything is DOM 65KB footprint&rdquo;</p>
+
+<p>example page: <a href="http://famo.us/">http://famo.us/</a></p>
+
+<p><a href="http://www.infoworld.com/t/application-development/did-these-guys-just-reinvent-the-web-228713?page=0,1">http://www.infoworld.com/t/application-development/did-these-guys-just-reinvent-the-web-228713?page=0,1</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Node web modules]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2013/11/11/node-web-modules/"/>
+    <updated>2013-11-11T08:40:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/11/11/node-web-modules</id>
+    <content type="html"><![CDATA[<p>Uma coleção de web frameworks para Node.js</p>
+
+<p><a href="http://nodewebmodules.com">http://nodewebmodules.com</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Aumente o desempenho do Mac Removendo efeitos de animação]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2013/11/07/aumente-o-desempenho-do-mac-removendo-efeitos-de-animacao/"/>
+    <updated>2013-11-07T17:17:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/11/07/aumente-o-desempenho-do-mac-removendo-efeitos-de-animacao</id>
+    <content type="html"><![CDATA[<p>Utilize os comandos abaixo para remover os efeitos do Mac e aumentar o seu desempenho.</p>
+
+<!-- more -->
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># opening and closing windows and popovers</span>
+</span><span class='line'>defaults write -g NSAutomaticWindowAnimationsEnabled -bool <span class="nb">false</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># smooth scrolling</span>
+</span><span class='line'>defaults write -g NSScrollAnimationEnabled -bool <span class="nb">false</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># showing and hiding sheets, resizing preference windows, zooming windows</span>
+</span><span class='line'><span class="c"># float 0 doesn&#39;t work</span>
+</span><span class='line'>defaults write -g NSWindowResizeTime -float 0.001
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># opening and closing Quick Look windows</span>
+</span><span class='line'>defaults write -g QLPanelAnimationDuration -float 0
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># rubberband scrolling (doesn&#39;t affect web views)</span>
+</span><span class='line'>defaults write -g NSScrollViewRubberbanding -bool <span class="nb">false</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># resizing windows before and after showing the version browser</span>
+</span><span class='line'><span class="c"># also disabled by NSWindowResizeTime -float 0.001</span>
+</span><span class='line'>defaults write -g NSDocumentRevisionsWindowTransformAnimation -bool <span class="nb">false</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># showing a toolbar or menu bar in full screen</span>
+</span><span class='line'>defaults write -g NSToolbarFullScreenAnimationDuration -float 0
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># scrolling column views</span>
+</span><span class='line'>defaults write -g NSBrowserColumnAnimationSpeedMultiplier -float 0
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># showing the Dock</span>
+</span><span class='line'>defaults write com.apple.dock autohide-time-modifier -float 0
+</span><span class='line'>defaults write com.apple.dock autohide-delay -float 0
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># showing and hiding Mission Control, command+numbers</span>
+</span><span class='line'>defaults write com.apple.dock expose-animation-duration -float 0
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># showing and hiding Launchpad</span>
+</span><span class='line'>defaults write com.apple.dock springboard-show-duration -float 0
+</span><span class='line'>defaults write com.apple.dock springboard-hide-duration -float 0
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># changing pages in Launchpad</span>
+</span><span class='line'>defaults write com.apple.dock springboard-page-duration -float 0
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># at least AnimateInfoPanes</span>
+</span><span class='line'>defaults write com.apple.finder DisableAllAnimations -bool <span class="nb">true</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># sending messages and opening windows for replies</span>
+</span><span class='line'>defaults write com.apple.Mail DisableSendAnimations -bool <span class="nb">true</span>
+</span><span class='line'>defaults write com.apple.Mail DisableReplyAnimations -bool <span class="nb">true</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>killall Dock
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sources:</p>
+
+<p><a href="http://www.chriswrites.com/2012/01/turn-off-animations-eye-candy-effects-in-mac-os-x-lion/">http://www.chriswrites.com/2012/01/turn-off-animations-eye-candy-effects-in-mac-os-x-lion/</a></p>
+
+<p><a href="http://unsanity.com/haxies/shadowkiller">http://unsanity.com/haxies/shadowkiller</a></p>
+
+<p><a href="http://apple.stackexchange.com/questions/14001/how-to-turn-off-all-the-animation-effect-on-mac-os">http://apple.stackexchange.com/questions/14001/how-to-turn-off-all-the-animation-effect-on-mac-os</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Configurando ambiente para desenvolvimento Android]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2013/11/04/configurando-ambiente-para-desenvolvimento-android/"/>
+    <updated>2013-11-04T17:18:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/11/04/configurando-ambiente-para-desenvolvimento-android</id>
+    <content type="html"><![CDATA[<p>Fontes:</p>
+
+<p><a href="http://spring.io/guides/gs/android/">http://spring.io/guides/gs/android/</a>
+<a href="http://spring.io/guides/gs/maven-android/">http://spring.io/guides/gs/maven-android/</a>
+<a href="https://github.com/mosabua/maven-android-sdk-deployer">https://github.com/mosabua/maven-android-sdk-deployer</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introdução ao RingoJS - Aplicações WEB com Javascript Server Side]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2013/10/28/introducao-ao-ringojs-aplicacoes-web-com-javascript-server-side/"/>
+    <updated>2013-10-28T16:07:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/10/28/introducao-ao-ringojs-aplicacoes-web-com-javascript-server-side</id>
+    <content type="html"><![CDATA[<p>RingoJS</p>
+
+<p>Ringo is a CommonJS-based JavaScript runtime written in Java and based on the Mozilla Rhino JavaScript engine. It takes a pragmatical and non-dogmatic stance on things like I/O paradigms. Blocking and asynchronous I/O both have their strengths and weaknesses in different areas.</p>
+
+<!-- more -->
+
+
+<p><a href="http://ringojs.org/">http://ringojs.org/</a>
+<a href="http://ringojs.org/documentation/">http://ringojs.org/documentation/</a></p>
+
+<figure class='code'><figcaption><span>Clone o repositório</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone https://github.com/ringo/ringojs.git
+</span><span class='line'><span class="nb">cd </span>ringojs/
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Execute este comando para ver as possíveis funções a serem executadas.</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ant
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Compilando o Ringo.</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ant update <span class="o">&amp;&amp;</span> ant jar <span class="o">&amp;&amp;</span> ant compile
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Execute o Modo iterativo</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>./bin/ringo
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>nano ~/.bashrc <span class="c"># linux</span>
+</span><span class='line'>nano ~/.bash_profile <span class="c"># mac</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Adicione na última linha do arquivo os executáveis</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;$PATH:&lt;SEU_PATH_AQUI&gt;&quot;</span>
+</span><span class='line'>
+</span><span class='line'>exemplo:
+</span><span class='line'>
+</span><span class='line'><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;$PATH:/Users/funcatemobile/Desktop/jug-ringo/ringojs/bin/&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Aperte CTRL + X para salvar e sair.</p>
+
+<figure class='code'><figcaption><span>Imprimindo um arquivo de texto</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>var <span class="nv">fs</span> <span class="o">=</span> require<span class="o">(</span><span class="s1">&#39;fs&#39;</span><span class="o">)</span>;
+</span><span class='line'>var <span class="nv">file</span> <span class="o">=</span> fs.read<span class="o">(</span><span class="s1">&#39;teste.txt&#39;</span><span class="o">)</span>;
+</span><span class='line'>print<span class="o">(</span>file<span class="o">)</span>;
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Criando app com o ringo-admin</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>./ringojs/bin/ringo-admin create jug-teste
+</span><span class='line'><span class="nb">cd </span>jug-teste
+</span><span class='line'>tree
+</span><span class='line'>../ringojs/bin/ringo main.js
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Clonando o repositório com o template do maven.</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone https://github.com/PauloLuan/ringo-maven.git
+</span><span class='line'>ant
+</span><span class='line'>mvn clean install
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Colocando em produção no Tomcat</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>cp target/ringo-maven.war ~/Documents/Desenvolvimento/Tomcat/apache-tomcat-7.0.32/webapps/
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Módulo de autenticação Social utilizando um projeto Java.</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone https://github.com/PauloLuan/ringo-socialauth.git
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Crud com MongoDB usando Java Driver!</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone https://github.com/PauloLuan/ringo-mongodb.git
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Baixe os Slides: https://gist.github.com/PauloLuan/7123760
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Aprenda GIT em 5 minutos! ]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2013/05/16/aprenda-git-em-5-minutos/"/>
+    <updated>2013-05-16T11:20:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/05/16/aprenda-git-em-5-minutos</id>
+    <content type="html"><![CDATA[<p>Guia de sobrevivência para aprender git em alguns passos bem rápidos.</p>
+
+<!-- more -->
+
+
+<p>Linux:</p>
+
+<figure class='code'><figcaption><span>Instale o GIT via apt-get</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> sudo apt-get install git <span class="c"># Linux</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>configure para que a cada commit que você fizer fique com seu nome e email:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> git config --global user.name <span class="s2">&quot;SEU NOME AQUI&quot;</span>
+</span><span class='line'> git config --global user.email <span class="s2">&quot;seuemail@example.com&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>clonando um repositório remoto (cópia do repositório remoto na sua máquina).</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> git clone url_do_repositorio
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>exemplo:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> git clone https://github.com/PauloLuan/ProjetosPoliticosSJC.git <span class="c"># cópia do repositório remoto na sua máquina</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>para commitar e enviar para o servidor:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> git add . <span class="c"># adiciona todos os arquivos para serem commitados</span>
+</span><span class='line'> git commit -a -m <span class="s2">&quot;mensagem de seu commit&quot;</span> <span class="c"># faz um novo commit das suas modificações</span>
+</span><span class='line'> git push origin master <span class="c"># envia pro servidor as modificações</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Receber modificações do repositório remoto, caso alguém tenha commitado algo:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git pull
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Quer saber tudo de GIT? Leia os tutoriais e livros abaixo!</p>
+
+<p>1 &ndash; <a href="http://git-scm.com/book/pt-br">livro ProGIT</a> gratuito, e em Pt-BR.</p>
+
+<p>2 &ndash; <a href="http://pcottle.github.io/learnGitBranching/">learnGitBranching</a></p>
+
+<p>3 &ndash; <a href="http://rogerdudler.github.io/git-guide/index.pt_BR.html">Aprendendo Git Sem Complicações</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Pesquisar recursivamente em pastas via terminal]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2013/05/16/pesquisar-recursivamente-em-pastas-via-terminal/"/>
+    <updated>2013-05-16T10:46:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/05/16/pesquisar-recursivamente-em-pastas-via-terminal</id>
+    <content type="html"><![CDATA[<p>comando:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> grep -R <span class="s2">&quot;o que eu quero pesquisar&quot;</span> path_da_sua_pasta
+</span></code></pre></td></tr></table></div></figure>
+
+
+<!-- more -->
+
+
+<p></p>
+
+<p>exemplo:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> grep -R <span class="s2">&quot;texto de exemplo&quot;</span> ~/Documents
+</span><span class='line'> grep -R <span class="s2">&quot;&lt;html&gt;ele também procura em arquivos de textos por qualquer tipo!&lt;/html&gt;&quot;</span> <span class="nb">source</span>/
+</span><span class='line'> grep -R <span class="s2">&quot;pode ser um texto em txt, um doc, enfim, ele vai achar...&quot;</span> <span class="nb">source</span>/
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Pesquisar por comandos digitados no terminal]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2013/05/16/pesquisar-por-comandos-digitados-no-terminal/"/>
+    <updated>2013-05-16T10:46:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/05/16/pesquisar-por-comandos-digitados-no-terminal</id>
+    <content type="html"><![CDATA[<p>Aprenda a recuperar comandos que você já digitou anteriormente no terminal.</p>
+
+<!-- more -->
+
+
+<p>comando:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>   <span class="nb">history</span> | grep comando_que_você_digitou anteriormente
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>por exemplo:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>   <span class="nb">history</span> | grep commit
+</span><span class='line'>   <span class="nb">history</span> | grep scp
+</span><span class='line'>   <span class="nb">history</span> | grep <span class="nb">cd</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Enviando chaves ssh para o servidor remoto com apenas um comando]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2013/05/16/enviando-chaves-ssh-para-o-servidor-remoto-com-apenas-um-comando/"/>
+    <updated>2013-05-16T10:22:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/05/16/enviando-chaves-ssh-para-o-servidor-remoto-com-apenas-um-comando</id>
+    <content type="html"><![CDATA[<p>Gere chaves SSH da sua máquina e envie para o servidor remoto com o seguinte comando:</p>
+
+<figure class='code'><figcaption><span>Comando: </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ssh-keygen -t rsa <span class="o">&amp;&amp;</span> cat ~/.ssh/id_rsa.pub | ssh &lt;user&gt;@&lt;hostname&gt; <span class="s1">&#39;cat &gt;&gt; ~/.ssh/authorized_keys&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Debbuger do SERVIDOR no Chrome]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2013/04/15/debbuger-do-servidor-no-chrome/"/>
+    <updated>2013-04-15T11:37:14+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/04/15/debbuger-do-servidor-no-chrome</id>
+    <content type="html"><![CDATA[<p>Veja <a href="http://craig.is/writing/chrome-logger">esta ferramenta</a> que te permite Debugar todos os objetos do servidor através do chrome!</p>
+
+<p>Você pode debbugar projetos Django, PHP entre diversos outros.</p>
+
+<!-- more -->
+
+
+<p>&ldquo;É tão bom usar o console do chrome para ver erros de client, que foi criado um projeto para ver erros de server também.&rdquo;</p>
+
+<p>Isto é perfeito! particularmente eu uso demasiadamente o console do Chrome para debuggar JS no cliente, e algumas ferramentas de debug do servidor as vezes carecem de recursos, que são supridos de maneira muito elegante no console do Chrome.</p>
+
+<p><a href="http://globodev.tumblr.com/post/47711164407/chrome-logger-for-django#.UWwPZit4aFd">Fonte</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cuidados com WHOIS, não comprem na Hostgator.]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2013/04/01/cuidados-com-whois-nao-comprem-na-hostgator/"/>
+    <updated>2013-04-01T18:18:37+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/04/01/cuidados-com-whois-nao-comprem-na-hostgator</id>
+    <content type="html"><![CDATA[<p>Há tempos atrás eu havia registrado um domínio na Hostgator bem como o seu plano de hospedagem, o que eu não sabia era do temeroso &ldquo;Who Is&rdquo;.</p>
+
+<!-- more -->
+
+
+<p>Segunda a Wikipedia:</p>
+
+<blockquote><p><strong>WHOIS</strong> (<em>pronuncia-se &ldquo;ruís&rdquo; no Brasil</em>) é um protocolo <a href="http://pt.wikipedia.org/wiki/Protocolo_TCP">TCP</a> (porta 43) específico para consultar informações de contato e <a href="http://pt.wikipedia.org/wiki/DNS">DNS</a> sobre entidades na <a href="http://pt.wikipedia.org/wiki/Internet">internet</a>. Uma entidade na internet pode ser um nome de <a href="http://pt.wikipedia.org/wiki/Dom%C3%ADnio">domínio</a>, um endereço <a href="http://pt.wikipedia.org/wiki/IP">IP</a> ou um <a href="http://pt.wikipedia.org/wiki/AS">AS</a> (Sistema Autônomo). O protocolo WHOIS apresenta três tipos de contatos para uma entidade: Contato Administrativo (<em>Admin Contact</em>), Contato Técnico (<em>Technical Contact</em>) e Contato de Cobrança (<em>Registrant Contact</em>). Estes contatos são informações de responsabilidade do provedor de internet, que as nomeia de acordo com as políticas internas de sua rede.</p></blockquote>
+
+<p>Pois bem, quando você registra um domínio você coloca diversas informações pessoais como endereço, telefone e nome completo, achando que a empresa que está lhe fornecendo os serviços de hospdagem guardará os seus dados com toda a segurança. Isto NÃO acontece. Acontece que a empresa coloca estas informações nos dados do WhoIS de seu site, o que significa que todos os seus dados pessoais estarão livres para o mundo inteiro consultar.</p>
+
+<p>Entrei em contato com a empresa para solicitar a remoção destes dados, e depois de muitas conversas, muita enrolação, muito blablabla eles NÃO resolveram o meu problema, eles disseram que a proteção do WhoIS era um produto adicional e que custaria R$18,00 (e eu já tinha pago R$30,00 no domínio fora os R$ 203,88/ano que paguei na hospedagem) o fato é que eles não informam em nenhum momento (e em nenhum local do contrato de prestação de serviços) que os dados dos clientes são expostos no WhoIS.</p>
+
+<p>Sinceramente Desisti, só prejuízo&hellip;</p>
+
+<p>Pois bem, caso algum dia você queira fazer um site, compre o domínio na <a href="http://www.superdominios.org/home/aff.php?aff=3716">SuperDomínios, lá o domínio é muuuuuito mais barato e ainda tem a proteção do WhoIS gratuita!</a>, e como hospedagem utilizem o <a href="http://api.hostinger.com.br/redir/1043293">HostInger, que é de graça e ainda conta com vários itens que a hostgator não tem&hellip;</a> Lá a hospedagem é com PHP + MySQL, mas se for um site comum, como um portfólio, já é mais do que suficiente.</p>
+
+<p>Não errem como eu errei, conselhos sinceros de um programador que foi lesado por essas empresas FDPs.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Demanda de programadores no mundo]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2013/03/29/demanda-de-programadores-no-mundo/"/>
+    <updated>2013-03-29T15:31:18+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/03/29/demanda-de-programadores-no-mundo</id>
+    <content type="html"><![CDATA[<p>Vídeo interessantíssimo sobre a arte de programar, bem como sua demanda futura&hellip;</p>
+
+<iframe width="560" height="349" src="http://www.youtube.com/embed/19cTdFlDFI4" frameborder="0" allowfullscreen></iframe>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Como remover submódulo do GIT]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2013/03/26/como-remover-submodulo-do-git/"/>
+    <updated>2013-03-26T11:19:22+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/03/26/como-remover-submodulo-do-git</id>
+    <content type="html"><![CDATA[<p>To remove a submodule you need to:</p>
+
+<pre><code>1. Delete the relevant section from the ".gitmodules" file.
+2. Delete the relevant section from ".git/config".
+3. Run "git rm --cached path_to_submodule" (no trailing slash).
+4. Commit
+5. Delete the now untracked submodule files: "rm -rf path_to_submodule"
+</code></pre>
+
+<!-- more -->
+
+
+<p><a href="http://stackoverflow.com/questions/1260748/how-do-i-remove-a-git-submodule">Fonte</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Melhor livro de GIt]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2013/02/14/melhor-livro-de-git/"/>
+    <updated>2013-02-14T14:45:08+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/02/14/melhor-livro-de-git</id>
+    <content type="html"><![CDATA[<p>Quer saber tudo de GIT? Leia o <a href="http://git-scm.com/book/pt-br">livro ProGIT</a> é gratuito.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[HTML5 Up and Running!]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2013/02/14/html5-up-and-running/"/>
+    <updated>2013-02-14T14:42:29+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/02/14/html5-up-and-running</id>
+    <content type="html"><![CDATA[<p>Quer aprender HTML5 direto da fonte, de maneira organizada e muito didática?</p>
+
+<p>Leia o livro <a href="http://diveintohtml5.com.br/">Dive into HTML5</a> traduzido pela comunidade de software livre, o livro é muito completo e aborda os principais conteúdos do novo padrão, talvez um dos melhores materias abordados sobre o assunto.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Forçar git a remover modificações locais em um pull]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2013/02/07/forcar-git-a-remover-modificacoes-locais-em-um-pull/"/>
+    <updated>2013-02-07T11:27:35+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/02/07/forcar-git-a-remover-modificacoes-locais-em-um-pull</id>
+    <content type="html"><![CDATA[<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git fetch --all <span class="o">&amp;&amp;</span> git reset --hard origin/master
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://stackoverflow.com/questions/1125968/force-git-to-overwrite-local-files-on-pull">fonte</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Faculdade de graça EAD]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2013/01/28/faculdade-de-graca-ead/"/>
+    <updated>2013-01-28T14:46:01+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/01/28/faculdade-de-graca-ead</id>
+    <content type="html"><![CDATA[<p>A <a href="http://www.cederj.edu.br/">Fundação CECIERJ/Consórcio CEDERJ</a> disponibiliza aqui as videoaulas do curso de <a href="http://www.cederj.edu.br/cederj/index.php?option=com_content&amp;view=frontpage&amp;Itemid=16">Tecnologia em Sistemas de Computação</a>.</p>
+
+<p>Este é um curso de nível superior que adota a metodologia semipresencial e conta com videoaulas especialmente produzidas neste contexto.</p>
+
+<p>O curso tem como objetivo formar profissionais com competência para realizar, entre outras tarefas, instalações de redes locais; desenvolvimento de pequenos programas; instalação de sistemas operacionais para máquinas de pequeno porte; manutenção de banco de dados em computadores pessoais destinados a pequenas corporações; e criação e manutenção de sites na web.</p>
+
+<!-- more -->
+
+
+<p></p>
+
+<p><a href="http://www.cederj.edu.br/videoaulas/">http://www.cederj.edu.br/videoaulas/</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Clonando apenas um subdiretório no GIT]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2013/01/21/clonando-apenas-um-subdiretorio-no-git/"/>
+    <updated>2013-01-21T09:42:10+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/01/21/clonando-apenas-um-subdiretorio-no-git</id>
+    <content type="html"><![CDATA[<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone &lt; URL DO REPOSITÓRIO &gt;
+</span><span class='line'><span class="nb">cd</span> &lt; DIRETÓRIO &gt;
+</span><span class='line'>git config core.sparsecheckout <span class="nb">true</span>
+</span><span class='line'><span class="nb">echo</span> &lt;NOME DA PASTA QUE VOCÊ QUER&gt; &gt;&gt; .git/info/sparse-checkout
+</span><span class='line'>git <span class="nb">read</span>-tree -m -u HEAD
+</span></code></pre></td></tr></table></div></figure>
+
+
+<!-- more -->
+
+
+<p></p>
+
+<p><a href="http://eminetto.github.com/blog/2012/04/25/git-sparse-checkouts/">Fonte</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Verificando diferença de horário em Java]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/12/04/verificando-diferenca-de-horario-em-java/"/>
+    <updated>2012-12-04T10:46:50+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/12/04/verificando-diferenca-de-horario-em-java</id>
+    <content type="html"><![CDATA[<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">verificaDiferenca</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="s">&quot;08/12/2003&quot;</span><span class="o">;</span>
+</span><span class='line'>      <span class="n">String</span> <span class="n">hora_saida</span> <span class="o">=</span> <span class="s">&quot;19:00:00&quot;</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">SimpleDateFormat</span> <span class="n">sdf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimpleDateFormat</span><span class="o">(</span><span class="s">&quot;dd/MM/yyyy HH:mm:ss&quot;</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">SimpleDateFormat</span> <span class="n">df</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimpleDateFormat</span><span class="o">(</span><span class="s">&quot;HH:mm:ss&quot;</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">Date</span> <span class="n">hora</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
+</span><span class='line'>      <span class="n">Date</span> <span class="n">horaS</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
+</span><span class='line'>      <span class="n">Date</span> <span class="n">diferenca</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">horaS</span> <span class="o">=</span> <span class="n">sdf</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">data</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">hora_saida</span><span class="o">);</span>
+</span><span class='line'>      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">ParseException</span> <span class="n">p</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">p</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+</span><span class='line'>      <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">diferenca</span><span class="o">.</span><span class="na">setTime</span><span class="o">(</span><span class="n">hora</span><span class="o">.</span><span class="na">getTime</span><span class="o">()</span> <span class="o">-</span> <span class="n">horaS</span><span class="o">.</span><span class="na">getTime</span><span class="o">());</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;hora saida &quot;</span> <span class="o">+</span> <span class="n">sdf</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">horaS</span><span class="o">));</span>
+</span><span class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;hora retorno &quot;</span> <span class="o">+</span> <span class="n">sdf</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">hora</span><span class="o">));</span>
+</span><span class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;diferenca &quot;</span> <span class="o">+</span> <span class="n">df</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">diferenca</span><span class="o">));</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="kt">long</span> <span class="n">difMilli</span> <span class="o">=</span> <span class="n">hora</span><span class="o">.</span><span class="na">getTime</span><span class="o">()</span> <span class="o">-</span> <span class="n">horaS</span><span class="o">.</span><span class="na">getTime</span><span class="o">();</span>
+</span><span class='line'>      <span class="kt">int</span> <span class="n">timeInSeconds</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">difMilli</span> <span class="o">/</span> <span class="mi">1000</span><span class="o">;</span>
+</span><span class='line'>      <span class="kt">int</span> <span class="n">hours</span><span class="o">,</span> <span class="n">minutes</span><span class="o">,</span> <span class="n">seconds</span><span class="o">;</span>
+</span><span class='line'>      <span class="n">hours</span> <span class="o">=</span> <span class="n">timeInSeconds</span> <span class="o">/</span> <span class="mi">3600</span><span class="o">;</span>
+</span><span class='line'>      <span class="n">timeInSeconds</span> <span class="o">=</span> <span class="n">timeInSeconds</span> <span class="o">-</span> <span class="o">(</span><span class="n">hours</span> <span class="o">*</span> <span class="mi">3600</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">minutes</span> <span class="o">=</span> <span class="n">timeInSeconds</span> <span class="o">/</span> <span class="mi">60</span><span class="o">;</span>
+</span><span class='line'>      <span class="n">timeInSeconds</span> <span class="o">=</span> <span class="n">timeInSeconds</span> <span class="o">-</span> <span class="o">(</span><span class="n">minutes</span> <span class="o">*</span> <span class="mi">60</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">seconds</span> <span class="o">=</span> <span class="n">timeInSeconds</span><span class="o">;</span>
+</span><span class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">hours</span> <span class="o">+</span> <span class="s">&quot; hour(s) &quot;</span> <span class="o">+</span> <span class="n">minutes</span> <span class="o">+</span> <span class="s">&quot; minute(s) &quot;</span><span class="o">+</span> <span class="n">seconds</span> <span class="o">+</span> <span class="s">&quot; second(s)&quot;</span><span class="o">);</span>
+</span><span class='line'>  <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Fonte: <a href="http://javafree.uol.com.br/topic-2263-diferencas-entre-data-e-horarios.html">http://javafree.uol.com.br/topic-2263-diferencas-entre-data-e-horarios.html</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conseguindo o endereço de IP e Mac do cliente em Java]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/11/08/conseguindo-o-endereco-de-ip-e-mac-do-cliente-em-java/"/>
+    <updated>2012-11-08T08:51:34+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/11/08/conseguindo-o-endereco-de-ip-e-mac-do-cliente-em-java</id>
+    <content type="html"><![CDATA[<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'> <span class="c1">// pegando o endereço de MAC</span>
+</span><span class='line'>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testGetMacAddress</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>      <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">InetAddress</span> <span class="n">address</span> <span class="o">=</span> <span class="n">InetAddress</span><span class="o">.</span><span class="na">getLocalHost</span><span class="o">();</span>
+</span><span class='line'>          <span class="n">NetworkInterface</span> <span class="n">ni</span> <span class="o">=</span> <span class="n">NetworkInterface</span><span class="o">.</span><span class="na">getByInetAddress</span><span class="o">(</span><span class="n">address</span><span class="o">);</span>
+</span><span class='line'>          <span class="kt">byte</span><span class="o">[]</span> <span class="n">mac</span> <span class="o">=</span> <span class="n">ni</span><span class="o">.</span><span class="na">getHardwareAddress</span><span class="o">();</span>
+</span><span class='line'>          <span class="n">String</span> <span class="n">macAddress</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>          <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">mac</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+</span><span class='line'>              <span class="n">String</span> <span class="n">macTemporary</span> <span class="o">=</span> <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&quot;%02X%s&quot;</span><span class="o">,</span> <span class="n">mac</span><span class="o">[</span><span class="n">i</span><span class="o">],</span> <span class="o">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">mac</span><span class="o">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">?</span> <span class="s">&quot;-&quot;</span> <span class="o">:</span> <span class="s">&quot;&quot;</span><span class="o">);</span>
+</span><span class='line'>              <span class="n">macAddress</span> <span class="o">+=</span> <span class="n">macTemporary</span><span class="o">;</span>
+</span><span class='line'>              <span class="c1">//System.out.format(&quot;%02X%s&quot;, mac[i], (i &lt; mac.length - 1) ? &quot;-&quot; : &quot;&quot;);</span>
+</span><span class='line'>          <span class="o">}</span>
+</span><span class='line'>          <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Mac Address: &quot;</span> <span class="o">+</span> <span class="n">macAddress</span><span class="o">);</span>
+</span><span class='line'>      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">UnknownHostException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span><span class='line'>      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">SocketException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span><span class='line'>      <span class="o">}</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// pegando o endereço de IP</span>
+</span><span class='line'>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testGetIP</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>      <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">String</span> <span class="n">ip</span> <span class="o">=</span> <span class="n">InetAddress</span><span class="o">.</span><span class="na">getLocalHost</span><span class="o">().</span><span class="na">getHostAddress</span><span class="o">();</span>
+</span><span class='line'>          <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Endereço de IP: &quot;</span> <span class="o">+</span> <span class="n">ip</span><span class="o">);</span>
+</span><span class='line'>      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">UnknownHostException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span><span class='line'>      <span class="o">}</span>
+</span><span class='line'>  <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Testei no Mac o código anterior e funcionou corretamente, porém tive alguns problemas ao rodar no windows e linux, no entanto encontrei o código a seguir e ainda não testei&hellip;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+<span class='line-number'>131</span>
+<span class='line-number'>132</span>
+<span class='line-number'>133</span>
+<span class='line-number'>134</span>
+<span class='line-number'>135</span>
+<span class='line-number'>136</span>
+<span class='line-number'>137</span>
+<span class='line-number'>138</span>
+<span class='line-number'>139</span>
+<span class='line-number'>140</span>
+<span class='line-number'>141</span>
+<span class='line-number'>142</span>
+<span class='line-number'>143</span>
+<span class='line-number'>144</span>
+<span class='line-number'>145</span>
+<span class='line-number'>146</span>
+<span class='line-number'>147</span>
+<span class='line-number'>148</span>
+<span class='line-number'>149</span>
+<span class='line-number'>150</span>
+<span class='line-number'>151</span>
+<span class='line-number'>152</span>
+<span class='line-number'>153</span>
+<span class='line-number'>154</span>
+<span class='line-number'>155</span>
+<span class='line-number'>156</span>
+<span class='line-number'>157</span>
+<span class='line-number'>158</span>
+<span class='line-number'>159</span>
+<span class='line-number'>160</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">NetworkInfo</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="nf">NetworkInfo</span><span class="o">(){</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">getMacAddress</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">String</span> <span class="n">os</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s">&quot;os.name&quot;</span><span class="o">);</span>
+</span><span class='line'>        <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>            <span class="k">if</span><span class="o">(</span><span class="n">os</span><span class="o">.</span><span class="na">startsWith</span><span class="o">(</span><span class="s">&quot;Windows&quot;</span><span class="o">))</span> <span class="o">{</span>
+</span><span class='line'>                <span class="k">return</span> <span class="nf">windowsParseMacAddress</span><span class="o">(</span><span class="n">windowsRunIpConfigCommand</span><span class="o">());</span>
+</span><span class='line'>            <span class="o">}</span> <span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">os</span><span class="o">.</span><span class="na">startsWith</span><span class="o">(</span><span class="s">&quot;Linux&quot;</span><span class="o">))</span> <span class="o">{</span>
+</span><span class='line'>                <span class="k">return</span> <span class="nf">linuxParseMacAddress</span><span class="o">(</span><span class="n">linuxRunIfConfigCommand</span><span class="o">());</span>
+</span><span class='line'>            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+</span><span class='line'>                <span class="k">throw</span> <span class="k">new</span> <span class="nf">IOException</span><span class="o">(</span><span class="s">&quot;Sistema operacional desconhecido: &quot;</span> <span class="o">+</span> <span class="n">os</span><span class="o">);</span>
+</span><span class='line'>            <span class="o">}</span>
+</span><span class='line'>        <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">ParseException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span><span class='line'>            <span class="k">throw</span> <span class="k">new</span> <span class="nf">IOException</span><span class="o">(</span><span class="n">ex</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="cm">/*</span>
+</span><span class='line'><span class="cm">     * Linux</span>
+</span><span class='line'><span class="cm">     */</span>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">linuxParseMacAddress</span><span class="o">(</span><span class="n">String</span> <span class="n">ipConfigResponse</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">ParseException</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">String</span> <span class="n">localHost</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</span><span class='line'>        <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">localHost</span> <span class="o">=</span> <span class="n">InetAddress</span><span class="o">.</span><span class="na">getLocalHost</span><span class="o">().</span><span class="na">getHostAddress</span><span class="o">();</span>
+</span><span class='line'>        <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">java</span><span class="o">.</span><span class="na">net</span><span class="o">.</span><span class="na">UnknownHostException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span><span class='line'>            <span class="k">throw</span> <span class="k">new</span> <span class="nf">ParseException</span><span class="o">(</span><span class="n">ex</span><span class="o">.</span><span class="na">getMessage</span><span class="o">(),</span> <span class="mi">0</span><span class="o">);</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">StringTokenizer</span> <span class="n">tokenizer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringTokenizer</span><span class="o">(</span><span class="n">ipConfigResponse</span><span class="o">,</span> <span class="s">&quot;n&quot;</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">String</span> <span class="n">lastMacAddress</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">while</span><span class="o">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="na">hasMoreTokens</span><span class="o">())</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">String</span> <span class="n">line</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="na">nextToken</span><span class="o">().</span><span class="na">trim</span><span class="o">();</span>
+</span><span class='line'>            <span class="kt">boolean</span> <span class="n">containsLocalHost</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="n">localHost</span><span class="o">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="c1">//IP</span>
+</span><span class='line'>            <span class="k">if</span><span class="o">(</span><span class="n">containsLocalHost</span> <span class="o">&amp;&amp;</span> <span class="n">lastMacAddress</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>                <span class="k">return</span> <span class="n">lastMacAddress</span><span class="o">;</span>
+</span><span class='line'>            <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="c1">//MAC address</span>
+</span><span class='line'>            <span class="kt">int</span> <span class="n">macAddressPosition</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">&quot;HWaddr&quot;</span><span class="o">);</span>
+</span><span class='line'>            <span class="k">if</span><span class="o">(</span><span class="n">macAddressPosition</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="o">)</span> <span class="k">continue</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="n">String</span> <span class="n">macAddressCandidate</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">macAddressPosition</span> <span class="o">+</span> <span class="mi">6</span><span class="o">).</span><span class="na">trim</span><span class="o">();</span>
+</span><span class='line'>            <span class="k">if</span><span class="o">(</span><span class="n">linuxIsMacAddress</span><span class="o">(</span><span class="n">macAddressCandidate</span><span class="o">))</span> <span class="o">{</span>
+</span><span class='line'>                <span class="n">lastMacAddress</span> <span class="o">=</span> <span class="n">macAddressCandidate</span><span class="o">;</span>
+</span><span class='line'>                <span class="k">continue</span><span class="o">;</span>
+</span><span class='line'>            <span class="o">}</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">ParseException</span> <span class="n">ex</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ParseException</span>
+</span><span class='line'>            <span class="o">(</span><span class="s">&quot;Nao foi possível ler o MAC address para &quot;</span> <span class="o">+</span> <span class="n">localHost</span> <span class="o">+</span> <span class="s">&quot; de [&quot;</span> <span class="o">+</span> <span class="n">ipConfigResponse</span> <span class="o">+</span> <span class="s">&quot;]&quot;</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span><span class='line'>        <span class="k">throw</span> <span class="n">ex</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">linuxIsMacAddress</span><span class="o">(</span><span class="n">String</span> <span class="n">macAddressCandidate</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>        <span class="k">if</span><span class="o">(</span><span class="n">macAddressCandidate</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">!=</span> <span class="mi">17</span><span class="o">)</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+</span><span class='line'>        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">linuxRunIfConfigCommand</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">Process</span> <span class="n">p</span> <span class="o">=</span> <span class="n">Runtime</span><span class="o">.</span><span class="na">getRuntime</span><span class="o">().</span><span class="na">exec</span><span class="o">(</span><span class="s">&quot;ifconfig&quot;</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">InputStream</span> <span class="n">stdoutStream</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedInputStream</span><span class="o">(</span><span class="n">p</span><span class="o">.</span><span class="na">getInputStream</span><span class="o">());</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">StringBuffer</span> <span class="n">buffer</span><span class="o">=</span> <span class="k">new</span> <span class="n">StringBuffer</span><span class="o">();</span>
+</span><span class='line'>        <span class="k">for</span> <span class="o">(;;)</span> <span class="o">{</span>
+</span><span class='line'>            <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">stdoutStream</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
+</span><span class='line'>            <span class="k">if</span> <span class="o">(</span><span class="n">c</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="k">break</span><span class="o">;</span>
+</span><span class='line'>            <span class="n">buffer</span><span class="o">.</span><span class="na">append</span><span class="o">((</span><span class="kt">char</span><span class="o">)</span><span class="n">c</span><span class="o">);</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>        <span class="n">String</span> <span class="n">outputText</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">stdoutStream</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">return</span> <span class="n">outputText</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="cm">/*</span>
+</span><span class='line'><span class="cm">     * Windows</span>
+</span><span class='line'><span class="cm">     */</span>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">windowsParseMacAddress</span><span class="o">(</span><span class="n">String</span> <span class="n">ipConfigResponse</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">ParseException</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">String</span> <span class="n">localHost</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</span><span class='line'>        <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">localHost</span> <span class="o">=</span> <span class="n">InetAddress</span><span class="o">.</span><span class="na">getLocalHost</span><span class="o">().</span><span class="na">getHostAddress</span><span class="o">();</span>
+</span><span class='line'>        <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">java</span><span class="o">.</span><span class="na">net</span><span class="o">.</span><span class="na">UnknownHostException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span><span class='line'>            <span class="k">throw</span> <span class="k">new</span> <span class="nf">ParseException</span><span class="o">(</span><span class="n">ex</span><span class="o">.</span><span class="na">getMessage</span><span class="o">(),</span> <span class="mi">0</span><span class="o">);</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">StringTokenizer</span> <span class="n">tokenizer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringTokenizer</span><span class="o">(</span><span class="n">ipConfigResponse</span><span class="o">,</span> <span class="s">&quot;n&quot;</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">String</span> <span class="n">lastMacAddress</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">while</span><span class="o">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="na">hasMoreTokens</span><span class="o">())</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">String</span> <span class="n">line</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="na">nextToken</span><span class="o">().</span><span class="na">trim</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="c1">//IP</span>
+</span><span class='line'>            <span class="k">if</span><span class="o">(</span><span class="n">line</span><span class="o">.</span><span class="na">endsWith</span><span class="o">(</span><span class="n">localHost</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">lastMacAddress</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>                <span class="k">return</span> <span class="n">lastMacAddress</span><span class="o">;</span>
+</span><span class='line'>            <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="c1">//MAC address</span>
+</span><span class='line'>            <span class="kt">int</span> <span class="n">macAddressPosition</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">&quot;:&quot;</span><span class="o">);</span>
+</span><span class='line'>            <span class="k">if</span><span class="o">(</span><span class="n">macAddressPosition</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="o">)</span> <span class="k">continue</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="n">String</span> <span class="n">macAddressCandidate</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">macAddressPosition</span> <span class="o">+</span> <span class="mi">1</span><span class="o">).</span><span class="na">trim</span><span class="o">();</span>
+</span><span class='line'>            <span class="k">if</span><span class="o">(</span><span class="n">windowsIsMacAddress</span><span class="o">(</span><span class="n">macAddressCandidate</span><span class="o">))</span> <span class="o">{</span>
+</span><span class='line'>                <span class="n">lastMacAddress</span> <span class="o">=</span> <span class="n">macAddressCandidate</span><span class="o">;</span>
+</span><span class='line'>                <span class="k">continue</span><span class="o">;</span>
+</span><span class='line'>            <span class="o">}</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">ParseException</span> <span class="n">ex</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ParseException</span><span class="o">(</span><span class="s">&quot;Nao foi possível ler o MAC address de [&quot;</span> <span class="o">+</span> <span class="n">ipConfigResponse</span> <span class="o">+</span> <span class="s">&quot;]&quot;</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span><span class='line'>        <span class="k">throw</span> <span class="n">ex</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">windowsIsMacAddress</span><span class="o">(</span><span class="n">String</span> <span class="n">macAddressCandidate</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>        <span class="k">if</span><span class="o">(</span><span class="n">macAddressCandidate</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">!=</span> <span class="mi">17</span><span class="o">)</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">windowsRunIpConfigCommand</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">Process</span> <span class="n">p</span> <span class="o">=</span> <span class="n">Runtime</span><span class="o">.</span><span class="na">getRuntime</span><span class="o">().</span><span class="na">exec</span><span class="o">(</span><span class="s">&quot;ipconfig /all&quot;</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">InputStream</span> <span class="n">stdoutStream</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedInputStream</span><span class="o">(</span><span class="n">p</span><span class="o">.</span><span class="na">getInputStream</span><span class="o">());</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">StringBuffer</span> <span class="n">buffer</span><span class="o">=</span> <span class="k">new</span> <span class="n">StringBuffer</span><span class="o">();</span>
+</span><span class='line'>        <span class="k">for</span> <span class="o">(;;)</span> <span class="o">{</span>
+</span><span class='line'>            <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">stdoutStream</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
+</span><span class='line'>            <span class="k">if</span> <span class="o">(</span><span class="n">c</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="k">break</span><span class="o">;</span>
+</span><span class='line'>            <span class="n">buffer</span><span class="o">.</span><span class="na">append</span><span class="o">((</span><span class="kt">char</span><span class="o">)</span><span class="n">c</span><span class="o">);</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>        <span class="n">String</span> <span class="n">outputText</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">stdoutStream</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">return</span> <span class="n">outputText</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">final</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>        <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Informacoes&quot;</span><span class="o">);</span>
+</span><span class='line'>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Sistema operacional: &quot;</span> <span class="o">+</span> <span class="n">System</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s">&quot;os.name&quot;</span><span class="o">));</span>
+</span><span class='line'>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;IP/Localhost: &quot;</span> <span class="o">+</span> <span class="n">InetAddress</span><span class="o">.</span><span class="na">getLocalHost</span><span class="o">().</span><span class="na">getHostAddress</span><span class="o">());</span>
+</span><span class='line'>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;MAC Address: &quot;</span> <span class="o">+</span> <span class="n">getMacAddress</span><span class="o">());</span>
+</span><span class='line'>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Nome da maquina: &quot;</span> <span class="o">+</span> <span class="n">InetAddress</span><span class="o">.</span><span class="na">getLocalHost</span><span class="o">().</span><span class="na">getHostName</span><span class="o">());</span>
+</span><span class='line'>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Nome completo da maquina: &quot;</span> <span class="o">+</span> <span class="n">InetAddress</span><span class="o">.</span><span class="na">getLocalHost</span><span class="o">().</span><span class="na">getCanonicalHostName</span><span class="o">());</span>
+</span><span class='line'>        <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">Throwable</span> <span class="n">t</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">t</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>FONTES:</p>
+
+<p><a href="http://www.guj.com.br/java/83460-capturar-endereco-mac-e-ip-alguem">http://www.guj.com.br/java/83460-capturar-endereco-mac-e-ip-alguem</a>
+<a href="http://paulovittor23.org/2008/02/01/pegando-o-mac-address-antes-e-depois-do-mustang-java-6/">http://paulovittor23.org/2008/02/01/pegando-o-mac-address-antes-e-depois-do-mustang-java-6/</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Install HomeBrew on MacOS over HTTP Proxy]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/11/01/how-to-install-homebrew-on-macos-over-http-proxy/"/>
+    <updated>2012-11-01T12:56:01+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/11/01/how-to-install-homebrew-on-macos-over-http-proxy</id>
+    <content type="html"><![CDATA[<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">http_proxy</span><span class="o">=</span>http://192.168.1.1:3128
+</span><span class='line'><span class="nb">export </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="nv">$http_proxy</span>
+</span><span class='line'>ruby -e <span class="s2">&quot;$(curl -fsSkL raw.github.com/mxcl/homebrew/go)&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<!-- more -->
+
+
+<p>Sources:
+<a href="http://squarism.com/2010/12/14/homebrew-behind-a-proxy/">http://squarism.com/2010/12/14/homebrew-behind-a-proxy/</a>
+<a href="https://github.com/mxcl/homebrew/wiki/Tips-N">https://github.com/mxcl/homebrew/wiki/Tips-N</a>&#8216;-Tricks
+<a href="http://stackoverflow.com/questions/9904850/how-to-install-homebrew-on-mac-osx-snow-leopard">http://stackoverflow.com/questions/9904850/how-to-install-homebrew-on-mac-osx-snow-leopard</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Aprendendo Orientação a objetos no JavaScript]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/10/19/aprendendo-orientacao-a-objetos-no-javascript/"/>
+    <updated>2012-10-19T13:36:38+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/10/19/aprendendo-orientacao-a-objetos-no-javascript</id>
+    <content type="html"><![CDATA[<p>Como não gosto de refazer a roda, aqui está um link interessantíssimo sobre como aprender OO no JS</p>
+
+<p><a href="http://killdream.github.com/blog/2011/10/understanding-javascript-oop/">Clique aqui para acessar o artigo</a></p>
+
+<p>Abraços!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Adicionando Tablespace no Oracle]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/10/17/adicionando-tablespace-no-oracle/"/>
+    <updated>2012-10-17T08:57:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/10/17/adicionando-tablespace-no-oracle</id>
+    <content type="html"><![CDATA[<p>Para adicionar mais espaço no Oracle digite o seguinte comando:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="k">ALTER</span> <span class="n">TABLESPACE</span> <span class="o">&lt;</span><span class="n">Nome</span><span class="o">&gt;</span>
+</span><span class='line'> <span class="k">ADD</span> <span class="n">DATAFILE</span> <span class="s1">&#39;&lt;Caminho do local onde será salvo&gt;&#39;</span> <span class="k">SIZE</span><span class="o">&lt;</span><span class="n">tamanho</span> <span class="n">em</span> <span class="n">mb</span><span class="o">&gt;</span> <span class="n">M</span>
+</span><span class='line'> <span class="n">AUTOEXTEND</span> <span class="k">ON</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Por Exemplo:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="k">ALTER</span> <span class="n">TABLESPACE</span> <span class="k">SYSTEM</span><span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+</span><span class='line'><span class="k">ADD</span> <span class="n">DATAFILE</span> <span class="s1">&#39;E:OracleDBtarefa.dbf&#39;</span> <span class="k">SIZE</span> <span class="mi">2000</span><span class="n">M</span>
+</span><span class='line'><span class="n">AUTOEXTEND</span> <span class="k">ON</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Para verificar quanto espaço temos alocado basta digitar o comando:</p>
+
+<p>&mdash;Espaço utilizado no BD</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="k">select</span> <span class="n">nvl</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">tablespace_name</span><span class="p">,</span> <span class="n">nvl</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">tablespace_name</span><span class="p">,</span><span class="s1">&#39;UNKNOWN&#39;</span><span class="p">))</span> <span class="ss">&quot;Tablespace&quot;</span><span class="p">,</span> <span class="n">kbytes_alloc</span> <span class="ss">&quot;Allocated MB&quot;</span><span class="p">,</span> <span class="n">kbytes_alloc</span><span class="o">-</span><span class="n">nvl</span><span class="p">(</span><span class="n">kbytes_free</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="ss">&quot;Used MB&quot;</span><span class="p">,</span>
+</span><span class='line'> <span class="n">nvl</span><span class="p">(</span><span class="n">kbytes_free</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="ss">&quot;Free MB&quot;</span><span class="p">,</span> <span class="p">((</span><span class="n">kbytes_alloc</span><span class="o">-</span><span class="n">nvl</span><span class="p">(</span><span class="n">kbytes_free</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span><span class="o">/</span><span class="n">kbytes_alloc</span><span class="p">)</span> <span class="ss">&quot;Used&quot;</span><span class="p">,</span> <span class="n">data_files</span> <span class="ss">&quot;Data Files&quot;</span> <span class="k">from</span> <span class="p">(</span> <span class="k">select</span> <span class="k">sum</span><span class="p">(</span><span class="n">bytes</span><span class="p">)</span><span class="o">/</span><span class="mi">1024</span><span class="o">/</span><span class="mi">1024</span> <span class="n">Kbytes_free</span><span class="p">,</span>
+</span><span class='line'> <span class="k">max</span><span class="p">(</span><span class="n">bytes</span><span class="p">)</span><span class="o">/</span><span class="mi">1024</span><span class="o">/</span><span class="mi">1024</span> <span class="n">largest</span><span class="p">,</span> <span class="n">tablespace_name</span> <span class="k">from</span> <span class="n">sys</span><span class="p">.</span><span class="n">dba_free_space</span> <span class="k">group</span> <span class="k">by</span> <span class="n">tablespace_name</span> <span class="p">)</span> <span class="n">a</span><span class="p">,</span> <span class="p">(</span> <span class="k">select</span> <span class="k">sum</span><span class="p">(</span><span class="n">bytes</span><span class="p">)</span><span class="o">/</span><span class="mi">1024</span><span class="o">/</span><span class="mi">1024</span> <span class="n">Kbytes_alloc</span><span class="p">,</span> <span class="n">tablespace_name</span><span class="p">,</span>
+</span><span class='line'> <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="n">data_files</span> <span class="k">from</span> <span class="n">sys</span><span class="p">.</span><span class="n">dba_data_files</span> <span class="k">group</span> <span class="k">by</span> <span class="n">tablespace_name</span> <span class="p">)</span> <span class="n">b</span> <span class="k">where</span> <span class="n">a</span><span class="p">.</span><span class="n">tablespace_name</span> <span class="p">(</span><span class="o">+</span><span class="p">)</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">tablespace_name</span> <span class="k">order</span> <span class="k">by</span> <span class="mi">1</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Configurando JAVA_HOME no Mac]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/09/04/configurando-java_home-no-mac/"/>
+    <updated>2012-09-04T14:19:03+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/09/04/configurando-java_home-no-mac</id>
+    <content type="html"><![CDATA[<p>Digite no Terminal:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo su
+</span><span class='line'>vim ~/.bash_profile
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Adicione ao final do arquivo</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="n">export</span> <span class="n">JAVA_HOME</span><span class="o">=`/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">java_home</span> <span class="o">-</span><span class="n">v</span> <span class="mi">1</span><span class="p">.</span><span class="mi">6</span><span class="o">`</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Pressione Esc digite :wq
+(W de Write e Q de Quit)</p>
+
+<p>Pronto!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Adicionando Funcionalidades ao BootStrap Twitter.]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/08/31/twitter-bootstrap/"/>
+    <updated>2012-08-31T09:59:39+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/08/31/twitter-bootstrap</id>
+    <content type="html"><![CDATA[<p>Para aqueles como eu que gostam de programar mas não tem muito talento para deixar a interface muuuuuito da hora e sempre fica aquela coisa meio &ldquo;Bicheira&rdquo; rs eu recomendo que conheçam o BootStrap! :D O Bootstrap é uma ferramenta que foi construída pelos Designers do Twitter e facilmente você consegue dar um toque mega profissional para aquele site bicheira que vc fez pro tiozinho do bar da esquina, então eu recomendo que vocês dêem uma olhada neste link:</p>
+
+<p><a href="http://twitter.github.com/bootstrap/">Bootstrap Twitter</a> CSS S2 ! :D</p>
+
+<p>Encontrei <a href="http://designshack.net/articles/css/20-awesome-resources-for-twitter-bootstrap-lovers/">neste site</a> alguns recursos interessantíssimos par aumentar a produtividade de quem utiliza esta ferramenta.</p>
+
+<!-- more -->
+
+
+<p>Segue a lista de links:</p>
+
+<p><a href="http://stylebootstrap.info/">http://stylebootstrap.info/</a></p>
+
+<p><a href="http://charliepark.org/bootstrap_buttons/">http://charliepark.org/bootstrap_buttons/</a></p>
+
+<p><a href="https://wrapbootstrap.com/">https://wrapbootstrap.com/</a></p>
+
+<p><a href="http://bootswatch.com/">http://bootswatch.com/</a></p>
+
+<p><a href="http://builtwithbootstrap.com/">http://builtwithbootstrap.com/</a></p>
+
+<p><a href="http://www.extendingfireworks.com/?p=133">http://www.extendingfireworks.com/?p=133</a></p>
+
+<p><a href="http://viget.com/inspire/an-omnigraffle-stencil-for-twitter-bootstrap-2">http://viget.com/inspire/an-omnigraffle-stencil-for-twitter-bootstrap-2</a></p>
+
+<p><a href="http://axutopia.com/twitter-bootstrap/">http://axutopia.com/twitter-bootstrap/</a></p>
+
+<p><a href="http://gui.repixdesign.com/#freebies">http://gui.repixdesign.com/#freebies</a></p>
+
+<p><a href="http://grails-twitter-bootstrap.cloudfoundry.com/">http://grails-twitter-bootstrap.cloudfoundry.com/</a></p>
+
+<p><a href="http://fortawesome.github.com/Font-Awesome/">http://fortawesome.github.com/Font-Awesome/</a></p>
+
+<p><a href="http://thesassway.com/projects/sass-twitter-bootstrap">http://thesassway.com/projects/sass-twitter-bootstrap</a></p>
+
+<p><a href="http://addyosmani.github.com/jquery-ui-bootstrap/">http://addyosmani.github.com/jquery-ui-bootstrap/</a></p>
+
+<p><a href="http://320press.com/wpbs/">http://320press.com/wpbs/</a></p>
+
+<p><a href="http://www.eyecon.ro/colorpicker-and-datepicker-for-twitter-bootstrap.htm">http://www.eyecon.ro/colorpicker-and-datepicker-for-twitter-bootstrap.htm</a></p>
+
+<p><a href="http://designshack.net/articles/css/5-incredibly-useful-tools-built-into-twitter-bootstrap/">http://designshack.net/articles/css/5-incredibly-useful-tools-built-into-twitter-bootstrap/</a></p>
+
+<p><a href="http://designshack.net/articles/css/twitter-bootstrap-2-bootstrap-goes-responsive/">http://designshack.net/articles/css/twitter-bootstrap-2-bootstrap-goes-responsive/</a></p>
+
+<p><a href="http://webdesign.tutsplus.com/tutorials/complete-websites/twitter-bootstrap-101-introduction/">http://webdesign.tutsplus.com/tutorials/complete-websites/twitter-bootstrap-101-introduction/</a></p>
+
+<p><a href="http://www.alistapart.com/articles/building-twitter-bootstrap/">http://www.alistapart.com/articles/building-twitter-bootstrap/</a></p>
+
+<p><a href="http://railscasts.com/episodes/328-twitter-bootstrap-basics">http://railscasts.com/episodes/328-twitter-bootstrap-basics</a></p>
+
+<p><a href="http://www.w3resource.com/twitter-bootstrap/tutorial.php">http://www.w3resource.com/twitter-bootstrap/tutorial.php</a></p>
+
+<p>Com estes links você está pronto para dominar o mundo! :D</p>
+
+<p>Abraços! Paulo Luan.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mudar a senha do usuário no Oracle]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/08/30/mudar-a-senha-do-usuario-no-oracle/"/>
+    <updated>2012-08-30T18:08:26+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/08/30/mudar-a-senha-do-usuario-no-oracle</id>
+    <content type="html"><![CDATA[<p>Abra o cmd e digite:</p>
+
+<p>Path default no Windows da instalação é o &ldquo;C:oraclexeapporacleproduct11.2.0serverbin&rdquo;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sqlplus / as sysdba
+</span><span class='line'>alter user identified by
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Exemplo:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="k">alter</span> <span class="k">user</span> <span class="k">system</span> <span class="n">identified</span> <span class="k">by</span> <span class="n">root</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Padrões de Interfaces Gráficas para desenvolvimento mobile]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/08/30/padroes-de-interfaces-graficas-para-desenvolvimento-mobile/"/>
+    <updated>2012-08-30T12:44:19+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/08/30/padroes-de-interfaces-graficas-para-desenvolvimento-mobile</id>
+    <content type="html"><![CDATA[<p>Geralmente programadores não tem muita noção de Interfaces Gráficas, eu pelo menos, não tenho muito talento com front-end, no entanto para facilitar as coisas e dar algumas idéias de padrões de UI para mobile eis que passarei alguns links abaixo, <del>copie </del>inspire-se nos designs já existentes e seja um programador feliz! :D retirei os links <a href="http://uxmovement.com/resources/best-collection-of-mobile-user-interface-patterns/">deste site</a>.</p>
+
+<!-- more -->
+
+
+<p><a href="http://pttrns.com/">http://pttrns.com/</a>
+<a href="http://mobile-patterns.com/">http://mobile-patterns.com/</a>
+<a href="http://www.lovelyui.com/">http://www.lovelyui.com/</a>
+<a href="http://inspired-ui.com/">http://inspired-ui.com/</a>
+<a href="http://www.uiparade.com/">http://www.uiparade.com/</a>
+<a href="http://cocoacontrols.com/">http://cocoacontrols.com/</a>
+<a href="http://www.androidpatterns.com/">http://www.androidpatterns.com/</a>
+<a href="http://uxmovement.com/products/interface-libraries-3-wireframe-like-a-professional/"> http://uxmovement.com/products/interface-libraries-3-wireframe-like-a-professional/</a>
+<a href="http://uxmovement.com/products/interface-papers-sketch-your-app-to-life/">http://uxmovement.com/products/interface-papers-sketch-your-app-to-life/</a>
+<a href="http://uxmovement.com/products/interface-styles-3-make-mockups-like-never-before/">http://uxmovement.com/products/interface-styles-3-make-mockups-like-never-before/</a></p>
+
+<p>Att, Paulo Luan.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Gerar chaves SSH Linux]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/08/26/gerar-chaves-ssh-linux/"/>
+    <updated>2012-08-26T18:03:14+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/08/26/gerar-chaves-ssh-linux</id>
+    <content type="html"><![CDATA[<p>Abra o terminal e digite >>></p>
+
+<pre><code>``` bash
+ssh-keygen -t rsa
+sudo apt-get install xclip
+cat ~/.ssh/id_rsa.pub | xclip -sel clip
+ 
+```
+
+Att,
+Paulo Luan
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Começando com NoSQL - MongoDB + PyMongo]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/08/26/comecando-com-nosql-mongodb-pymongo/"/>
+    <updated>2012-08-26T15:48:28+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/08/26/comecando-com-nosql-mongodb-pymongo</id>
+    <content type="html"><![CDATA[<p>Este tutorial foi realizado no sistema operacional Ubuntu 12.04, mas os comandos são parecidos em todas as plataformas.</p>
+
+<p>Para começar acesse o site oficial e faça o download dos binários para sua plataforma:</p>
+
+<p><a href="http://www.mongodb.org/downloads">http://www.mongodb.org/downloads</a></p>
+
+<p>Logo em seguida, descompacte o conteúdo do arquivo mongodb-linux-x86_64-2.0.7.tgz em uma pasta qualquer que no meu caso é a</p>
+
+<figure class='code'><figcaption><span>/home//Desenvolvimento/mongo &#8220;`</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>&lt;!-- more --&gt;
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>Em seguida crie uma pasta necessária para o funcionamento <span class="k">do </span>MongoDB:
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> bash</p>
+
+<p>sudo mkdir /data</p>
+
+<p>cd /data</p>
+
+<p>sudo mkdir db</p>
+
+<figure class='code'><figcaption><span>/home//Desenvolvimento/mongo &#8220;`</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Para iniciar o seu banco de dados acesse o terminal apertando CTRL+ALT+T digite o comando
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> bash cd ~/Desenvolvimento/mongo/mongodb-linux-x86_64-2.0.7/bin &#8220;`</p>
+
+<p>(este ~ é equivalente a /home/<NOME DE SEU USUARIO>/) logo depois, digite</p>
+
+<figure class='code'><figcaption><span>sudo ./mongod &#8220;`</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>abra outro terminal digitando
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> bash
+cd ~/Desenvolvimento/mongo/mongodb-linux-x86_64-2.0.7/bin</p>
+
+<p>mongo</p>
+
+<figure class='code'><figcaption><span>sudo ./mongod &#8220;`</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>se aparecer algo como isto:
+</span><span class='line'>
+</span><span class='line'><span class="o">[</span>!<span class="o">[](</span>http://javalees.files.wordpress.com/2012/08/mongo-funcionando.png<span class="o">)](</span>http://javalees.files.wordpress.com/2012/08/mongo-funcionando.png<span class="o">)</span>
+</span><span class='line'>
+</span><span class='line'>parabéns você conseguiu instalar! rs
+</span><span class='line'>
+</span><span class='line'>Instalando o PyMongo:
+</span><span class='line'>
+</span><span class='line'>Acesse a página oficial neste link: <span class="o">[</span>https://github.com/mongodb/mongo-python-driver<span class="o">](</span>https://github.com/mongodb/mongo-python-driver<span class="o">)</span>
+</span><span class='line'>
+</span><span class='line'>Comandos utlizados:
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> bash
+sudo su</p>
+
+<p>apt-get install build-essential python-dev</p>
+
+<p>apt-get install git</p>
+
+<p>cd ~/</p>
+
+<p>git clone git://github.com/mongodb/mongo-python-driver.git pymongo</p>
+
+<p>cd pymongo/</p>
+
+<p>python setup.py install</p>
+
+<figure class='code'><figcaption><span>sudo ./mongod &#8220;`</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Instalado!! agora vamos brincar um pouco com o mongoDB no Python:
+</span><span class='line'>
+</span><span class='line'>digite na linha de comando:
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> bash</p>
+
+<blockquote><blockquote><blockquote><p>python
+import pymongo
+connection = pymongo.Connection(&ldquo;localhost&rdquo;, 27017)
+db = connection.test
+db.name
+u&#8217;test&#8217;
+db.my_collection
+Collection(Database(Connection(&lsquo;localhost&rsquo;, 27017), u&#8217;test&#8217;), u&#8217;my_collection&#8217;)
+db.my_collection.save({&ldquo;x&rdquo;: 10})
+ObjectId(&lsquo;4aba15ebe23f6b53b0000000&rsquo;)
+db.my_collection.save({&ldquo;x&rdquo;: 8})
+ObjectId(&lsquo;4aba160ee23f6b543e000000&rsquo;)
+db.my_collection.save({&ldquo;x&rdquo;: 11})
+ObjectId(&lsquo;4aba160ee23f6b543e000002&rsquo;)
+db.my_collection.find_one()
+{u&#8217;x&#8217;: 10, u&#8217;_id&#8217;: ObjectId(&lsquo;4aba15ebe23f6b53b0000000&rsquo;)}
+for item in db.my_collection.find():
+&hellip;     print item[&ldquo;x&rdquo;]
+&hellip;
+10
+8
+11
+db.my_collection.create_index(&ldquo;x&rdquo;)
+u&#8217;x_1&#8217;
+for item in db.my_collection.find().sort(&ldquo;x&rdquo;, pymongo.ASCENDING):
+&hellip;     print item[&ldquo;x&rdquo;]
+&hellip;
+8
+10
+11
+[item[&ldquo;x&rdquo;] for item in db.my_collection.find().limit(2).skip(1)]
+[8, 11]</p></blockquote></blockquote></blockquote>
+
+<figure class='code'><figcaption><span>sudo ./mongod &#8220;`</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> bash >>> [item[&ldquo;x&rdquo;] for item in db.my_collection.find().limit(2).skip(1)] &#8220;`</p>
+
+<p>Nesta página você pode conferir todos os releases das documentações do MongoDB, na data deste post o último release é o <a href="http://downloads.mongodb.org/docs/mongodb-docs-2012-08-26.pdf">http://downloads.mongodb.org/docs/mongodb-docs-2012-08-26.pdf</a> o legal é que dá pra baixar o PDF para futuras consultas sem a necessidade de internet.</p>
+
+<p>Para iniciarmos com mongoDB existe um Shell interessantíssimo do qual você pode utilizar os comandos e ver como funcionam os CRUDs (Inserção, Remoção e Atualização) básicos no Mongo, para isto clique em “Try It Now” na página oficial <a href="http://www.mongodb.org/">http://www.mongodb.org/</a>.</p>
+
+<p>Um caso interessante de sucesso na implementação do MongoDB é o CartolaFC da Globo.com, confira o artigo na integra neste link: <a href="http://www.gonow.com.br/blog/2011/07/29/o-mongodb-aplicado-ao-cartolafc-da-globo-com/">http://www.gonow.com.br/blog/2011/07/29/o-mongodb-aplicado-ao-cartolafc-da-globo-com/</a></p>
+
+<p>Parabéns! Agora você pode incluir no currículo que mexeu com MongoDB! :D</p>
+
+<p>Abraços!</p>
+
+<p>Paulo Luan.</p>
+
+<p>pesquisas futuras:</p>
+
+<p><a href="http://www.tornadoweb.org/">http://www.tornadoweb.org/</a></p>
+
+<p><a href="https://github.com/bitly/asyncmongo">https://github.com/bitly/asyncmongo</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mega Tutorial de GIT]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/08/24/mega-tutorial-de-git/"/>
+    <updated>2012-08-24T09:15:20+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/08/24/mega-tutorial-de-git</id>
+    <content type="html"><![CDATA[<p>Encontrei este artigo, muuuuuuuuuito completo sobre GIT:</p>
+
+<p><a href="http://blog.santiagobasulto.com.ar/2011/11/27/tutorial-de-git/">http://blog.santiagobasulto.com.ar/2011/11/27/tutorial-de-git/</a></p>
+
+<p>Como não gosto de reinventar a roda é só acessar o link e curtir rs quando eu estiver inspirado eu faço um artigo com os principais comandos mas por enquanto utilize o google translate HAUSHSA se bem que espanhol dá até pra se virar.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Criando apresentações de slides e efeitos incríveis com JavaScript.]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/08/03/criando-apresentacoes-de-slides-e-efeitos-incriveis-com-javascript/"/>
+    <updated>2012-08-03T11:03:17+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/08/03/criando-apresentacoes-de-slides-e-efeitos-incriveis-com-javascript</id>
+    <content type="html"><![CDATA[<p>Estava eu navegando pelo site <a href="http://microjs.com/">MicroJS</a> pesquisando por alguns frameworks leves para utilizar em páginas mobile, quando me deparo com seguinte framework <a href="https://github.com/bartaz/impress.js"> Impress.js</a> trata-se de um framework javascript para a criação de apresentações de Slides incríveis utilizando HTML5 e CSS3, vejam por exemplo <a href="http://exequiel09.github.com/symposium-presentation/#/title">esta apresentação</a> que interessante! Todos os exemplos estão <a href="https://github.com/bartaz/impress.js/wiki/Examples-and-demos">neste link</a>.</p>
+
+<p>Divirta-se! :D</p>
+
+<p>Abraços! att, Paulo Luan.</p>
+
+<!-- more -->
+
+
+<p>//
+//</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Variáveis de ambiente e alguns erros comuns.]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/07/30/variaveis-de-ambiente-e-alguns-erros-comuns/"/>
+    <updated>2012-07-30T19:35:11+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/07/30/variaveis-de-ambiente-e-alguns-erros-comuns</id>
+    <content type="html"><![CDATA[<p>Estava eu programando no WINDOWS sim, WINDOWS (SDK de uma ferramenta que só funciona no Windows) :(( rs quando eu me deparei com o seguinte erro com a plataforma Titanium:</p>
+
+<!-- more -->
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[</span>INFO<span class="o">]</span> <span class="nv">logfile</span> <span class="o">=</span> C:UsersPauloLuanDropboxSource CodesOnibusSJCworkTitaniumOnibusSJCbuild.log
+</span><span class='line'><span class="o">[</span>INFO<span class="o">]</span> Launching Android emulator...one moment
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> <span class="s1">&#39;xcopy&#39;</span> não é reconhecido como um comando interno
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> ou externo, um programa operável ou um arquivo em lotes.
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> Exception occured <span class="k">while </span>building Android project:
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> File <span class="s2">&quot;C:UsersPauloLuanAppDataRoamingTitaniummobilesdkwin322.1.0.GAandroidbuilder.py&quot;</span>, line 2199, in
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> s.run_emulator<span class="o">(</span>avd_id, avd_skin, avd_name, avd_abi, add_args<span class="o">)</span>
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> File <span class="s2">&quot;C:UsersPauloLuanAppDataRoamingTitaniummobilesdkwin322.1.0.GAandroidbuilder.py&quot;</span>, line 476, in run_emulator
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> <span class="nv">avd_name</span> <span class="o">=</span> self.create_avd<span class="o">(</span>avd_id, avd_skin, avd_abi<span class="o">)</span>
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> File <span class="s2">&quot;C:UsersPauloLuanAppDataRoamingTitaniummobilesdkwin322.1.0.GAandroidbuilder.py&quot;</span>, line 399, in create_avd
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> <span class="nv">available_avds</span> <span class="o">=</span> avd.get_avds<span class="o">(</span>self.sdk<span class="o">)</span>
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> File <span class="s2">&quot;C:UsersPauloLuanAppDataRoamingTitaniummobilesdkwin322.1.0.GAandroidavd.py&quot;</span>, line 23, in get_avds
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> <span class="k">for </span>line in run.run<span class="o">([</span>sdk.get_android<span class="o">()</span>,<span class="s1">&#39;list&#39;</span>,<span class="s1">&#39;target&#39;</span><span class="o">]</span>,debug<span class="o">=</span>False<span class="o">)</span>.split<span class="o">(</span><span class="s2">&quot;n&quot;</span><span class="o">)</span>:
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> AttributeError: <span class="s1">&#39;NoneType&#39;</span> object has no attribute <span class="s1">&#39;split&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>//
+//</p>
+
+<p>No começo não sabia o que fazer, mas ao analisar a terceira linha vi que a mensagem dizia: &ldquo;&lsquo;xcopy&rsquo; não é reconhecido como um comando interno&rdquo; estranhei porque xcopy é um comando do windows no cmd para copia de arquivos, pois bem, o problema que ocasionou este erro na minha IDE é que as variáveis de ambiente do windows estavam desconfiguradas, eu acho que de tanto mexer pra configurar o meu Java (é que estava tendo alguns problemas), no entanto, se você quiser saber mais sobre as variáveis de ambiente leia <a href="http://pt.wikipedia.org/wiki/Vari%C3%A1vel_de_ambiente">este</a> e <a href="http://technet.microsoft.com/pt-br/library/cc668471.aspx">este</a> artigo.</p>
+
+<p>Por exemplo, quando retiramos a propriedade &ldquo;C:WindowsSystem32&rdquo; das variáveis de Path teremos alguns erros como os seguintes:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="s1">&#39;xcopy&#39;</span> não é reconhecido como um comando interno ou externo, um programa operável ou um arquivo em lotes.
+</span><span class='line'><span class="s1">&#39;ipconfig&#39;</span> não é reconhecido como um comando interno ou externo, um programa operável ou um arquivo em lotes.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>semelhante a imagem:</p>
+
+<p>[caption id=&ldquo;attachment_671&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;676&rdquo;]<a href="http://javalees.files.wordpress.com/2012/07/erros-cmd-nc3a3o-reconhece.png"><img src="http://javalees.files.wordpress.com/2012/07/erros-cmd-nc3a3o-reconhece.png" alt="Erro: cmd não reconhece comandos." /></a> Erro: cmd não reconhece comandos.[/caption]</p>
+
+<p>pois todos os programas que estavam mapeados agora não estão mais, as variáveis de ambiente são importantes e é só você colocar o diretório onde estão os executáveis que o sistema mapeará e deixará disponível para uso no terminal.</p>
+
+<p>Então para configurar basta pressionar o &ldquo;logo do windows + pause break&rdquo; ou ir no painel de controle &mdash;> Sistema &mdash;> variáveis de ambiente. O importante é chegar nesta tela:</p>
+
+<p>[caption id=&ldquo;attachment_672&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;421&rdquo;]<a href="http://javalees.files.wordpress.com/2012/07/propriedades-do-sistema.png"><img src="http://javalees.files.wordpress.com/2012/07/propriedades-do-sistema.png" alt="Propriedades do Sistema" /></a> Propriedades do Sistema[/caption]</p>
+
+<p>Depois clique em variáveis de ambiente:</p>
+
+<p>[caption id=&ldquo;attachment_673&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;393&rdquo;]<a href="http://javalees.files.wordpress.com/2012/07/varic3a1veis-de-ambiente.png"><img src="http://javalees.files.wordpress.com/2012/07/varic3a1veis-de-ambiente.png" alt="Variáveis de ambiente" /></a> Variáveis de ambiente[/caption]</p>
+
+<p>e depois é só clicar em &ldquo;editar&rdquo; sobre a variável de ambiente PATH e colar o local a ser mapeado por exemplo, se você quiser que o Java seja mapeado coloque o diretório da instalação (geralmente é o &ldquo;C:Program Files (x86)Javajdk1.7.0_05bin;&rdquo; ou algo parecido ;) ) e lembre-se de separar as pastas com &ldquo;;&rdquo; ,logo, para resolver aquele problema da minha IDE era só colocar o caminho &ldquo;C:WindowsSystem32&rdquo; na variável PATH como na imagem:</p>
+
+<p>com as variáveis de ambiente configuradas olha que bonito que ficou meu CMD executando o comando xcopy e ipconfig:</p>
+
+<p>[caption id=&ldquo;attachment_670&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;677&rdquo;]<a href="http://javalees.files.wordpress.com/2012/07/cmd-feliz.png"><img src="http://javalees.files.wordpress.com/2012/07/cmd-feliz.png" alt="cmd feliz" /></a> cmd feliz[/caption]</p>
+
+<p>Att, Paulo Luan.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Aprendendo a Programar com o CodeCademy]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/07/19/aprendendo-a-programar-com-o-codecademy/"/>
+    <updated>2012-07-19T15:21:07+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/07/19/aprendendo-a-programar-com-o-codecademy</id>
+    <content type="html"><![CDATA[<p>Depois que conheci o <a href="http://khanacademy.com/">KhanAcademy</a> Fiquei apaixonado pela idéia de aprender com o conhecimento das outras pessoas através de plataformas de ensino à distância, o legal é que você que coordena o seu tempo de aprendizado a quantidade de horas que você vai investir enfim, é você que manda quando que vai aprender e a que ritmo, mas deixando de blablabla vamos direto ao ponto, tem um site que se chama <a href="http://www.codecademy.com/pt">CodeCademy</a> que é uma plataforma de ensino extremamente didática para o aprendizado da programação, coisa lindíssima!! parece com o KhanAcademy mas com o foco em programação, acesse o site e veja você mesmo! e bom aprendizado!</p>
+
+<p>Att, Paulo Luan.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introdução ao Sistema de controle de versão GIT.]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/07/15/introducao-ao-sistema-de-controle-de-versao-git/"/>
+    <updated>2012-07-15T13:47:04+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/07/15/introducao-ao-sistema-de-controle-de-versao-git</id>
+    <content type="html"><![CDATA[<p>Primeiro de tudo, se você está lendo este post, é porque você tem interesse em aprender a utilizar o GIT, como pré-requisito deixo bem claro que você não deve ter preguiça!!! rs lendo e acompanhando tudo o que passarei neste post você vai ficar fera para começar com GIT e aprender demais com o mundo open-Source do <a href="https://github.com/">GITHUB</a>.</p>
+
+<!-- more -->
+
+
+<p>//
+//</p>
+
+<p>Sistemas de controle de versão são ESSENCIAIS no desenvolvimento de projetos, principalmente em projetos de desenvolvimento de software, não vou refazer a roda refazendo artigos que já existem, ao invés disso passarei o caminho das pedras para você! :D</p>
+
+<p>Quando conheci os sistemas de controle de versão fiquei APAIXONADO pelo seu funcionamento!! ele resolvia todos os problemas da minha vida kkkk eu fiz um post na minha época de apaixonado sobre os sistemas de controle de versão, se você não conhece e não sabe o que é não deixe de ler <a href="http://javafxbr.com/blog/?p=117">meu artigo</a> ;). Eu até ensinei <a href="http://javafxbr.com/blog/?p=125">como fazer um repositório SVN no google code</a>.</p>
+
+<p>Como tudo na vida pode ser melhorado, acabei conhecendo o <a href="http://git-scm.com/">GIT</a>, leia <a href="http://pt.wikipedia.org/wiki/Git">este artigo</a> para saber mais detalhes sobre ele. Eu sinceramente achava o SVN muito bom, e não via a necessidade de trocar para o GIT, mas depois de ler alguns artigos comecei a ficar interessado no uso do GIT como controlador de versões para meus projetos, principalmente depois de assistir o <a href="http://akitaonrails.com/2010/08/17/screencast-comecando-com-git">Screencast do Akita sobre GIT</a> (é extremamente essencial que você assista este Screencast!! :D sério você vai entender e verá como utilizar o GIT na prática!).</p>
+
+<p>Outra coisa que me motivou a utilizar GIT foi a série de podcasts do pessoal do GrokPodcast sobre GIT, recomendo que você ouça para abrir sua mente, o podcast foi dividido em três partes que você pode conferir nestes links: <a href="http://grokpodcast.com/2011/03/10/episodio-22-%E2%80%93-sistemas-de-controle-de-versao-%E2%80%93-parte-1/">Parte 1</a>, <a href="http://grokpodcast.com/2011/03/18/episodio-23-%E2%80%93-sistemas-de-controle-de-versao-git-%E2%80%93-parte-2/">Parte 2</a>, <a href="http://grokpodcast.com/2011/03/25/episodio-24-%E2%80%93-sistemas-de-controle-de-versao-github-%E2%80%93-parte-3/">Parte 3</a>.</p>
+
+<p>Apesar de estarem bastante desatualizados eu recomendo a leitura <a href="http://akitaonrails.com/2007/09/22/jogar-pedra-em-gato-morto-por-que-subversion-no-presta">deste</a> e <a href="http://akitaonrails.com/2008/04/02/micro-tutorial-de-git">deste outro</a> artigo.</p>
+
+<p>Futuramente farei um artigo falando um pouco sobre GITHUB e como criar um repositório de códigos neste serviço.</p>
+
+<p>Abraços!</p>
+
+<p>Paulo Luan</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[O que é DropBox? e como ele pode mudar minha vida?]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/07/15/o-que-e-dropbox-e-como-ele-pode-mudar-minha-vida/"/>
+    <updated>2012-07-15T12:26:17+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/07/15/o-que-e-dropbox-e-como-ele-pode-mudar-minha-vida</id>
+    <content type="html"><![CDATA[<p>//
+//</p>
+
+<p>DropBox é um sistema de armazenamento de arquivos na nuvem! é perfeito pois você pode acessar seus documentos de qualquer computador em qualquer lugar!! além disto, é possível fazer sincronização de vários computadores de forma automática, por exemplo, se você tem um computador no trabalho e o seu computador pessoal mas gostaria de que os dois sempre tivesse os mesmos arquivos sempre sincronizados o DropBox faz isso pra você! :D</p>
+
+<p>Você nunca mais vai perder os arquivos pois, caso aconteça algum dano no seu computador os seus arquivos estarão backupeados online!  <a href="http://db.tt/TlpQui7">acesse este Link</a> e faça a sua conta, é grátis! :D</p>
+
+<!-- more -->
+
+
+<p>E é legal que também dá pra selecionar quais pastas você quer que sincronize, logo, se você criar uma pasta &ldquo;Faculdade&rdquo; dá pra sincronizar somente esta pasta no computador da faculdade, e assim por diante. Olha só que legal <a href="https://www.dropbox.com/tour/">Este card explicativo</a> de como funciona o serviço do DropBox.</p>
+
+<p>Outro serviço semelhante é o <a href="https://drive.google.com/start">Google Drive!</a> do qual você tambem pode fazer backup nas nuvens de todos os seus arquivos.</p>
+
+<p>Abraços!</p>
+
+<p>Paulo Luan.</p>
+
+<p>//
+//</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cursos Gratuitos (Desenvolvimento Web, Lógica de Programação e Sistemas Linux de EAD)]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/07/15/cursos-gratuitos-desenvolvimento-web-logica-de-programacao-e-sistemas-linux-de-ead/"/>
+    <updated>2012-07-15T12:16:03+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/07/15/cursos-gratuitos-desenvolvimento-web-logica-de-programacao-e-sistemas-linux-de-ead</id>
+    <content type="html"><![CDATA[<p>A ActiveInfo, consultoria de treinamentos, disponibilizou gratuitamente alguns de seus cursos, todos eles são interessantíssimos!! :D eu comecei a ler o de criação de sites e eles possuem ótima didática e bastante organização no conteúdo do curso. Quem quiser conferir e fazer os treinamentos é só acessar as URLs abaixo:</p>
+
+<!-- more -->
+
+
+<p>//
+//</p>
+
+<p>Criação de Sites &ndash; HTML e CSS
+<a href="http://www.activeinfo.com.br/cursos/criacao-de-sites-html-e-css">http://www.activeinfo.com.br/cursos/criacao-de-sites-html-e-css</a></p>
+
+<p>Lógica da Programação na Prática
+<a href="http://www.activeinfo.com.br/cursos/logica-da-programacao-na-pratica">http://www.activeinfo.com.br/cursos/logica-da-programacao-na-pratica</a></p>
+
+<p>Administração de Sistemas Linux EAD
+<a href="http://www.activeinfo.com.br/cursos/administracao-de-sistemas-linux-ead">http://www.activeinfo.com.br/cursos/administracao-de-sistemas-linux-ead</a></p>
+
+<p>Abraços!</p>
+
+<p>Paulo Luan.</p>
+
+<p>//
+//</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Nginx - Como Listar suas pastas (AutoIndex) na página inicial.]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/03/28/nginx-como-listar-suas-pastas-autoindex-na-pagina-inicial/"/>
+    <updated>2012-03-28T11:48:04+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/03/28/nginx-como-listar-suas-pastas-autoindex-na-pagina-inicial</id>
+    <content type="html"><![CDATA[<p>O Nginx por default não lista as pastas do seus projetos que ficam em (/usr/share/nginx/www/), por exemplo, se você tiver apenas pastas com os seus projetos sem nenhuma página inicial o Nginx lançará um erro 403 pois não encontrará uma página inicial para acessar e não listará as pastas que existem neste diretório. Para solucionar este problema, modifique o arquivo de configurações do seu Nginx com o seguinte comando:</p>
+
+<!-- more -->
+
+
+
+
+<figure class='code'><figcaption><span>sudo gedit</span><a href='http://PauloLuan.github.io//github/etc/nginx/sites-available/default ```'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Vai ser algo parecido com isto o seu arquivo:
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> bash
+server {</p>
+
+<pre><code>listen   83; ## listen for ipv4; this line is default and implied
+#listen   [::]:80 default ipv6only=on; ## listen for ipv6
+
+root /usr/share/nginx/www;
+index index.html index.htm;
+
+# Make site accessible from http://localhost/
+server_name localhost;
+
+location / {
+    # First attempt to serve request as file, then
+    # as directory, then fall back to index.html
+    try_files $uri $uri/ /index.html;
+}
+
+location /doc {
+    root /usr/share;
+    autoindex on;
+    allow 127.0.0.1;
+    deny all;
+}
+
+location /images {
+    root /usr/share;
+    autoindex off;
+}```
+</code></pre>
+
+<p>Devemos alterar apenas a Tag &ldquo;location/ { &hellip; }&rdquo; adicionando o atributo &ldquo;autoindex on&rdquo; ficando assim:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>location / <span class="o">{</span>
+</span><span class='line'>        autoindex on;
+</span><span class='line'>  <span class="c"># First attempt to serve request as file, then</span>
+</span><span class='line'>  <span class="c"># as directory, then fall back to index.html</span>
+</span><span class='line'>  try_files <span class="nv">$uri</span> <span class="nv">$uri</span>/ /index.html;
+</span><span class='line'><span class="o">}</span><span class="sb">```</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>    Reinicie o servidor:
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> bash sudo /etc/init.d/nginx restart&#8220;`</p>
+
+<p>Comando útil para poder editar os arquivos do projeto:</p>
+
+<p><code>bash sudo chmod -R 777 /usr/share/nginx/www/</code></p>
+
+<p> Att,</p>
+
+<p>Paulo Luan</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Site com diversos exemplos de Modelagem de Bancos de Dados.]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/03/06/site-com-diversos-exemplos-de-modelagem-de-bancos-de-dados/"/>
+    <updated>2012-03-06T12:24:02+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/03/06/site-com-diversos-exemplos-de-modelagem-de-bancos-de-dados</id>
+    <content type="html"><![CDATA[<p>Para aqueles que assim como eu gostam de obter idéias a partir de exemplos prontos, eu indico um super site (esse vai mudar sua vida também hein!)</p>
+
+<p>é o <a href="http://www.databaseanswers.org/data_models/index.htm">Data Base Answers!</a> (<a href="http://www.databaseanswers.org/data_models/index.htm">http://www.databaseanswers.org/data_models/index.htm</a>)</p>
+
+<p>Nele você encontra modelos prontos de Banco de Dados para todos os tipos de sistemas! :D eu estou impressionado com a quantidade de coisas que tem lá, são mais de 900 Base de dados modeladas para você tirar uma idéia e criar a modelagem de seu banco de dados.</p>
+
+<p>Aproveitem! gostou? comente ;) um grande abraço!</p>
+
+<p>Att,
+Paulo Luan</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Como aprender a programar.]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/02/17/como-aprender-a-programar/"/>
+    <updated>2012-02-17T08:35:51+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/02/17/como-aprender-a-programar</id>
+    <content type="html"><![CDATA[<p>Programar é algo realmente prazeroso! É incrível e realmente espetacular ter uma idéia, pensar e construir do zero um programa.</p>
+
+<p>Aliás se você nunca programou já imaginou como funciona a construção de um software? Quem se simpatiza por informática com certeza se dará bem com programação, que é uma área bastante interessante, muda constantemente (sempre você aprende coisas novas, o seu trabalho nunca vai ser igual! :D), ganha bastante dinheiro (ebaaa rs), é divertido! E a demanda de mercado é bastante grande pra esta área.</p>
+
+<!-- more -->
+
+
+<p>//
+//</p>
+
+<p>Trabalhando com programação eu realmente me encontrei, e a cada dia vejo que eu tenho muuuuita coisa pra aprender e isso me motiva bastante! e você só aprende a programar programando! rs Quanto mais você pratica mais você encontra sentido para cada coisa que você aprende, mas deixando de blá blá blá programar não é um bicho de sete cabeças!</p>
+
+<p>Para aprender a programar basta que você seja curioso e dê uma olhada nos links abaixo, quem sabe você não goste de programar, e trabalhe feliz pelo resto da sua vida? (não se esqueça de me agradecer depois ;) )</p>
+
+<p>Observação: Cuidado! Programar pode te viciar! rs assim como eu você pode ficar maluco também! haushuashhuas</p>
+
+<p>Python é uma linguagem de programação bastante simples e recomendada para aprender a programar por sua sintaxe de fácil aprendizado. Achei este link interessantíssimo dos primeiros passos com programação aproveite ;) leia um trecho do que o autor descreve a razão de aprender programação:</p>
+
+<blockquote><p><em>&ldquo;<strong>Porque aprender a programar?</strong> A razão fundamental, que nos motivou a produzir este tutorial, é uma só: programar é divertido. É claro que nem todo mundo vai concordar com isso, assim como muita gente não acha graça nenhuma em jogar xadrez ou explorar cavernas. Ao contrário do xadrez e da espeleologia, a programação também é uma habilidade que tem forte demanda no mercado de trabalho.</em></p></blockquote>
+
+<p><em>Mas a dura realidade é que somente com centenas ou milhares de horas de experiência programando é que você estará apto a incluir essa disciplina em seu currículo e se dar bem em uma entrevista de emprego. Portanto nosso objetivo aqui é bem mais modesto do que transformar você em um programador profissional. O que estamos te oferecendo é uma introdução suave a esse tópico fascinante. Ao final, esperamos que você descubra se tem a vocação e a motivação necessárias para criar softwares, como hobby ou profissão.</em></p>
+
+<p><em>Antes de começar, apenas um aviso: o prazer de construir um programa pode causar dependência psicológica. Não é apenas por dinheiro que programadores do mundo inteiro varam noites escrevendo código.&ldquo;</em> [<em>Luciano Ramalho, Python Brasil</em>].</p>
+
+<p>Este tutorial sobre como aprender a programar em Python pode se encontrado aqui: <a href="http://python.org.br/wiki/AprendaProgramar">http://python.org.br/wiki/AprendaProgramar</a></p>
+
+<p>Outra linguagem amplamente utilizada e requisitada no mundo inteiro é Java, ser programador nesta linguagem poderá lhe render bons frutos e ser bastante requisitado no mercado. Java possui uma documentação muito boa! e muitos fóruns pra você tirar suas dúvidas. Pra quem está começando ou ainda nem começou a programar em Java, eu recomendo que você leia a apostila da Caelum (<a href="http://www.caelum.com.br/download/caelum-java-objetos-fj11.pdf">http://www.caelum.com.br/download/caelum-java-objetos-fj11.pdf</a>) o conteúdo é muito bem organizado e explicativo, além de falar detalhadamente quais são todos os componentes necessários para você programar nesta linguagem. Outra recomendação muito interessante é o site da T2TI mais especificamente este link (<a href="http://www.t2ti.com/curso/video/java/basico/java_starter.php">http://www.t2ti.com/curso/video/java/basico/java_starter.php</a>), lá você encontra uma série de tutoriais viciantes sobre programação em Java, Outras Apostilas muito boas e gratuitas sobre Java você encontra no site da K19 que oferece treinamentos de Programação, lá tem apostilas desde o básico (Lógica de Programação) até o avançado, confira e aproveite! (<a href="http://www.k19.com.br/downloads/apostilas-java">http://www.k19.com.br/downloads/apostilas-java</a>). Faça todos os exercícios dos PDFs que te passei e considere-se um Master Programador Java! :D</p>
+
+<p>Se você estiver programando e tiver alguma dúvida sobre como fazer um código o site (<a href="http://www.java2s.com/">http://www.java2s.com/</a>) pode te ajudar! lá você encontra milhões de trechos de código que irão te ajudar na implementação!</p>
+
+<p>Gostou deste Post? Comente! ficarei feliz em saber que você curtiu ;) um abraço à todos! (Por Paulo Luan)</p>
+
+<p>//
+//</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Salman Khan o melhor professor do mundo.]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/01/30/salman-khan-o-melhor-professor-do-mundo/"/>
+    <updated>2012-01-30T09:23:36+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/01/30/salman-khan-o-melhor-professor-do-mundo</id>
+    <content type="html"><![CDATA[<p>Navegando pela internet me deparei com a capa da Veja de janeiro de 2012 falando sobre o professor Salman Khan, o cara é um gênio que resolveu dedicar-se a ensinar as pessoas através de seus vídeos pela internet (recebendo como apoio alguns milhões do google :p ). O cara dá aulas de várias matérias e você pode conferir o canal oficial dele <a href="http://www.khanacademy.org/#browse">aqui</a>.</p>
+
+<!-- more -->
+
+
+<p>//
+//</p>
+
+<p>A fundação Lemann em parceria com a intel mantém um <a href="http://www.youtube.com/playlist?list=PL5EC0291F3B7451E2&amp;feature=plcp">canal no youtube</a> com a tradução dos vídeos do professor.</p>
+
+<p>Tem também aulas de <a href="http://www.khanacademy.org/video/recursive-fibonacci-example?playlist=Computer+Science">Ciências da Computação</a> em Python no site dele :D .</p>
+
+<p><a href="http://www.khanacademy.org/contribute">Neste Link</a> é possível contribuir com traduções para os vídeos do professor ;)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[O que é o JavaFX 2.0?]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/01/19/o-que-e-o-javafx-2-0/"/>
+    <updated>2012-01-19T14:10:09+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/01/19/o-que-e-o-javafx-2-0</id>
+    <content type="html"><![CDATA[<p>Este texto tem como base a documentação em inglês da Oracle sobre o JavaFX, estas informações podem ser encontradas <a href="http://docs.oracle.com/javafx/2.0/overview/jfxpub-overview.htm">Neste Link</a>.</p>
+
+<p>JavaFX é uma evolução da plataforma cliente do Java, ela é designada para criar aplicativos RIAs (Rich Internet Application ou Aplicações ricas para internet), que podem ser utilizados em Multiplataformas.</p>
+
+<!-- more -->
+
+
+<p>//
+//</p>
+
+<p>Em 2007 a Oracle lançou a primeira versão do JavaFX utilizando uma linguagem separada ao Java, o JavaFX Script, porém em 2010 ocorreu o anúncio da descontinuidade desta linguagem. Agora na versão 2.0, o JavaFX utiliza Java como linguagem de programação.</p>
+
+<p>Sendo uma API de alto desempenho, o JavaFX facilita o desenvolvimento de aplicações ricas em Interfaces Gráficas, além de oferecer um mecanismo que simplifica o desenvolvimento de aplicações que utilizam conteúdos multimídia.</p>
+
+<p>Características do JavaFX:</p>
+
+<ul>
+<li><p>Você pode usar o mesmo editor ou ferramentas que já utiliza para programar em Java.</p></li>
+<li><p>O JavaFX possue um novo motor gráfico para lidar com CPUs modernas, além de oferecer aceleração de hardware, o “Prism”, com este motor gráfico as modernas interfaces gráficas além de bonitas e suaves, ficam mais rápidas!</p></li>
+<li><p>FXML, baseada em XML esta nova linguagem de marcação declarativa permite modelar a interface gráfica da aplicação! :D o javaFX também permite usar CSS nesta modelagem.</p></li>
+<li><p>Possui uma documentação muito bem feita! <a href="http://PauloLuan.github.io//github//docs.oracle.com/javafx/2.0/api/index.html">Disponível aqui</a></p></li>
+</ul>
+
+
+<p>Veja mais detalhes sobre a arquitetura do JavaFX <a href="http://PauloLuan.github.io//github//docs.oracle.com/javafx/2.0/architecture/jfxpub-architecture.htm">Aqui</a>.</p>
+
+<p><a href="http://PauloLuan.github.io//github//download.oracle.com/otn-pub/java/javafx/2.0.2-b08/javafx_samples-2_0_2.zip">Neste Link</a> você encontra diversos exemplos incríveis do que pode ser feito utilizando o JavaFX! Emoção mesmo é abrir o arquivo “Ensemble.jar” e poder apreciar todo o poder desta obra prima!! (momento emocionado <em>&ndash;</em> HSUAHSUAHS).</p>
+
+<p>Brincadeiras a parte :P este arquivo de exemplo me deixou de queixo caído! A riqueza de detalhes da Interface Gráfica e todo o poder do javaFX em ação realmente me motivou a aprender mais sobre esta tecnologia! E por este motivo que criei uma série de tutoriais que pode ser visto na sessão de <a href="http://javalees.wordpress.com/category/programacao/javafx/">JavaFX</a> do nosso Blog.</p>
+
+<p>Gostou? Que tal começarmos com a <a href="http://javalees.wordpress.com/2012/01/18/como-instalar-javafx-2-0/">Instalação do JavaFX</a> e <a href="http://javalees.wordpress.com/2012/01/18/hello-world-em-javafx-2-0/">Como criar o seu primeiro aplicativo em JavaFX</a>.</p>
+
+<p>Fontes: <a href="http://docs.oracle.com/javafx/2.0/overview/jfxpub-overview.htm">http://docs.oracle.com/javafx/2.0/overview/jfxpub-overview.htm</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World em JavaFX 2.0]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/01/18/hello-world-em-javafx-2-0/"/>
+    <updated>2012-01-18T20:23:07+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/01/18/hello-world-em-javafx-2-0</id>
+    <content type="html"><![CDATA[<p>Leia:
+<a href="http://javalees.wordpress.com/2012/01/19/o-que-e-o-javafx-2-0/">O que é JavaFX 2.0?</a>
+<a href="http://javalees.wordpress.com/2012/01/18/como-instalar-javafx-2-0/">Como Instalar JavaFX 2.0</a></p>
+
+<p>Talvez por ser um produto da Oracle, a <a href="http://PauloLuan.github.io//github//netbeans.org/">IDE NetBeans</a> já é bem preparada para criar aplicações para JavaFX, no entanto, devido a esta facilidade vou fazer este tutorial demonstrando como criar aplicações JavaFX no Eclipse, que também é uma ótima IDE ;) então mãos à obra.</p>
+
+<!-- more -->
+
+
+<p>Esta aplicação pode ser criada em qualquer IDE do Eclipse versão Java, para começarmos, crie um novo Java Project, clicando com o botão direito &mdash;> New &mdash;> Java Project,  nomeie-o da maneira que quiser, e clique em Next:</p>
+
+<p><a href="http://javafxbr.com/blog/wp-content/uploads/2012/01/1.jpg"><img src="http://javafxbr.com/blog/wp-content/uploads/2012/01/1.jpg?w=1024" alt="" /></a></p>
+
+<p><a href="http://javafxbr.com/blog/wp-content/uploads/2012/01/2.jpg"><img src="http://javafxbr.com/blog/wp-content/uploads/2012/01/2.jpg?w=1024" alt="" /></a></p>
+
+<p>Clique na Aba Libraries, É aqui que ocorre a mágica hehe nós teremos que incluir o JAR externo que contém o conjunto de instruções do JavaFX, para isto clique em Add External Jars</p>
+
+<p><a href="http://javafxbr.com/blog/wp-content/uploads/2012/01/3.jpg"><img src="http://javafxbr.com/blog/wp-content/uploads/2012/01/3.jpg?w=1024" alt="" /></a></p>
+
+<p>Por padrão, o diretório de instalação é o X:Program FilesOracleJavaFX 2.0 SDKrtlibjfxrt.jar é este o caminho que teremos que indicar conforme a figura abaixo:</p>
+
+<p><a href="http://javafxbr.com/blog/wp-content/uploads/2012/01/4.jpg"><img src="http://javafxbr.com/blog/wp-content/uploads/2012/01/4.jpg?w=1024" alt="" /></a></p>
+
+<p>Depois disto, crie uma classe Java com qualquer nome, pode ser como no exemplo “TesteFX” e coloque o seguinte código:</p>
+
+<p>&#8220;` java package javalees.wordpress.com;</p>
+
+<p>import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;</p>
+
+<p>/<em>*
+ * @author PauloLuan
+ </em>/
+public class TesteFX extends Application {</p>
+
+<pre><code>/*
+ * repare que nossa classe herda da Classe Application, que é a classe que
+ * fornece todo o ciclo de vida para as aplicações em JavaFX
+ */
+
+/* Este método é obrigatório pois é herdado da classe Application */
+
+@Override
+public void start(Stage stage) throws Exception {
+    /*
+     * O Stage do parâmetro é o contâiner de nível superior como se fosse o
+     * "palco" principal da aplicação, e a "cena" (Scene) é a superfície de
+     * desenho para o conteúdo do aplicativo.
+     */
+
+    /*
+     * Uma aplicação JavaFX é composta por uma árvore hierárquica de nós,
+     * quando criamos uma cena temos que aderí-la à um grupo Pai que vai ser
+     * o seu nó superior. Isto fica explicito abaixo quando criamos a cena e
+     * passamos como parâmetro uma nova instância de um Grupo. Não entendeu?
+     * (nem eu! kkk brincadeira) o seguinte link demonstra uma aplicação de
+     * círculos coloridos:
+     *
+     * http://docs.oracle.com/javafx/2.0/get_started/jfxpub-get_started.htm
+     *
+     * Nesta aplicação fica mais fácil compreender a estrutura hieráquica de
+     * uma aplicação JavaFX.
+     */
+    Scene scene = new Scene(new Group(new Text(250, 30,
+            "JavaLees says: Hello World, JavaFX!")));
+
+    stage.setTitle("Hello World | JavaLees"); // modificamos o título do Janela
+    stage.setScene(scene); // enviamos a "cena"(Scene) desenhada para o contâiner superior (Stage)
+    stage.show(); // método que faz com que a aplicação seja exibida
+}
+
+public static void main(String[] args) {
+    launch(args); // único método chamado na classe Main que dispara nossa aplicação.
+}
+</code></pre>
+
+<p>}&#8220;`</p>
+
+<p>Eis que temos nossa primeira aplicação em JavaFX 2.0! :D</p>
+
+<p><a href="http://javafxbr.com/blog/wp-content/uploads/2012/01/6.jpg"><img src="http://javafxbr.com/blog/wp-content/uploads/2012/01/6.jpg" alt="primeira aplicação em javaFX!" /></a></p>
+
+<pre><code>primeira aplicação em javaFX!
+</code></pre>
+
+<p><a href="http://PauloLuan.github.io//github//docs.oracle.com/javafx/index.html">Aqui na Documentação</a> você encontra detalhes importantes sobre toda a estrutura e os componentes de uma aplicação do JavaFX.</p>
+
+<p>[twitter-follow screen_name=&lsquo;javalees&rsquo; show_count=&lsquo;no&rsquo; text_color=&lsquo;00ccff&rsquo;]</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Como instalar JavaFX 2.0]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/01/18/como-instalar-javafx-2-0/"/>
+    <updated>2012-01-18T19:53:31+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/01/18/como-instalar-javafx-2-0</id>
+    <content type="html"><![CDATA[<p>Bom, este artigo tem como intuito instalar todas as ferramentas necessárias para que possamos criar aplicações em JavaFX 2.0, para quem não sabe o que é javaFX acesse <a href="http://javalees.wordpress.com/2012/01/19/o-que-e-o-javafx-2-0/">este post</a>.</p>
+
+<!-- more -->
+
+
+<p>Para que possamos iniciar nossa programação, necessitaremos do SDK (Software Development Kit) do javaFX que é o conjunto de ferramentas que nos possibilita criar os programas nesta plataforma.</p>
+
+<p>Existem duas formas de se baixar o SDK para javaFX, uma delas é baixar a segunda atualização do SDK do Java SE (pois já vem com o javaFX acoplado) disponível <a href="http://PauloLuan.github.io//github//www.oracle.com/technetwork/java/javase/downloads/index.html">Neste Link</a>, ou acessar a página de downloads exclusivos do javaFX (caso você já tenha versões anteriores do SDK) disponível <a href="http://PauloLuan.github.io//github//www.oracle.com/technetwork/java/javafx/downloads/index.html">Neste Link</a> e escolher qual arquitetura é baseada o seu processador (32 ou 64 bits) e qual o seu sistema operacional, o JavaFX está somente disponível (por enquanto) para <strong>Windows e Mac</strong> =( então quem usa Linux vai ter que criar uma VM ou usar um dos sistemas operacionais citados. A Oracle indica utilizar as ferramentas mais recentes pra não rolar nenhuma espécie de incompatibilidade ou instabilidade, por precaução eu lhe indico baixar o SDK (do java e javaFX) e JRE mais novos dispostos nos links acima!</p>
+
+<p>A instalação para Windows (ainda não testei no MAC) é simples, basta baixar os arquivos que lhe indiquei abrí-los e seguir a instalação com o famoso next, next, next&hellip;</p>
+
+<p>Simples assim!</p>
+
+<p>Agora vamos criar nossa primeira aplicação! <a href="http://javalees.wordpress.com/2012/01/18/hello-world-em-javafx-2-0/">O Hello World em JavaFX!</a> :D</p>
+
+<p>[twitter-follow screen_name=&lsquo;javalees&rsquo; show_count=&lsquo;no&rsquo; text_color=&lsquo;00ccff&rsquo;]</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[O que é e como utilizar um sistema de controle de versão SVN]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/01/16/o-que-e-e-como-utilizar-um-sistema-de-controle-de-versao-svn/"/>
+    <updated>2012-01-16T11:09:17+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/01/16/o-que-e-e-como-utilizar-um-sistema-de-controle-de-versao-svn</id>
+    <content type="html"><![CDATA[<p>Atenção: Se você nunca utilizou um sistema de controle de versões, leia este artigo! (Gostaria muito que alguém tivesse dito estas dicas quando iniciei minha faculdade, teria mudado minha vida! rs então utilizem este artigo para facilitar a sua vida! Haushaush Espero que minha experiência possa lhe ajudar ;) Se gostar agradeça nos comentários, aperte CTRL+ D e adicionem nosso blog aos seus favoritos!)</p>
+
+<!-- more -->
+
+
+<p>Iniciei meu estágio como programador java em uma empresa de softwares, desde então nunca tinha trabalhado profissionalmente como programador, e apesar da faculdade ensinar grande parte da teoria envolvendo a construção de um aplicativo, você não consegue abstrair de maneira concreta os processos reais desta construção (a faculdade é muito acadêmica, quando você trabalha como programador as coisas realmente são muito diferentes! rs).</p>
+
+<p>É fantástico o número de ferramentas que existem para facilitar e organizar o trabalho em grupo (já que é impossível fazer um grande projeto individualmente), seja ele em uma organização ou até mesmo trabalhos em grupo da faculdade, quem já fez trabalhos de programação em grupo sabe como é ruim pegar arquivos a partir de pen-drives ou emails a parte do colega, além de que imagine se o seu amigo fez uma modificação em uma classe e você também fez várias alterações? Como juntar as diversas partes dos membros do grupo de forma eficaz, sem que nada seja perdido? Como controlar cada uma das alterações para que todos os membros tenham sempre a versão mais recente do sistema? Para isto existem os <a href="http://pt.wikipedia.org/wiki/Sistema_de_controle_de_vers%C3%A3o">“Sistemas de Controle de Versão!”</a> (fico até emocionado ao falar deles! <em>&ndash;</em> uahsuhasuhash).</p>
+
+<p>Nos sistemas de controle de versão é possível manter as versões sempre atualizadas sem perder nenhum dado! Isso só é possível pois todo o sistema fica armazenado em um servidor e cada um dos membros do grupo podem realizar modificações independentes, ou seja, as diversas alterações que ocorrerem durante o desenvolvimento do software (pode ser pra qualquer tipo de documento! Mas durante o artigo demonstrarei focando no desenvolvimento de programas) não serão substituídas por demais alterações! :D isto é fantástico pois todos os usuários podem fazer modificações NO MESMO ARQUIVO sem ter medo de sobrepor o trabalho realizado por outro desenvolvedor envolvido no projeto (que coisa linda!! :D ).</p>
+
+<p>Para manter este controle de alterações os sistemas de controle de versão, utilizam diversas metodologias avançadas! neste <a href="http://PauloLuan.github.io//github//svnbook-pt-br.googlecode.com/svn/snapshots/1.4/svn.intro.whatis.html"> Link </a> vocês podem ler a fundo como funciona a arquitetura do SVN ;) e como acontece esta mágica! rs leiam esta matéria pois é muito esclarecedora e fornece de maneira bastante técnica os conceitos do SVN.</p>
+
+<p>Os sistemas de controle de versão mais conhecidos são: <a href="http://PauloLuan.github.io//github//pt.wikipedia.org/wiki/Git">GIT</a>, <a href="http://en.wikipedia.org/wiki/Mercurial"> Mercurial</a> e <a href="http://PauloLuan.github.io//github//en.wikipedia.org/wiki/Apache_Subversion">SVN (ou Subversion) </a>, farei a abordagem do SVN pois é o sistema que estou utilizando em meu trabalho, no entanto não posso afirmar se os outros são melhores ou piores (estudarei e farei testes entre eles para chegar a uma conclusão! ;) vou fazer um post sobre isto futuramente).</p>
+
+<p>Bom, mãos a obra! Prepare-se pois agora vamos criar um repositório SVN de verdade utilizando o Google Code! <a href="http://javafxbr.com/blog/?p=125">Clique aqui para começarmos!</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Traduções de Jogos de Videogames para Português]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/01/14/traducoes-de-jogos-de-videogames-para-portugues/"/>
+    <updated>2012-01-14T15:45:01+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/01/14/traducoes-de-jogos-de-videogames-para-portugues</id>
+    <content type="html"><![CDATA[<p>Quando eu jogo videogames minha maior dificuldade é o entendimento da história do jogo, na verdade creio que grande parte dos jogadores tem essa dificuldade, apesar da acessibilidade ao aprendizado de novas línguas, nem todos possuem o entendimento aprimorado de outra língua além de sua língua nativa, no entanto o meu objetivo neste artigo é falar um pouco sobre traduções de jogos para português!</p>
+
+<!-- more -->
+
+
+<p>Para a plataforma de Pcs a tradução dos jogos já é bastante consolidada para o nosso idioma, para quem ainda não conhece o fórum da <a href="http://www.gamevicio.com/">Gamevicio</a> (fica a dica) possui diversas traduções da maioria dos jogos lançados para PC!. Lá existe um <a href="http://PauloLuan.github.io//github//www.gamevicio.com/i/projetos-de-traducao/index.html">projeto de tradução</a> de jogos para esta plataforma, sendo que o funcionamento é uma espécie de “Tradução Open-Source” onde todos os usuários podem pegar os arquivos e traduzir para o português. Acho fantástica esta ideia! Pois as traduções saem muuuuito rápidas e com uma qualidade incrível!</p>
+
+<p>O grande problema é que nem todos os gamers são usuários de Pcs, e traduções para Xbox 360, Playstation 3 e outros consoles são raríssimas! Na minha opinião por dois motivos: primeiro que a arquitetura de um jogo para console é diferente, logo, muito mais complexo de fazer uma modificação funcionar, segundo e o ponto mais crítico da coisa: é considerado pirataria, pois é necessário queimar uma nova mídia ou utilizar algum meio “paralelo” ao original para que o jogo possa funcionar.</p>
+
+<p>Há algum tempo atrás fui em uma palestra interessantíssima sobre <a href="http://www.visgraf.impa.br/seminar/slides/seminario-esteban.pdf">“O Futuro dos Videogames”</a> com o palestrante <a href="http://www.inf.pucminas.br/sbc2010/index.php?mact=News,cntnt01,print,0&amp;cntnt01articleid=14&amp;cntnt01showtemplate=false&amp;cntnt01returnid=57"> Esteban Walter Gonzalez Clua </a> este cara é diretamente ligado ao desenvolvimento e tecnologias de games, não perdendo a oportunidade o questionei por qual motivo os jogos lançados no brasil ainda não são traduzidos, ele me respondeu que o principal motivo é a pirataria, pelo que entendi de sua resposta, as produtoras ainda possuem certo receio em explorar o mercado brasileiro por conta da enorme pirataria existente em nosso país. O principal problema em relação à pirataria é a questão dos altos preços e impostos (absurdos) que pagamos sobre os produtos tecnológicos.</p>
+
+<p>De certa forma não concordo com a posição das produtoras, pois o esforço para a tradução de um jogo não interfere em nada no custo de uma produção de um grande jogo! Imaginem um jogo como GTA 4 que custou miseros <a href="http://games.terra.com.br/noticias/0,,OI4288480-EI1702,00-Producao+de+Grand+Theft+Auto+e+a+mais+cara+da+historia.html">100 milhões de dólares!</a> ou God of war 3 que custou <a href="http://PauloLuan.github.io//github//www.gamevicio.com/i/noticias/40/40315-revelado-o-custo-de-producao-de-god-of-war-iii/index.html">44 Milhões de dólares</a> para serem produzidos, o custo da tradução de um jogo é quase que inexistente em uma produção como esta.
+Existem diversas discussões sobre <a href="http://PauloLuan.github.io//github//www.romhacking.trd.br/index.php?topic=6968.0">projetos de traduções</a> independentes para tradução de jogos de console para PT-BR, mas talvez pela complexidade de se mexer em uma plataforma de consoles dificulta este processo, como é o caso <a href="http://PauloLuan.github.io//github//nowloaded.org/forum/index.php?showtopic=135640">deste tópico</a> que parece ter morrido (rs).</p>
+
+<p>Eu me motivo pra caramba quando penso em jogar games traduzidos em consoles! Imaginem poder entender perfeitamente todos os jogos em sua língua nativa! Seria muito bom!</p>
+
+<p>Eu tenho uma solução para este caso! ;) se o problema para as produtoras é o custo para a tradução dos idiomas, deveria ser feito um projeto open-source da tradução dos seus jogos, neste caso, existiriam diversos projetos de um mesmo jogo onde cada pessoa do mundo pudesse entrar e traduzir o seu game para sua língua nativa, logo, todos os seus jogos seriam traduzidos para a maioria das línguas de todo o mundo! A dificuldade de se mexer com a arquitetura do sistema ficaria por conta da produtora (pois ela tem todas as ferramentas) e a pirataria não seria necessária já que cópias originais seriam traduzidas para a língua do usuário!!!</p>
+
+<p>Neste caso, garanto que os jogos seriam muito mais vendidos em todo o mundo pois a acessibilidade aumentaria de maneira espetacular, ou seja, as produtoras ganhariam bastante dinheiro e em troca os games poderiam ficar mais baratos por conta das vendas. O governo por sua vez poderia diminuir o absurdo que pagamos dos impostos e mais pessoas poderiam comprar jogos originais!! pois não é justo pagar 200 reais em um jogo sendo que ele é vendido por ¼ do preço fora do país!!!!</p>
+
+<p>É uma pena que isto não acontece no mundo real, por conta do capitalismo e corrupção que existe em nosso país! Apesar do pouco tempo que tenho disponível sempre estudo como explorar a plataforma Xbox 360 para que novos projetos de tradução open-source sejam criados! Se conseguir encontrar novas soluções ou até mesmo criar um novo aplicativo que faça com que novos mods sejam criados postarei aqui em meu blog! Pois quem tem a força somos nós usuários! Então se não mexermos a bunda da frente do computador e fazer o negócio acontecer dificilmente (ou raramente) os jogos serão traduzidos para nossa língua! Pois não vou dizer que é facil mas não é impossível! ;)</p>
+
+<p>Vejam alguns jogos para xbox 360 que já foram traduzidos para nossa língua (não encontrei projetos pra playstation 3, quem encontrar poste nos comentários por favor):</p>
+
+<p><a href="http://PauloLuan.github.io//github//www.romhacking.trd.br/index.php?topic=4992.0%E2%80%9D">Silent Hill Homecoming</a>
+<a href="http://PauloLuan.github.io//github//www.romhacking.trd.br/index.php?topic=7004.0%E2%80%9D">Alan Wake</a>
+<a href="http://PauloLuan.github.io//github//www.romhacking.trd.br/index.php?topic=6336.0%E2%80%9D">GTA 4</a></p>
+
+<p>Lista bastante extensa (creio que são todos os jogos traduzidos para português da plataforma xbox 360:)
+<a href="http://teemgames.blogspot.com/2010/04/jogos-de-xbox-360-em-portugues-do.html">http://teemgames.blogspot.com/2010/04/jogos-de-xbox-360-em-portugues-do.html</a></p>
+
+<p>Links interessantes sobre XBOX 360:
+<a href="http://www.romhacking.trd.br/index.php?topic=6968.0">http://www.romhacking.trd.br/index.php?topic=6968.0</a>
+<a href="http://nowloaded.org/forum/index.php?showtopic=135640">http://nowloaded.org/forum/index.php?showtopic=135640</a></p>
+
+<p>Se tiver algum link interessante sobre este tema poste nos comentários.</p>
+
+<p>Gostou? Deixe um comentário! ;) ficarei feliz em saber o que achou do meu post! Abraços a todos!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Códigos-Fontes de diversas linguagens de programação]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/01/13/codigos-fontes-de-diversas-linguagens-de-programacao/"/>
+    <updated>2012-01-13T10:08:45+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/01/13/codigos-fontes-de-diversas-linguagens-de-programacao</id>
+    <content type="html"><![CDATA[<p><strong>Atenção: Mais um post da série &ldquo;você não pode morrer sem saber&rdquo; ;) rs site muito bom! </strong></p>
+
+<p>Para quem é programador ou gosta de programar, sempre se encontrou (ou ainda vai encontrar) uma situação em que você necessita não apenas de uma explicação de como algo funciona, mas sim de um código que exemplifique tal situação.</p>
+
+<!-- more -->
+
+
+<p>Depois que me indicaram<a href="http://www.java2s.com/"> este site </a> minha vida mudou! (putz quanto drama haushuash) mas de verdade! é muito o bom o site! nele você encontra códigos de tudo quanto é situação que necessita, além de possuir códigos de várias linguagens de programação e até banco de dados! Então quando você necessitar de ver um exemplo de código-fonte em alguma linguagem, basta acessar <a href="http://www.java2s.com/"> www.java2s.com </a> e se divertir! (hasuhuas)</p>
+
+<p>Outro site interessante é o &ldquo;Really Big Index&rdquo; (<a href="http://docs.oracle.com/javase/tutorial/reallybigindex.html">http://docs.oracle.com/javase/tutorial/reallybigindex.html</a>). Este site reúne todos os tutoriais feitos pela Oracle em um único local, ou seja, basta que você aperte CTRL + F fazer a busca pelo item desejado e acessar o tutorial :D</p>
+
+<p>O RoseIndia (<a href="http://www.roseindia.net/">http://www.roseindia.net/</a>) é um site parecido com o Java2s, possui diversos tutoriais sobre BD, Java, Struts, Hibernate, entre outros&hellip;</p>
+
+<p>Abraços!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Window Builder - Ferramenta de criação de interfaces gráficas Java]]></title>
+    <summary><![CDATA[]]></summary>
+    <link href="http://PauloLuan.github.io//github/blog/2012/01/12/window-builder-ferramenta-de-criacao-de-interfaces-graficas-java/"/>
+    <updated>2012-01-12T10:30:55+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/01/12/window-builder-ferramenta-de-criacao-de-interfaces-graficas-java</id>
+    <content type="html"><![CDATA[<p><strong>
+Atenção: Este artigo vai mudar a sua vida e o seu modo de fazer interfaces gráficas! Leia-o com atenção ;) </strong></p>
+
+<p>Esta informação eu tenho que compartilhar! quem faz interface gráfica com Java e utiliza o <a href="http://PauloLuan.github.io//github//netbeans.org/%E2%80%9D"> NetBeans </a> ou outras IDEs para &ldquo;desenhar&rdquo; a aplicação, geralmente gera lixo pra caramba no código e ainda fica restrito demais pra mexer no código gerado! então pra quem usa <a href="http://PauloLuan.github.io//github//www.eclipse.org/downloads/%E2%80%9D"> Eclipse </a> tem que conhecer o Window Builder!</p>
+
+<!-- more -->
+
+
+<p>O Window Builder é uma incrível ferramenta desenvolvida pelo google! (vindo do google não se pode esperar algo ruim) para criação de interfaces gráficas (GUI) em java!
+Utilizando os modos escritos e drag-n-drop (arrastar componentes na tela), você pode criar GUIs rapidamente, esta ferramenta cria GUIs para java Swing e para alguns produtos da googles (só explorei a parte “Java” do aplicativo).
+O Window Builder me chamou a atenção pelo fato da liberdade TOTAL na construção das interfaces! quando você altera algum componente no modo escrito ele automaticamente modifica a parte visual! (e vice-versa) ou seja, você pode alterar o código “na mão” com toda a liberdade! Aleḿ de não gerar NENHUMA DEPENDÊNCIA com IDEs ou APIs.
+O objetivo deste artigo é demonstrar uma ferramenta alternativa de criação de interfaces gráficas (GUI) de maneira simples e descomplicada. Neste tutorial, demonstrarei como instalar o Window Builder no Eclipse.</p>
+
+<p>Para instalar o Window Builder abra o Eclipse, clique na aba help → Install new software</p>
+
+<p><img src="http://javalees.files.wordpress.com/2012/01/install-new-software1.jpg" alt="Instalação de plugins no eclipse" /></p>
+
+<p>Acesse <a href="http://eclipse.org/windowbuilder/download.php"> este site </a> e veja qual é a versão do seu eclipse (no meu caso o eclipse helios) clique com o botão direito no “link” da sua versão e copie a URL, como no exemplo:</p>
+
+<p><img src="http://javalees.files.wordpress.com/2012/01/site-do-eclipse.jpg" alt="Site do Eclipse" /></p>
+
+<p>Cole na janela que foi aberta anteriormente no eclipse:</p>
+
+<p><img src="http://javalees.files.wordpress.com/2012/01/colando-url.jpg" alt="Colando URL na instalação do Eclipse" /></p>
+
+<p>Agora ficou fácil né? Selecione as três opções, continue lendo as instruções no eclipse, aceite e continue a instalação clicando em next, next, next (rs). Agora veja como utilizar o Window Builder  criando uma pequena calculadora em java! (em breve!)</p>
+
+<p>Abraços! (dicas, críticas e sugestões são bem-vindas nos comentários!)</p>
+]]></content>
+  </entry>
+  
+</feed>

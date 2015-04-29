@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Topic: apt-get, | Diário de programador]]></title>
+  <link href="http://PauloLuan.github.io//github/blog/categories/apt-get/atom.xml" rel="self"/>
+  <link href="http://PauloLuan.github.io//github/"/>
+  <updated>2015-04-29T11:53:11+00:00</updated>
+  <id>http://PauloLuan.github.io//github/</id>
+  <author>
+    <name><![CDATA[Paulo Luan]]></name>
+    <email><![CDATA[pauloluan.inova@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Apt-get no Windows]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2015/04/28/apt-get-no-windows/"/>
+    <updated>2015-04-28T20:23:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2015/04/28/apt-get-no-windows</id>
+    <content type="html"><![CDATA[<p>Transforme o seu windows em um Linux-Like com o chocolatey, com ele você poderá instalar vários aplicativos através de um comando simples no terminal. Nunca mais instale o asktoolbar (ou hao123) por engano ;)</p>
+
+<!-- more -->
+
+
+<p>Abra o cmd com privilégios de administrador, e digite:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bat'><span class='line'><span class="p">@</span>powershell -NoProfile -ExecutionPolicy unrestricted -Command &amp;ldquo;iex ((new-object net.webclient).DownloadString(&amp;lsquo;<span class="p">&lt;</span><span class="n">a</span> href<span class="o">=</span><span class="s2">&quot;https://chocolatey.org/install.ps1&quot;</span><span class="p">&gt;</span><span class="n">https</span>:<span class="n">//chocolatey.org/install.ps1&lt;/a&gt;&amp;rsquo;))&amp;rdquo;</span> &amp;amp;&amp;amp; <span class="k">SET</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">%PATH%</span>;<span class="nv">%ALLUSERSPROFILE%</span>\chocolatey\bin
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Agora você pode instalar qualquer um dos pacotes disponíveis no site oficial. Para procurar os pacotes basta acessar o <a href="https://chocolatey.org/packages">site oficial</a>  e procurar, você pode instalar o chrome (não precisa mais usar o internet explorer para isto), firefox, sumatrapdf, java, flash, nodejs, git, svn e muitos outros, tudo via choco install!</p>
+
+<p>para instalar o git por exemplo:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bat'><span class='line'>choco install git -y
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Ele vai instalar tudo automáticamente, a opção -y é para que ele instale sem perguntar nada, por default ele exibe o script que vai ser executado na sua máquina, pois todos os pacotes são feitos pela comunidade, logo, pode ser que dentro do script que será executado possa ter algum tipo de requisição que você não queria que seja executada, o que é muito raro, já que todos os pacotes passam por um processo de aprovação rígido pelos admins do projeto, o que por vezes gera certa lentidão na aprovação de um pacote no caso de você criar um.</p>
+
+<p>Adicionalmente, as mesmas instruções estão no site do <a href="https://chocolatey.org/">chocolatey</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

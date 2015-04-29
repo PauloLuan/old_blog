@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Topic: JavaFX | Diário de programador]]></title>
+  <link href="http://PauloLuan.github.io//github/blog/categories/javafx/atom.xml" rel="self"/>
+  <link href="http://PauloLuan.github.io//github/"/>
+  <updated>2015-04-29T11:53:11+00:00</updated>
+  <id>http://PauloLuan.github.io//github/</id>
+  <author>
+    <name><![CDATA[Paulo Luan]]></name>
+    <email><![CDATA[pauloluan.inova@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[O que é o JavaFX 2.0?]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2012/01/19/o-que-e-o-javafx-2-0/"/>
+    <updated>2012-01-19T14:10:09+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/01/19/o-que-e-o-javafx-2-0</id>
+    <content type="html"><![CDATA[<p>Este texto tem como base a documentação em inglês da Oracle sobre o JavaFX, estas informações podem ser encontradas <a href="http://docs.oracle.com/javafx/2.0/overview/jfxpub-overview.htm">Neste Link</a>.</p>
+
+<p>JavaFX é uma evolução da plataforma cliente do Java, ela é designada para criar aplicativos RIAs (Rich Internet Application ou Aplicações ricas para internet), que podem ser utilizados em Multiplataformas.</p>
+
+<!-- more -->
+
+
+<p>//
+//</p>
+
+<p>Em 2007 a Oracle lançou a primeira versão do JavaFX utilizando uma linguagem separada ao Java, o JavaFX Script, porém em 2010 ocorreu o anúncio da descontinuidade desta linguagem. Agora na versão 2.0, o JavaFX utiliza Java como linguagem de programação.</p>
+
+<p>Sendo uma API de alto desempenho, o JavaFX facilita o desenvolvimento de aplicações ricas em Interfaces Gráficas, além de oferecer um mecanismo que simplifica o desenvolvimento de aplicações que utilizam conteúdos multimídia.</p>
+
+<p>Características do JavaFX:</p>
+
+<ul>
+<li><p>Você pode usar o mesmo editor ou ferramentas que já utiliza para programar em Java.</p></li>
+<li><p>O JavaFX possue um novo motor gráfico para lidar com CPUs modernas, além de oferecer aceleração de hardware, o “Prism”, com este motor gráfico as modernas interfaces gráficas além de bonitas e suaves, ficam mais rápidas!</p></li>
+<li><p>FXML, baseada em XML esta nova linguagem de marcação declarativa permite modelar a interface gráfica da aplicação! :D o javaFX também permite usar CSS nesta modelagem.</p></li>
+<li><p>Possui uma documentação muito bem feita! <a href="//docs.oracle.com/javafx/2.0/api/index.html">Disponível aqui</a></p></li>
+</ul>
+
+
+<p>Veja mais detalhes sobre a arquitetura do JavaFX <a href="//docs.oracle.com/javafx/2.0/architecture/jfxpub-architecture.htm">Aqui</a>.</p>
+
+<p><a href="//download.oracle.com/otn-pub/java/javafx/2.0.2-b08/javafx_samples-2_0_2.zip">Neste Link</a> você encontra diversos exemplos incríveis do que pode ser feito utilizando o JavaFX! Emoção mesmo é abrir o arquivo “Ensemble.jar” e poder apreciar todo o poder desta obra prima!! (momento emocionado <em>&ndash;</em> HSUAHSUAHS).</p>
+
+<p>Brincadeiras a parte :P este arquivo de exemplo me deixou de queixo caído! A riqueza de detalhes da Interface Gráfica e todo o poder do javaFX em ação realmente me motivou a aprender mais sobre esta tecnologia! E por este motivo que criei uma série de tutoriais que pode ser visto na sessão de <a href="http://javalees.wordpress.com/category/programacao/javafx/">JavaFX</a> do nosso Blog.</p>
+
+<p>Gostou? Que tal começarmos com a <a href="http://javalees.wordpress.com/2012/01/18/como-instalar-javafx-2-0/">Instalação do JavaFX</a> e <a href="http://javalees.wordpress.com/2012/01/18/hello-world-em-javafx-2-0/">Como criar o seu primeiro aplicativo em JavaFX</a>.</p>
+
+<p>Fontes: <a href="http://docs.oracle.com/javafx/2.0/overview/jfxpub-overview.htm">http://docs.oracle.com/javafx/2.0/overview/jfxpub-overview.htm</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World em JavaFX 2.0]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2012/01/18/hello-world-em-javafx-2-0/"/>
+    <updated>2012-01-18T20:23:07+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/01/18/hello-world-em-javafx-2-0</id>
+    <content type="html"><![CDATA[<p>Leia:
+<a href="http://javalees.wordpress.com/2012/01/19/o-que-e-o-javafx-2-0/">O que é JavaFX 2.0?</a>
+<a href="http://javalees.wordpress.com/2012/01/18/como-instalar-javafx-2-0/">Como Instalar JavaFX 2.0</a></p>
+
+<p>Talvez por ser um produto da Oracle, a <a href="//netbeans.org/">IDE NetBeans</a> já é bem preparada para criar aplicações para JavaFX, no entanto, devido a esta facilidade vou fazer este tutorial demonstrando como criar aplicações JavaFX no Eclipse, que também é uma ótima IDE ;) então mãos à obra.</p>
+
+<!-- more -->
+
+
+<p>Esta aplicação pode ser criada em qualquer IDE do Eclipse versão Java, para começarmos, crie um novo Java Project, clicando com o botão direito &mdash;> New &mdash;> Java Project,  nomeie-o da maneira que quiser, e clique em Next:</p>
+
+<p><a href="http://javafxbr.com/blog/wp-content/uploads/2012/01/1.jpg"><img src="http://javafxbr.com/blog/wp-content/uploads/2012/01/1.jpg?w=1024" alt="" /></a></p>
+
+<p><a href="http://javafxbr.com/blog/wp-content/uploads/2012/01/2.jpg"><img src="http://javafxbr.com/blog/wp-content/uploads/2012/01/2.jpg?w=1024" alt="" /></a></p>
+
+<p>Clique na Aba Libraries, É aqui que ocorre a mágica hehe nós teremos que incluir o JAR externo que contém o conjunto de instruções do JavaFX, para isto clique em Add External Jars</p>
+
+<p><a href="http://javafxbr.com/blog/wp-content/uploads/2012/01/3.jpg"><img src="http://javafxbr.com/blog/wp-content/uploads/2012/01/3.jpg?w=1024" alt="" /></a></p>
+
+<p>Por padrão, o diretório de instalação é o X:Program FilesOracleJavaFX 2.0 SDKrtlibjfxrt.jar é este o caminho que teremos que indicar conforme a figura abaixo:</p>
+
+<p><a href="http://javafxbr.com/blog/wp-content/uploads/2012/01/4.jpg"><img src="http://javafxbr.com/blog/wp-content/uploads/2012/01/4.jpg?w=1024" alt="" /></a></p>
+
+<p>Depois disto, crie uma classe Java com qualquer nome, pode ser como no exemplo “TesteFX” e coloque o seguinte código:</p>
+
+<p>``` java package javalees.wordpress.com;</p>
+
+<p>import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;</p>
+
+<p>/<em>*
+ * @author PauloLuan
+ </em>/
+public class TesteFX extends Application {</p>
+
+<pre><code>/*
+ * repare que nossa classe herda da Classe Application, que é a classe que
+ * fornece todo o ciclo de vida para as aplicações em JavaFX
+ */
+
+/* Este método é obrigatório pois é herdado da classe Application */
+
+@Override
+public void start(Stage stage) throws Exception {
+    /*
+     * O Stage do parâmetro é o contâiner de nível superior como se fosse o
+     * "palco" principal da aplicação, e a "cena" (Scene) é a superfície de
+     * desenho para o conteúdo do aplicativo.
+     */
+
+    /*
+     * Uma aplicação JavaFX é composta por uma árvore hierárquica de nós,
+     * quando criamos uma cena temos que aderí-la à um grupo Pai que vai ser
+     * o seu nó superior. Isto fica explicito abaixo quando criamos a cena e
+     * passamos como parâmetro uma nova instância de um Grupo. Não entendeu?
+     * (nem eu! kkk brincadeira) o seguinte link demonstra uma aplicação de
+     * círculos coloridos:
+     *
+     * http://docs.oracle.com/javafx/2.0/get_started/jfxpub-get_started.htm
+     *
+     * Nesta aplicação fica mais fácil compreender a estrutura hieráquica de
+     * uma aplicação JavaFX.
+     */
+    Scene scene = new Scene(new Group(new Text(250, 30,
+            "JavaLees says: Hello World, JavaFX!")));
+
+    stage.setTitle("Hello World | JavaLees"); // modificamos o título do Janela
+    stage.setScene(scene); // enviamos a "cena"(Scene) desenhada para o contâiner superior (Stage)
+    stage.show(); // método que faz com que a aplicação seja exibida
+}
+
+public static void main(String[] args) {
+    launch(args); // único método chamado na classe Main que dispara nossa aplicação.
+}
+</code></pre>
+
+<p>}```</p>
+
+<p>Eis que temos nossa primeira aplicação em JavaFX 2.0! :D</p>
+
+<p><a href="http://javafxbr.com/blog/wp-content/uploads/2012/01/6.jpg"><img src="http://javafxbr.com/blog/wp-content/uploads/2012/01/6.jpg" alt="primeira aplicação em javaFX!" /></a></p>
+
+<pre><code>primeira aplicação em javaFX!
+</code></pre>
+
+<p><a href="//docs.oracle.com/javafx/index.html">Aqui na Documentação</a> você encontra detalhes importantes sobre toda a estrutura e os componentes de uma aplicação do JavaFX.</p>
+
+<p>[twitter-follow screen_name=&lsquo;javalees&rsquo; show_count=&lsquo;no&rsquo; text_color=&lsquo;00ccff&rsquo;]</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Como instalar JavaFX 2.0]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2012/01/18/como-instalar-javafx-2-0/"/>
+    <updated>2012-01-18T19:53:31+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/01/18/como-instalar-javafx-2-0</id>
+    <content type="html"><![CDATA[<p>Bom, este artigo tem como intuito instalar todas as ferramentas necessárias para que possamos criar aplicações em JavaFX 2.0, para quem não sabe o que é javaFX acesse <a href="http://javalees.wordpress.com/2012/01/19/o-que-e-o-javafx-2-0/">este post</a>.</p>
+
+<!-- more -->
+
+
+<p>Para que possamos iniciar nossa programação, necessitaremos do SDK (Software Development Kit) do javaFX que é o conjunto de ferramentas que nos possibilita criar os programas nesta plataforma.</p>
+
+<p>Existem duas formas de se baixar o SDK para javaFX, uma delas é baixar a segunda atualização do SDK do Java SE (pois já vem com o javaFX acoplado) disponível <a href="//www.oracle.com/technetwork/java/javase/downloads/index.html">Neste Link</a>, ou acessar a página de downloads exclusivos do javaFX (caso você já tenha versões anteriores do SDK) disponível <a href="//www.oracle.com/technetwork/java/javafx/downloads/index.html">Neste Link</a> e escolher qual arquitetura é baseada o seu processador (32 ou 64 bits) e qual o seu sistema operacional, o JavaFX está somente disponível (por enquanto) para <strong>Windows e Mac</strong> =( então quem usa Linux vai ter que criar uma VM ou usar um dos sistemas operacionais citados. A Oracle indica utilizar as ferramentas mais recentes pra não rolar nenhuma espécie de incompatibilidade ou instabilidade, por precaução eu lhe indico baixar o SDK (do java e javaFX) e JRE mais novos dispostos nos links acima!</p>
+
+<p>A instalação para Windows (ainda não testei no MAC) é simples, basta baixar os arquivos que lhe indiquei abrí-los e seguir a instalação com o famoso next, next, next&hellip;</p>
+
+<p>Simples assim!</p>
+
+<p>Agora vamos criar nossa primeira aplicação! <a href="http://javalees.wordpress.com/2012/01/18/hello-world-em-javafx-2-0/">O Hello World em JavaFX!</a> :D</p>
+
+<p>[twitter-follow screen_name=&lsquo;javalees&rsquo; show_count=&lsquo;no&rsquo; text_color=&lsquo;00ccff&rsquo;]</p>
+]]></content>
+  </entry>
+  
+</feed>

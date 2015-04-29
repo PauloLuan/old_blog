@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Topic: Android | Diário de programador]]></title>
+  <link href="http://PauloLuan.github.io//github/blog/categories/android/atom.xml" rel="self"/>
+  <link href="http://PauloLuan.github.io//github/"/>
+  <updated>2015-04-29T11:53:11+00:00</updated>
+  <id>http://PauloLuan.github.io//github/</id>
+  <author>
+    <name><![CDATA[Paulo Luan]]></name>
+    <email><![CDATA[pauloluan.inova@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Configurando ambiente para desenvolvimento Android]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/11/04/configurando-ambiente-para-desenvolvimento-android/"/>
+    <updated>2013-11-04T17:18:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/11/04/configurando-ambiente-para-desenvolvimento-android</id>
+    <content type="html"><![CDATA[<p>Fontes:</p>
+
+<p><a href="http://spring.io/guides/gs/android/">http://spring.io/guides/gs/android/</a>
+<a href="http://spring.io/guides/gs/maven-android/">http://spring.io/guides/gs/maven-android/</a>
+<a href="https://github.com/mosabua/maven-android-sdk-deployer">https://github.com/mosabua/maven-android-sdk-deployer</a></p>
+]]></content>
+  </entry>
+  
+</feed>

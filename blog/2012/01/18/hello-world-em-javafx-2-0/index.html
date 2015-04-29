@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Hello World em JavaFX 2.0 - Diário de programador</title>
+  <meta name="author" content="Paulo Luan">
+
+  
+  <meta name="description" content="O mundo precisa saber disto...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://PauloLuan.github.io//github/blog/2012/01/18/hello-world-em-javafx-2-0">
+  <link href="/blog/favicon.png" rel="icon">
+  <link href="/blog/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/blog/atom.xml" rel="alternate" title="Diário de programador" type="application/atom+xml">
+  <script src="/blog/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/blog/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-41007005-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/blog/">Diário de programador</a></h1>
+  
+    <h2>Códigos, anotações e pensamentos.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation">  
+  
+  
+<ul class="main-navigation">
+  <li><a href="/blog/blog/archives">Blog</a></li>
+  <li><a href="/blog/about">Sobre o Autor</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Hello World em JavaFX 2.0</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-01-18T20:23:07+00:00" pubdate data-updated="true">Jan 18<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/javafx/'>JavaFX</a>
+  
+</span>
+
+
+        
+          <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Leia:
+<a href="http://javalees.wordpress.com/2012/01/19/o-que-e-o-javafx-2-0/">O que é JavaFX 2.0?</a>
+<a href="http://javalees.wordpress.com/2012/01/18/como-instalar-javafx-2-0/">Como Instalar JavaFX 2.0</a></p>
+
+<p>Talvez por ser um produto da Oracle, a <a href="/blog//netbeans.org/">IDE NetBeans</a> já é bem preparada para criar aplicações para JavaFX, no entanto, devido a esta facilidade vou fazer este tutorial demonstrando como criar aplicações JavaFX no Eclipse, que também é uma ótima IDE ;) então mãos à obra.</p>
+
+<!-- more -->
+
+
+<p>Esta aplicação pode ser criada em qualquer IDE do Eclipse versão Java, para começarmos, crie um novo Java Project, clicando com o botão direito &mdash;> New &mdash;> Java Project,  nomeie-o da maneira que quiser, e clique em Next:</p>
+
+<p><a href="http://javafxbr.com/blog/wp-content/uploads/2012/01/1.jpg"><img src="http://javafxbr.com/blog/wp-content/uploads/2012/01/1.jpg?w=1024" alt="" /></a></p>
+
+<p><a href="http://javafxbr.com/blog/wp-content/uploads/2012/01/2.jpg"><img src="http://javafxbr.com/blog/wp-content/uploads/2012/01/2.jpg?w=1024" alt="" /></a></p>
+
+<p>Clique na Aba Libraries, É aqui que ocorre a mágica hehe nós teremos que incluir o JAR externo que contém o conjunto de instruções do JavaFX, para isto clique em Add External Jars</p>
+
+<p><a href="http://javafxbr.com/blog/wp-content/uploads/2012/01/3.jpg"><img src="http://javafxbr.com/blog/wp-content/uploads/2012/01/3.jpg?w=1024" alt="" /></a></p>
+
+<p>Por padrão, o diretório de instalação é o X:Program FilesOracleJavaFX 2.0 SDKrtlibjfxrt.jar é este o caminho que teremos que indicar conforme a figura abaixo:</p>
+
+<p><a href="http://javafxbr.com/blog/wp-content/uploads/2012/01/4.jpg"><img src="http://javafxbr.com/blog/wp-content/uploads/2012/01/4.jpg?w=1024" alt="" /></a></p>
+
+<p>Depois disto, crie uma classe Java com qualquer nome, pode ser como no exemplo “TesteFX” e coloque o seguinte código:</p>
+
+<p>&#8220;` java package javalees.wordpress.com;</p>
+
+<p>import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;</p>
+
+<p>/<em>*
+ * @author PauloLuan
+ </em>/
+public class TesteFX extends Application {</p>
+
+<pre><code>/*
+ * repare que nossa classe herda da Classe Application, que é a classe que
+ * fornece todo o ciclo de vida para as aplicações em JavaFX
+ */
+
+/* Este método é obrigatório pois é herdado da classe Application */
+
+@Override
+public void start(Stage stage) throws Exception {
+    /*
+     * O Stage do parâmetro é o contâiner de nível superior como se fosse o
+     * "palco" principal da aplicação, e a "cena" (Scene) é a superfície de
+     * desenho para o conteúdo do aplicativo.
+     */
+
+    /*
+     * Uma aplicação JavaFX é composta por uma árvore hierárquica de nós,
+     * quando criamos uma cena temos que aderí-la à um grupo Pai que vai ser
+     * o seu nó superior. Isto fica explicito abaixo quando criamos a cena e
+     * passamos como parâmetro uma nova instância de um Grupo. Não entendeu?
+     * (nem eu! kkk brincadeira) o seguinte link demonstra uma aplicação de
+     * círculos coloridos:
+     *
+     * http://docs.oracle.com/javafx/2.0/get_started/jfxpub-get_started.htm
+     *
+     * Nesta aplicação fica mais fácil compreender a estrutura hieráquica de
+     * uma aplicação JavaFX.
+     */
+    Scene scene = new Scene(new Group(new Text(250, 30,
+            "JavaLees says: Hello World, JavaFX!")));
+
+    stage.setTitle("Hello World | JavaLees"); // modificamos o título do Janela
+    stage.setScene(scene); // enviamos a "cena"(Scene) desenhada para o contâiner superior (Stage)
+    stage.show(); // método que faz com que a aplicação seja exibida
+}
+
+public static void main(String[] args) {
+    launch(args); // único método chamado na classe Main que dispara nossa aplicação.
+}
+</code></pre>
+
+<p>}&#8220;`</p>
+
+<p>Eis que temos nossa primeira aplicação em JavaFX 2.0! :D</p>
+
+<p><a href="http://javafxbr.com/blog/wp-content/uploads/2012/01/6.jpg"><img src="http://javafxbr.com/blog/wp-content/uploads/2012/01/6.jpg" alt="primeira aplicação em javaFX!" /></a></p>
+
+<pre><code>primeira aplicação em javaFX!
+</code></pre>
+
+<p><a href="/blog//docs.oracle.com/javafx/index.html">Aqui na Documentação</a> você encontra detalhes importantes sobre toda a estrutura e os componentes de uma aplicação do JavaFX.</p>
+
+<p>[twitter-follow screen_name=&lsquo;javalees&rsquo; show_count=&lsquo;no&rsquo; text_color=&lsquo;00ccff&rsquo;]</p>
+</div>
+
+
+  <footer>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://PauloLuan.github.io//github/blog/2012/01/18/hello-world-em-javafx-2-0/" data-via="" data-counturl="http://PauloLuan.github.io//github/blog/2012/01/18/hello-world-em-javafx-2-0/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/blog/2012/01/18/como-instalar-javafx-2-0/" title="Previous Post: Como instalar JavaFX 2.0">&laquo; Como instalar JavaFX 2.0</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/blog/2012/01/19/o-que-e-o-javafx-2-0/" title="Next Post: O que é o JavaFX 2.0?">O que é o JavaFX 2.0? &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/blog/2015/04/28/apt-get-no-windows/">Apt-get no Windows</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/blog/2013/11/11/did-these-guys-just-reinvent-the-web/">Did these guys just reinvent the Web?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/blog/2013/11/11/node-web-modules/">Node web modules</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/blog/2013/11/07/aumente-o-desempenho-do-mac-removendo-efeitos-de-animacao/">Aumente o desempenho do Mac Removendo efeitos de animação</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/blog/2013/11/04/configurando-ambiente-para-desenvolvimento-android/">Configurando ambiente para desenvolvimento Android</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/http://github.com/PauloLuan/">@http://github.com/PauloLuan/</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'http://github.com/PauloLuan/',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/blog/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>Copyright &copy; 2015 Paulo Luan</p>
+<p>Produced in Portland, Oregon. Powered by <a href="http://octopress.org">Octopress</a> and <a href="https://github.com/vladigleba/readify">Readify</a>.</p>
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'diariodeprogramador';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://PauloLuan.github.io//github/blog/2012/01/18/hello-world-em-javafx-2-0/';
+        var disqus_url = 'http://PauloLuan.github.io//github/blog/2012/01/18/hello-world-em-javafx-2-0/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+</body>
+</html>

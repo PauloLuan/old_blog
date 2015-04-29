@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Topic: javascript | Diário de programador]]></title>
+  <link href="http://PauloLuan.github.io//github/blog/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://PauloLuan.github.io//github/"/>
+  <updated>2015-04-29T11:53:11+00:00</updated>
+  <id>http://PauloLuan.github.io//github/</id>
+  <author>
+    <name><![CDATA[Paulo Luan]]></name>
+    <email><![CDATA[pauloluan.inova@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Introdução ao RingoJS - Aplicações WEB com Javascript Server Side]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/10/28/introducao-ao-ringojs-aplicacoes-web-com-javascript-server-side/"/>
+    <updated>2013-10-28T16:07:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/10/28/introducao-ao-ringojs-aplicacoes-web-com-javascript-server-side</id>
+    <content type="html"><![CDATA[<p>RingoJS</p>
+
+<p>Ringo is a CommonJS-based JavaScript runtime written in Java and based on the Mozilla Rhino JavaScript engine. It takes a pragmatical and non-dogmatic stance on things like I/O paradigms. Blocking and asynchronous I/O both have their strengths and weaknesses in different areas.</p>
+
+<!-- more -->
+
+
+<p><a href="http://ringojs.org/">http://ringojs.org/</a>
+<a href="http://ringojs.org/documentation/">http://ringojs.org/documentation/</a></p>
+
+<p><code> bash Clone o repositório
+git clone https://github.com/ringo/ringojs.git
+cd ringojs/
+</code></p>
+
+<p><code>bash Execute este comando para ver as possíveis funções a serem executadas.
+ant
+</code></p>
+
+<p><code>bash Compilando o Ringo.
+ant update &amp;&amp; ant jar &amp;&amp; ant compile
+</code></p>
+
+<p><code>bash Execute o Modo iterativo
+./bin/ringo
+</code></p>
+
+<p><code>bash
+nano ~/.bashrc # linux
+nano ~/.bash_profile # mac
+</code></p>
+
+<p>``` bash Adicione na última linha do arquivo os executáveis
+export PATH=&ldquo;$PATH:&lt;SEU_PATH_AQUI>&rdquo;</p>
+
+<p>exemplo:</p>
+
+<p>export PATH=&ldquo;$PATH:/Users/funcatemobile/Desktop/jug-ringo/ringojs/bin/&rdquo;
+```</p>
+
+<p>Aperte CTRL + X para salvar e sair.</p>
+
+<p><code> bash Imprimindo um arquivo de texto
+var fs = require('fs');
+var file = fs.read('teste.txt');
+print(file);
+</code></p>
+
+<p><code>bash Criando app com o ringo-admin
+./ringojs/bin/ringo-admin create jug-teste
+cd jug-teste
+tree
+../ringojs/bin/ringo main.js
+</code></p>
+
+<p><code>bash Clonando o repositório com o template do maven.
+git clone https://github.com/PauloLuan/ringo-maven.git
+ant
+mvn clean install
+</code></p>
+
+<p><code>bash Colocando em produção no Tomcat
+cp target/ringo-maven.war ~/Documents/Desenvolvimento/Tomcat/apache-tomcat-7.0.32/webapps/
+</code></p>
+
+<p><code>bash Módulo de autenticação Social utilizando um projeto Java.
+git clone https://github.com/PauloLuan/ringo-socialauth.git
+</code></p>
+
+<p><code>bash Crud com MongoDB usando Java Driver!
+git clone https://github.com/PauloLuan/ringo-mongodb.git
+</code></p>
+
+<p><code>bash
+Baixe os Slides: https://gist.github.com/PauloLuan/7123760
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

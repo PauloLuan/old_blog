@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Topic: Metodologias | Diário de programador]]></title>
+  <link href="http://PauloLuan.github.io//github/blog/categories/metodologias/atom.xml" rel="self"/>
+  <link href="http://PauloLuan.github.io//github/"/>
+  <updated>2015-04-29T11:53:11+00:00</updated>
+  <id>http://PauloLuan.github.io//github/</id>
+  <author>
+    <name><![CDATA[Paulo Luan]]></name>
+    <email><![CDATA[pauloluan.inova@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Clonando apenas um subdiretório no GIT]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/01/21/clonando-apenas-um-subdiretorio-no-git/"/>
+    <updated>2013-01-21T09:42:10+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/01/21/clonando-apenas-um-subdiretorio-no-git</id>
+    <content type="html"><![CDATA[<p><code>bash
+git clone &lt; URL DO REPOSITÓRIO &gt;
+cd &lt; DIRETÓRIO &gt;
+git config core.sparsecheckout true
+echo &lt;NOME DA PASTA QUE VOCÊ QUER&gt; &gt;&gt; .git/info/sparse-checkout
+git read-tree -m -u HEAD
+</code></p>
+
+<!-- more -->
+
+
+<p></p>
+
+<p><a href="http://eminetto.github.com/blog/2012/04/25/git-sparse-checkouts/">Fonte</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Install HomeBrew on MacOS over HTTP Proxy]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2012/11/01/how-to-install-homebrew-on-macos-over-http-proxy/"/>
+    <updated>2012-11-01T12:56:01+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/11/01/how-to-install-homebrew-on-macos-over-http-proxy</id>
+    <content type="html"><![CDATA[<p>``` bash</p>
+
+<pre><code>export http_proxy=http://192.168.1.1:3128
+export ALL_PROXY=$http_proxy
+ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+</code></pre>
+
+<p>```</p>
+
+<!-- more -->
+
+
+<p>Sources:
+<a href="http://squarism.com/2010/12/14/homebrew-behind-a-proxy/">http://squarism.com/2010/12/14/homebrew-behind-a-proxy/</a>
+<a href="https://github.com/mxcl/homebrew/wiki/Tips-N">https://github.com/mxcl/homebrew/wiki/Tips-N</a>'-Tricks
+<a href="http://stackoverflow.com/questions/9904850/how-to-install-homebrew-on-mac-osx-snow-leopard">http://stackoverflow.com/questions/9904850/how-to-install-homebrew-on-mac-osx-snow-leopard</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Configurando JAVA_HOME no Mac]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2012/09/04/configurando-java_home-no-mac/"/>
+    <updated>2012-09-04T14:19:03+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/09/04/configurando-java_home-no-mac</id>
+    <content type="html"><![CDATA[<p>Digite no Terminal:</p>
+
+<p><code>bash
+sudo su
+vim ~/.bash_profile
+</code></p>
+
+<p>Adicione ao final do arquivo</p>
+
+<p><code>sql
+export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
+</code></p>
+
+<p>Pressione Esc digite :wq
+(W de Write e Q de Quit)</p>
+
+<p>Pronto!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Adicionando Funcionalidades ao BootStrap Twitter.]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2012/08/31/twitter-bootstrap/"/>
+    <updated>2012-08-31T09:59:39+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/08/31/twitter-bootstrap</id>
+    <content type="html"><![CDATA[<p>Para aqueles como eu que gostam de programar mas não tem muito talento para deixar a interface muuuuuito da hora e sempre fica aquela coisa meio &ldquo;Bicheira&rdquo; rs eu recomendo que conheçam o BootStrap! :D O Bootstrap é uma ferramenta que foi construída pelos Designers do Twitter e facilmente você consegue dar um toque mega profissional para aquele site bicheira que vc fez pro tiozinho do bar da esquina, então eu recomendo que vocês dêem uma olhada neste link:</p>
+
+<p><a href="http://twitter.github.com/bootstrap/">Bootstrap Twitter</a> CSS S2 ! :D</p>
+
+<p>Encontrei <a href="http://designshack.net/articles/css/20-awesome-resources-for-twitter-bootstrap-lovers/">neste site</a> alguns recursos interessantíssimos par aumentar a produtividade de quem utiliza esta ferramenta.</p>
+
+<!-- more -->
+
+
+<p>Segue a lista de links:</p>
+
+<p><a href="http://stylebootstrap.info/">http://stylebootstrap.info/</a></p>
+
+<p><a href="http://charliepark.org/bootstrap_buttons/">http://charliepark.org/bootstrap_buttons/</a></p>
+
+<p><a href="https://wrapbootstrap.com/">https://wrapbootstrap.com/</a></p>
+
+<p><a href="http://bootswatch.com/">http://bootswatch.com/</a></p>
+
+<p><a href="http://builtwithbootstrap.com/">http://builtwithbootstrap.com/</a></p>
+
+<p><a href="http://www.extendingfireworks.com/?p=133">http://www.extendingfireworks.com/?p=133</a></p>
+
+<p><a href="http://viget.com/inspire/an-omnigraffle-stencil-for-twitter-bootstrap-2">http://viget.com/inspire/an-omnigraffle-stencil-for-twitter-bootstrap-2</a></p>
+
+<p><a href="http://axutopia.com/twitter-bootstrap/">http://axutopia.com/twitter-bootstrap/</a></p>
+
+<p><a href="http://gui.repixdesign.com/#freebies">http://gui.repixdesign.com/#freebies</a></p>
+
+<p><a href="http://grails-twitter-bootstrap.cloudfoundry.com/">http://grails-twitter-bootstrap.cloudfoundry.com/</a></p>
+
+<p><a href="http://fortawesome.github.com/Font-Awesome/">http://fortawesome.github.com/Font-Awesome/</a></p>
+
+<p><a href="http://thesassway.com/projects/sass-twitter-bootstrap">http://thesassway.com/projects/sass-twitter-bootstrap</a></p>
+
+<p><a href="http://addyosmani.github.com/jquery-ui-bootstrap/">http://addyosmani.github.com/jquery-ui-bootstrap/</a></p>
+
+<p><a href="http://320press.com/wpbs/">http://320press.com/wpbs/</a></p>
+
+<p><a href="http://www.eyecon.ro/colorpicker-and-datepicker-for-twitter-bootstrap.htm">http://www.eyecon.ro/colorpicker-and-datepicker-for-twitter-bootstrap.htm</a></p>
+
+<p><a href="http://designshack.net/articles/css/5-incredibly-useful-tools-built-into-twitter-bootstrap/">http://designshack.net/articles/css/5-incredibly-useful-tools-built-into-twitter-bootstrap/</a></p>
+
+<p><a href="http://designshack.net/articles/css/twitter-bootstrap-2-bootstrap-goes-responsive/">http://designshack.net/articles/css/twitter-bootstrap-2-bootstrap-goes-responsive/</a></p>
+
+<p><a href="http://webdesign.tutsplus.com/tutorials/complete-websites/twitter-bootstrap-101-introduction/">http://webdesign.tutsplus.com/tutorials/complete-websites/twitter-bootstrap-101-introduction/</a></p>
+
+<p><a href="http://www.alistapart.com/articles/building-twitter-bootstrap/">http://www.alistapart.com/articles/building-twitter-bootstrap/</a></p>
+
+<p><a href="http://railscasts.com/episodes/328-twitter-bootstrap-basics">http://railscasts.com/episodes/328-twitter-bootstrap-basics</a></p>
+
+<p><a href="http://www.w3resource.com/twitter-bootstrap/tutorial.php">http://www.w3resource.com/twitter-bootstrap/tutorial.php</a></p>
+
+<p>Com estes links você está pronto para dominar o mundo! :D</p>
+
+<p>Abraços! Paulo Luan.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mega Tutorial de GIT]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2012/08/24/mega-tutorial-de-git/"/>
+    <updated>2012-08-24T09:15:20+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/08/24/mega-tutorial-de-git</id>
+    <content type="html"><![CDATA[<p>Encontrei este artigo, muuuuuuuuuito completo sobre GIT:</p>
+
+<p><a href="http://blog.santiagobasulto.com.ar/2011/11/27/tutorial-de-git/">http://blog.santiagobasulto.com.ar/2011/11/27/tutorial-de-git/</a></p>
+
+<p>Como não gosto de reinventar a roda é só acessar o link e curtir rs quando eu estiver inspirado eu faço um artigo com os principais comandos mas por enquanto utilize o google translate HAUSHSA se bem que espanhol dá até pra se virar.</p>
+]]></content>
+  </entry>
+  
+</feed>

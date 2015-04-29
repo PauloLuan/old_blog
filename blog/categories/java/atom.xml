@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Topic: Java | Diário de programador]]></title>
+  <link href="http://PauloLuan.github.io//github/blog/categories/java/atom.xml" rel="self"/>
+  <link href="http://PauloLuan.github.io//github/"/>
+  <updated>2015-04-29T11:53:11+00:00</updated>
+  <id>http://PauloLuan.github.io//github/</id>
+  <author>
+    <name><![CDATA[Paulo Luan]]></name>
+    <email><![CDATA[pauloluan.inova@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Verificando diferença de horário em Java]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2012/12/04/verificando-diferenca-de-horario-em-java/"/>
+    <updated>2012-12-04T10:46:50+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/12/04/verificando-diferenca-de-horario-em-java</id>
+    <content type="html"><![CDATA[<p>``` java</p>
+
+<p>public void verificaDiferenca() {</p>
+
+<pre><code>    String data = "08/12/2003";
+    String hora_saida = "19:00:00";
+
+    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+    SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");
+    Date hora = new Date();
+    Date horaS = new Date();
+    Date diferenca = new Date();
+
+    try {
+        horaS = sdf.parse(data + " " + hora_saida);
+    } catch (ParseException p) {
+        System.out.println(p.getMessage());
+    }
+
+    diferenca.setTime(hora.getTime() - horaS.getTime());
+
+    System.out.println("hora saida " + sdf.format(horaS));
+    System.out.println("hora retorno " + sdf.format(hora));
+    System.out.println("diferenca " + df.format(diferenca));
+
+    long difMilli = hora.getTime() - horaS.getTime();
+    int timeInSeconds = (int) difMilli / 1000;
+    int hours, minutes, seconds;
+    hours = timeInSeconds / 3600;
+    timeInSeconds = timeInSeconds - (hours * 3600);
+    minutes = timeInSeconds / 60;
+    timeInSeconds = timeInSeconds - (minutes * 60);
+    seconds = timeInSeconds;
+    System.out.println(hours + " hour(s) " + minutes + " minute(s) "+ seconds + " second(s)");
+}
+</code></pre>
+
+<p>```</p>
+
+<p>Fonte: <a href="http://javafree.uol.com.br/topic-2263-diferencas-entre-data-e-horarios.html">http://javafree.uol.com.br/topic-2263-diferencas-entre-data-e-horarios.html</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Conseguindo o endereço de IP e Mac do cliente em Java]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2012/11/08/conseguindo-o-endereco-de-ip-e-mac-do-cliente-em-java/"/>
+    <updated>2012-11-08T08:51:34+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/11/08/conseguindo-o-endereco-de-ip-e-mac-do-cliente-em-java</id>
+    <content type="html"><![CDATA[<p>``` java</p>
+
+<pre><code>// pegando o endereço de MAC
+public void testGetMacAddress() {
+    try {
+        InetAddress address = InetAddress.getLocalHost();
+        NetworkInterface ni = NetworkInterface.getByInetAddress(address);
+        byte[] mac = ni.getHardwareAddress();
+        String macAddress = "";
+
+        for (int i = 0; i &lt; mac.length; i++) {
+            String macTemporary = String.format("%02X%s", mac[i], (i &lt; mac.length - 1) ? "-" : "");
+            macAddress += macTemporary;
+            //System.out.format("%02X%s", mac[i], (i &lt; mac.length - 1) ? "-" : "");
+        }
+        System.out.println("Mac Address: " + macAddress);
+    } catch (UnknownHostException e) {
+        e.printStackTrace();
+    } catch (SocketException e) {
+        e.printStackTrace();
+    }
+}
+
+// pegando o endereço de IP
+public void testGetIP() {
+    try {
+        String ip = InetAddress.getLocalHost().getHostAddress();
+        System.out.println("Endereço de IP: " + ip);
+    } catch (UnknownHostException e) {
+        e.printStackTrace();
+    }
+}
+</code></pre>
+
+<p>```</p>
+
+<p>Testei no Mac o código anterior e funcionou corretamente, porém tive alguns problemas ao rodar no windows e linux, no entanto encontrei o código a seguir e ainda não testei&hellip;</p>
+
+<p>``` java</p>
+
+<p>public final class NetworkInfo {</p>
+
+<pre><code>public NetworkInfo(){
+
+}
+
+private final static String getMacAddress() throws IOException {
+    String os = System.getProperty("os.name");
+    try {
+        if(os.startsWith("Windows")) {
+            return windowsParseMacAddress(windowsRunIpConfigCommand());
+        } else if(os.startsWith("Linux")) {
+            return linuxParseMacAddress(linuxRunIfConfigCommand());
+        } else {
+            throw new IOException("Sistema operacional desconhecido: " + os);
+        }
+    } catch(ParseException ex) {
+        ex.printStackTrace();
+        throw new IOException(ex.getMessage());
+    }
+}
+
+/*
+ * Linux
+ */
+private final static String linuxParseMacAddress(String ipConfigResponse) throws ParseException {
+    String localHost = null;
+    try {
+        localHost = InetAddress.getLocalHost().getHostAddress();
+    } catch(java.net.UnknownHostException ex) {
+        ex.printStackTrace();
+        throw new ParseException(ex.getMessage(), 0);
+    }
+
+    StringTokenizer tokenizer = new StringTokenizer(ipConfigResponse, "n");
+    String lastMacAddress = null;
+
+    while(tokenizer.hasMoreTokens()) {
+        String line = tokenizer.nextToken().trim();
+        boolean containsLocalHost = line.indexOf(localHost) &gt;= 0;
+
+        //IP
+        if(containsLocalHost &amp;&amp; lastMacAddress != null) {
+            return lastMacAddress;
+        }
+
+        //MAC address
+        int macAddressPosition = line.indexOf("HWaddr");
+        if(macAddressPosition &lt;= 0) continue;
+
+        String macAddressCandidate = line.substring(macAddressPosition + 6).trim();
+        if(linuxIsMacAddress(macAddressCandidate)) {
+            lastMacAddress = macAddressCandidate;
+            continue;
+        }
+    }
+
+    ParseException ex = new ParseException
+        ("Nao foi possível ler o MAC address para " + localHost + " de [" + ipConfigResponse + "]", 0);
+    ex.printStackTrace();
+    throw ex;
+}
+
+private final static boolean linuxIsMacAddress(String macAddressCandidate) {
+    if(macAddressCandidate.length() != 17) return false;
+    return true;
+}
+
+private final static String linuxRunIfConfigCommand() throws IOException {
+    Process p = Runtime.getRuntime().exec("ifconfig");
+    InputStream stdoutStream = new BufferedInputStream(p.getInputStream());
+
+    StringBuffer buffer= new StringBuffer();
+    for (;;) {
+        int c = stdoutStream.read();
+        if (c == -1) break;
+        buffer.append((char)c);
+    }
+    String outputText = buffer.toString();
+
+    stdoutStream.close();
+
+    return outputText;
+}
+
+/*
+ * Windows
+ */
+private final static String windowsParseMacAddress(String ipConfigResponse) throws ParseException {
+    String localHost = null;
+    try {
+        localHost = InetAddress.getLocalHost().getHostAddress();
+    } catch(java.net.UnknownHostException ex) {
+        ex.printStackTrace();
+        throw new ParseException(ex.getMessage(), 0);
+    }
+
+    StringTokenizer tokenizer = new StringTokenizer(ipConfigResponse, "n");
+    String lastMacAddress = null;
+
+    while(tokenizer.hasMoreTokens()) {
+        String line = tokenizer.nextToken().trim();
+
+        //IP
+        if(line.endsWith(localHost) &amp;&amp; lastMacAddress != null) {
+            return lastMacAddress;
+        }
+
+        //MAC address
+        int macAddressPosition = line.indexOf(":");
+        if(macAddressPosition &lt;= 0) continue;
+
+        String macAddressCandidate = line.substring(macAddressPosition + 1).trim();
+        if(windowsIsMacAddress(macAddressCandidate)) {
+            lastMacAddress = macAddressCandidate;
+            continue;
+        }
+    }
+
+    ParseException ex = new ParseException("Nao foi possível ler o MAC address de [" + ipConfigResponse + "]", 0);
+    ex.printStackTrace();
+    throw ex;
+}
+
+private final static boolean windowsIsMacAddress(String macAddressCandidate) {
+    if(macAddressCandidate.length() != 17) return false;
+
+    return true;
+}
+
+private final static String windowsRunIpConfigCommand() throws IOException {
+    Process p = Runtime.getRuntime().exec("ipconfig /all");
+    InputStream stdoutStream = new BufferedInputStream(p.getInputStream());
+
+    StringBuffer buffer= new StringBuffer();
+    for (;;) {
+        int c = stdoutStream.read();
+        if (c == -1) break;
+        buffer.append((char)c);
+    }
+    String outputText = buffer.toString();
+
+    stdoutStream.close();
+
+    return outputText;
+}
+</code></pre>
+
+<p>public final static void main(String[] args) {</p>
+
+<pre><code>    try {
+        System.out.println("Informacoes");
+        System.out.println("Sistema operacional: " + System.getProperty("os.name"));
+        System.out.println("IP/Localhost: " + InetAddress.getLocalHost().getHostAddress());
+        System.out.println("MAC Address: " + getMacAddress());
+        System.out.println("Nome da maquina: " + InetAddress.getLocalHost().getHostName());
+        System.out.println("Nome completo da maquina: " + InetAddress.getLocalHost().getCanonicalHostName());
+    } catch(Throwable t) {
+        t.printStackTrace();
+    }
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>FONTES:</p>
+
+<p><a href="http://www.guj.com.br/java/83460-capturar-endereco-mac-e-ip-alguem">http://www.guj.com.br/java/83460-capturar-endereco-mac-e-ip-alguem</a>
+<a href="http://paulovittor23.org/2008/02/01/pegando-o-mac-address-antes-e-depois-do-mustang-java-6/">http://paulovittor23.org/2008/02/01/pegando-o-mac-address-antes-e-depois-do-mustang-java-6/</a></p>
+]]></content>
+  </entry>
+  
+</feed>

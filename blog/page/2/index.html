@@ -1,0 +1,1894 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Diário de programador</title>
+  <meta name="author" content="Paulo Luan">
+
+  
+  <meta name="description" content="O mundo precisa saber disto...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://PauloLuan.github.io//github/blog/page/2">
+  <link href="/blog/favicon.png" rel="icon">
+  <link href="/blog/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/blog/atom.xml" rel="alternate" title="Diário de programador" type="application/atom+xml">
+  <script src="/blog/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/blog/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-41007005-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/blog/">Diário de programador</a></h1>
+  
+    <h2>Códigos, anotações e pensamentos.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation">  
+  
+  
+<ul class="main-navigation">
+  <li><a href="/blog/blog/archives">Blog</a></li>
+  <li><a href="/blog/about">Sobre o Autor</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/11/08/conseguindo-o-endereco-de-ip-e-mac-do-cliente-em-java/">Conseguindo o endereço de IP e Mac do cliente em Java</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-08T08:51:34+00:00" pubdate data-updated="true">Nov 8<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/java/'>Java</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/11/08/conseguindo-o-endereco-de-ip-e-mac-do-cliente-em-java/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'> <span class="c1">// pegando o endereço de MAC</span>
+</span><span class='line'>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testGetMacAddress</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>      <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">InetAddress</span> <span class="n">address</span> <span class="o">=</span> <span class="n">InetAddress</span><span class="o">.</span><span class="na">getLocalHost</span><span class="o">();</span>
+</span><span class='line'>          <span class="n">NetworkInterface</span> <span class="n">ni</span> <span class="o">=</span> <span class="n">NetworkInterface</span><span class="o">.</span><span class="na">getByInetAddress</span><span class="o">(</span><span class="n">address</span><span class="o">);</span>
+</span><span class='line'>          <span class="kt">byte</span><span class="o">[]</span> <span class="n">mac</span> <span class="o">=</span> <span class="n">ni</span><span class="o">.</span><span class="na">getHardwareAddress</span><span class="o">();</span>
+</span><span class='line'>          <span class="n">String</span> <span class="n">macAddress</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>          <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">mac</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+</span><span class='line'>              <span class="n">String</span> <span class="n">macTemporary</span> <span class="o">=</span> <span class="n">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&quot;%02X%s&quot;</span><span class="o">,</span> <span class="n">mac</span><span class="o">[</span><span class="n">i</span><span class="o">],</span> <span class="o">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">mac</span><span class="o">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">?</span> <span class="s">&quot;-&quot;</span> <span class="o">:</span> <span class="s">&quot;&quot;</span><span class="o">);</span>
+</span><span class='line'>              <span class="n">macAddress</span> <span class="o">+=</span> <span class="n">macTemporary</span><span class="o">;</span>
+</span><span class='line'>              <span class="c1">//System.out.format(&quot;%02X%s&quot;, mac[i], (i &lt; mac.length - 1) ? &quot;-&quot; : &quot;&quot;);</span>
+</span><span class='line'>          <span class="o">}</span>
+</span><span class='line'>          <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Mac Address: &quot;</span> <span class="o">+</span> <span class="n">macAddress</span><span class="o">);</span>
+</span><span class='line'>      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">UnknownHostException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span><span class='line'>      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">SocketException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span><span class='line'>      <span class="o">}</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// pegando o endereço de IP</span>
+</span><span class='line'>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testGetIP</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>      <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">String</span> <span class="n">ip</span> <span class="o">=</span> <span class="n">InetAddress</span><span class="o">.</span><span class="na">getLocalHost</span><span class="o">().</span><span class="na">getHostAddress</span><span class="o">();</span>
+</span><span class='line'>          <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Endereço de IP: &quot;</span> <span class="o">+</span> <span class="n">ip</span><span class="o">);</span>
+</span><span class='line'>      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">UnknownHostException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span><span class='line'>      <span class="o">}</span>
+</span><span class='line'>  <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Testei no Mac o código anterior e funcionou corretamente, porém tive alguns problemas ao rodar no windows e linux, no entanto encontrei o código a seguir e ainda não testei&hellip;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+<span class='line-number'>106</span>
+<span class='line-number'>107</span>
+<span class='line-number'>108</span>
+<span class='line-number'>109</span>
+<span class='line-number'>110</span>
+<span class='line-number'>111</span>
+<span class='line-number'>112</span>
+<span class='line-number'>113</span>
+<span class='line-number'>114</span>
+<span class='line-number'>115</span>
+<span class='line-number'>116</span>
+<span class='line-number'>117</span>
+<span class='line-number'>118</span>
+<span class='line-number'>119</span>
+<span class='line-number'>120</span>
+<span class='line-number'>121</span>
+<span class='line-number'>122</span>
+<span class='line-number'>123</span>
+<span class='line-number'>124</span>
+<span class='line-number'>125</span>
+<span class='line-number'>126</span>
+<span class='line-number'>127</span>
+<span class='line-number'>128</span>
+<span class='line-number'>129</span>
+<span class='line-number'>130</span>
+<span class='line-number'>131</span>
+<span class='line-number'>132</span>
+<span class='line-number'>133</span>
+<span class='line-number'>134</span>
+<span class='line-number'>135</span>
+<span class='line-number'>136</span>
+<span class='line-number'>137</span>
+<span class='line-number'>138</span>
+<span class='line-number'>139</span>
+<span class='line-number'>140</span>
+<span class='line-number'>141</span>
+<span class='line-number'>142</span>
+<span class='line-number'>143</span>
+<span class='line-number'>144</span>
+<span class='line-number'>145</span>
+<span class='line-number'>146</span>
+<span class='line-number'>147</span>
+<span class='line-number'>148</span>
+<span class='line-number'>149</span>
+<span class='line-number'>150</span>
+<span class='line-number'>151</span>
+<span class='line-number'>152</span>
+<span class='line-number'>153</span>
+<span class='line-number'>154</span>
+<span class='line-number'>155</span>
+<span class='line-number'>156</span>
+<span class='line-number'>157</span>
+<span class='line-number'>158</span>
+<span class='line-number'>159</span>
+<span class='line-number'>160</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">NetworkInfo</span> <span class="o">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="nf">NetworkInfo</span><span class="o">(){</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">getMacAddress</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">String</span> <span class="n">os</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s">&quot;os.name&quot;</span><span class="o">);</span>
+</span><span class='line'>        <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>            <span class="k">if</span><span class="o">(</span><span class="n">os</span><span class="o">.</span><span class="na">startsWith</span><span class="o">(</span><span class="s">&quot;Windows&quot;</span><span class="o">))</span> <span class="o">{</span>
+</span><span class='line'>                <span class="k">return</span> <span class="nf">windowsParseMacAddress</span><span class="o">(</span><span class="n">windowsRunIpConfigCommand</span><span class="o">());</span>
+</span><span class='line'>            <span class="o">}</span> <span class="k">else</span> <span class="k">if</span><span class="o">(</span><span class="n">os</span><span class="o">.</span><span class="na">startsWith</span><span class="o">(</span><span class="s">&quot;Linux&quot;</span><span class="o">))</span> <span class="o">{</span>
+</span><span class='line'>                <span class="k">return</span> <span class="nf">linuxParseMacAddress</span><span class="o">(</span><span class="n">linuxRunIfConfigCommand</span><span class="o">());</span>
+</span><span class='line'>            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+</span><span class='line'>                <span class="k">throw</span> <span class="k">new</span> <span class="nf">IOException</span><span class="o">(</span><span class="s">&quot;Sistema operacional desconhecido: &quot;</span> <span class="o">+</span> <span class="n">os</span><span class="o">);</span>
+</span><span class='line'>            <span class="o">}</span>
+</span><span class='line'>        <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">ParseException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span><span class='line'>            <span class="k">throw</span> <span class="k">new</span> <span class="nf">IOException</span><span class="o">(</span><span class="n">ex</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="cm">/*</span>
+</span><span class='line'><span class="cm">     * Linux</span>
+</span><span class='line'><span class="cm">     */</span>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">linuxParseMacAddress</span><span class="o">(</span><span class="n">String</span> <span class="n">ipConfigResponse</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">ParseException</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">String</span> <span class="n">localHost</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</span><span class='line'>        <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">localHost</span> <span class="o">=</span> <span class="n">InetAddress</span><span class="o">.</span><span class="na">getLocalHost</span><span class="o">().</span><span class="na">getHostAddress</span><span class="o">();</span>
+</span><span class='line'>        <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">java</span><span class="o">.</span><span class="na">net</span><span class="o">.</span><span class="na">UnknownHostException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span><span class='line'>            <span class="k">throw</span> <span class="k">new</span> <span class="nf">ParseException</span><span class="o">(</span><span class="n">ex</span><span class="o">.</span><span class="na">getMessage</span><span class="o">(),</span> <span class="mi">0</span><span class="o">);</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">StringTokenizer</span> <span class="n">tokenizer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringTokenizer</span><span class="o">(</span><span class="n">ipConfigResponse</span><span class="o">,</span> <span class="s">&quot;n&quot;</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">String</span> <span class="n">lastMacAddress</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">while</span><span class="o">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="na">hasMoreTokens</span><span class="o">())</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">String</span> <span class="n">line</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="na">nextToken</span><span class="o">().</span><span class="na">trim</span><span class="o">();</span>
+</span><span class='line'>            <span class="kt">boolean</span> <span class="n">containsLocalHost</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="n">localHost</span><span class="o">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="c1">//IP</span>
+</span><span class='line'>            <span class="k">if</span><span class="o">(</span><span class="n">containsLocalHost</span> <span class="o">&amp;&amp;</span> <span class="n">lastMacAddress</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>                <span class="k">return</span> <span class="n">lastMacAddress</span><span class="o">;</span>
+</span><span class='line'>            <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="c1">//MAC address</span>
+</span><span class='line'>            <span class="kt">int</span> <span class="n">macAddressPosition</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">&quot;HWaddr&quot;</span><span class="o">);</span>
+</span><span class='line'>            <span class="k">if</span><span class="o">(</span><span class="n">macAddressPosition</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="o">)</span> <span class="k">continue</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="n">String</span> <span class="n">macAddressCandidate</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">macAddressPosition</span> <span class="o">+</span> <span class="mi">6</span><span class="o">).</span><span class="na">trim</span><span class="o">();</span>
+</span><span class='line'>            <span class="k">if</span><span class="o">(</span><span class="n">linuxIsMacAddress</span><span class="o">(</span><span class="n">macAddressCandidate</span><span class="o">))</span> <span class="o">{</span>
+</span><span class='line'>                <span class="n">lastMacAddress</span> <span class="o">=</span> <span class="n">macAddressCandidate</span><span class="o">;</span>
+</span><span class='line'>                <span class="k">continue</span><span class="o">;</span>
+</span><span class='line'>            <span class="o">}</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">ParseException</span> <span class="n">ex</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ParseException</span>
+</span><span class='line'>            <span class="o">(</span><span class="s">&quot;Nao foi possível ler o MAC address para &quot;</span> <span class="o">+</span> <span class="n">localHost</span> <span class="o">+</span> <span class="s">&quot; de [&quot;</span> <span class="o">+</span> <span class="n">ipConfigResponse</span> <span class="o">+</span> <span class="s">&quot;]&quot;</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span><span class='line'>        <span class="k">throw</span> <span class="n">ex</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">linuxIsMacAddress</span><span class="o">(</span><span class="n">String</span> <span class="n">macAddressCandidate</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>        <span class="k">if</span><span class="o">(</span><span class="n">macAddressCandidate</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">!=</span> <span class="mi">17</span><span class="o">)</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+</span><span class='line'>        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">linuxRunIfConfigCommand</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">Process</span> <span class="n">p</span> <span class="o">=</span> <span class="n">Runtime</span><span class="o">.</span><span class="na">getRuntime</span><span class="o">().</span><span class="na">exec</span><span class="o">(</span><span class="s">&quot;ifconfig&quot;</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">InputStream</span> <span class="n">stdoutStream</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedInputStream</span><span class="o">(</span><span class="n">p</span><span class="o">.</span><span class="na">getInputStream</span><span class="o">());</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">StringBuffer</span> <span class="n">buffer</span><span class="o">=</span> <span class="k">new</span> <span class="n">StringBuffer</span><span class="o">();</span>
+</span><span class='line'>        <span class="k">for</span> <span class="o">(;;)</span> <span class="o">{</span>
+</span><span class='line'>            <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">stdoutStream</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
+</span><span class='line'>            <span class="k">if</span> <span class="o">(</span><span class="n">c</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="k">break</span><span class="o">;</span>
+</span><span class='line'>            <span class="n">buffer</span><span class="o">.</span><span class="na">append</span><span class="o">((</span><span class="kt">char</span><span class="o">)</span><span class="n">c</span><span class="o">);</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>        <span class="n">String</span> <span class="n">outputText</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">stdoutStream</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">return</span> <span class="n">outputText</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="cm">/*</span>
+</span><span class='line'><span class="cm">     * Windows</span>
+</span><span class='line'><span class="cm">     */</span>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">windowsParseMacAddress</span><span class="o">(</span><span class="n">String</span> <span class="n">ipConfigResponse</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">ParseException</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">String</span> <span class="n">localHost</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</span><span class='line'>        <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">localHost</span> <span class="o">=</span> <span class="n">InetAddress</span><span class="o">.</span><span class="na">getLocalHost</span><span class="o">().</span><span class="na">getHostAddress</span><span class="o">();</span>
+</span><span class='line'>        <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">java</span><span class="o">.</span><span class="na">net</span><span class="o">.</span><span class="na">UnknownHostException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span><span class='line'>            <span class="k">throw</span> <span class="k">new</span> <span class="nf">ParseException</span><span class="o">(</span><span class="n">ex</span><span class="o">.</span><span class="na">getMessage</span><span class="o">(),</span> <span class="mi">0</span><span class="o">);</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">StringTokenizer</span> <span class="n">tokenizer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringTokenizer</span><span class="o">(</span><span class="n">ipConfigResponse</span><span class="o">,</span> <span class="s">&quot;n&quot;</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">String</span> <span class="n">lastMacAddress</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">while</span><span class="o">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="na">hasMoreTokens</span><span class="o">())</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">String</span> <span class="n">line</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="o">.</span><span class="na">nextToken</span><span class="o">().</span><span class="na">trim</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="c1">//IP</span>
+</span><span class='line'>            <span class="k">if</span><span class="o">(</span><span class="n">line</span><span class="o">.</span><span class="na">endsWith</span><span class="o">(</span><span class="n">localHost</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">lastMacAddress</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>                <span class="k">return</span> <span class="n">lastMacAddress</span><span class="o">;</span>
+</span><span class='line'>            <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="c1">//MAC address</span>
+</span><span class='line'>            <span class="kt">int</span> <span class="n">macAddressPosition</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">&quot;:&quot;</span><span class="o">);</span>
+</span><span class='line'>            <span class="k">if</span><span class="o">(</span><span class="n">macAddressPosition</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="o">)</span> <span class="k">continue</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>            <span class="n">String</span> <span class="n">macAddressCandidate</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="n">macAddressPosition</span> <span class="o">+</span> <span class="mi">1</span><span class="o">).</span><span class="na">trim</span><span class="o">();</span>
+</span><span class='line'>            <span class="k">if</span><span class="o">(</span><span class="n">windowsIsMacAddress</span><span class="o">(</span><span class="n">macAddressCandidate</span><span class="o">))</span> <span class="o">{</span>
+</span><span class='line'>                <span class="n">lastMacAddress</span> <span class="o">=</span> <span class="n">macAddressCandidate</span><span class="o">;</span>
+</span><span class='line'>                <span class="k">continue</span><span class="o">;</span>
+</span><span class='line'>            <span class="o">}</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">ParseException</span> <span class="n">ex</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ParseException</span><span class="o">(</span><span class="s">&quot;Nao foi possível ler o MAC address de [&quot;</span> <span class="o">+</span> <span class="n">ipConfigResponse</span> <span class="o">+</span> <span class="s">&quot;]&quot;</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span><span class='line'>        <span class="k">throw</span> <span class="n">ex</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">windowsIsMacAddress</span><span class="o">(</span><span class="n">String</span> <span class="n">macAddressCandidate</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>        <span class="k">if</span><span class="o">(</span><span class="n">macAddressCandidate</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">!=</span> <span class="mi">17</span><span class="o">)</span> <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">windowsRunIpConfigCommand</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">Process</span> <span class="n">p</span> <span class="o">=</span> <span class="n">Runtime</span><span class="o">.</span><span class="na">getRuntime</span><span class="o">().</span><span class="na">exec</span><span class="o">(</span><span class="s">&quot;ipconfig /all&quot;</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">InputStream</span> <span class="n">stdoutStream</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedInputStream</span><span class="o">(</span><span class="n">p</span><span class="o">.</span><span class="na">getInputStream</span><span class="o">());</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">StringBuffer</span> <span class="n">buffer</span><span class="o">=</span> <span class="k">new</span> <span class="n">StringBuffer</span><span class="o">();</span>
+</span><span class='line'>        <span class="k">for</span> <span class="o">(;;)</span> <span class="o">{</span>
+</span><span class='line'>            <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">stdoutStream</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
+</span><span class='line'>            <span class="k">if</span> <span class="o">(</span><span class="n">c</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="k">break</span><span class="o">;</span>
+</span><span class='line'>            <span class="n">buffer</span><span class="o">.</span><span class="na">append</span><span class="o">((</span><span class="kt">char</span><span class="o">)</span><span class="n">c</span><span class="o">);</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>        <span class="n">String</span> <span class="n">outputText</span> <span class="o">=</span> <span class="n">buffer</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="n">stdoutStream</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">return</span> <span class="n">outputText</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">final</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>        <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Informacoes&quot;</span><span class="o">);</span>
+</span><span class='line'>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Sistema operacional: &quot;</span> <span class="o">+</span> <span class="n">System</span><span class="o">.</span><span class="na">getProperty</span><span class="o">(</span><span class="s">&quot;os.name&quot;</span><span class="o">));</span>
+</span><span class='line'>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;IP/Localhost: &quot;</span> <span class="o">+</span> <span class="n">InetAddress</span><span class="o">.</span><span class="na">getLocalHost</span><span class="o">().</span><span class="na">getHostAddress</span><span class="o">());</span>
+</span><span class='line'>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;MAC Address: &quot;</span> <span class="o">+</span> <span class="n">getMacAddress</span><span class="o">());</span>
+</span><span class='line'>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Nome da maquina: &quot;</span> <span class="o">+</span> <span class="n">InetAddress</span><span class="o">.</span><span class="na">getLocalHost</span><span class="o">().</span><span class="na">getHostName</span><span class="o">());</span>
+</span><span class='line'>            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Nome completo da maquina: &quot;</span> <span class="o">+</span> <span class="n">InetAddress</span><span class="o">.</span><span class="na">getLocalHost</span><span class="o">().</span><span class="na">getCanonicalHostName</span><span class="o">());</span>
+</span><span class='line'>        <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">Throwable</span> <span class="n">t</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>            <span class="n">t</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+</span><span class='line'>        <span class="o">}</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>FONTES:</p>
+
+<p><a href="http://www.guj.com.br/java/83460-capturar-endereco-mac-e-ip-alguem">http://www.guj.com.br/java/83460-capturar-endereco-mac-e-ip-alguem</a>
+<a href="http://paulovittor23.org/2008/02/01/pegando-o-mac-address-antes-e-depois-do-mustang-java-6/">http://paulovittor23.org/2008/02/01/pegando-o-mac-address-antes-e-depois-do-mustang-java-6/</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/11/01/how-to-install-homebrew-on-macos-over-http-proxy/">How to Install HomeBrew on MacOS over HTTP Proxy</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-01T12:56:01+00:00" pubdate data-updated="true">Nov 1<span>st</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/metodologias/'>Metodologias</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/11/01/how-to-install-homebrew-on-macos-over-http-proxy/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">http_proxy</span><span class="o">=</span>http://192.168.1.1:3128
+</span><span class='line'><span class="nb">export </span><span class="nv">ALL_PROXY</span><span class="o">=</span><span class="nv">$http_proxy</span>
+</span><span class='line'>ruby -e <span class="s2">&quot;$(curl -fsSkL raw.github.com/mxcl/homebrew/go)&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/blog/2012/11/01/how-to-install-homebrew-on-macos-over-http-proxy/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/10/19/aprendendo-orientacao-a-objetos-no-javascript/">Aprendendo Orientação a objetos no JavaScript</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-19T13:36:38+00:00" pubdate data-updated="true">Oct 19<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/programacao/'>Programação</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/10/19/aprendendo-orientacao-a-objetos-no-javascript/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Como não gosto de refazer a roda, aqui está um link interessantíssimo sobre como aprender OO no JS</p>
+
+<p><a href="http://killdream.github.com/blog/2011/10/understanding-javascript-oop/">Clique aqui para acessar o artigo</a></p>
+
+<p>Abraços!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/10/17/adicionando-tablespace-no-oracle/">Adicionando Tablespace no Oracle</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-17T08:57:00+00:00" pubdate data-updated="true">Oct 17<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/banco-de-dados/'>Banco de Dados</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/10/17/adicionando-tablespace-no-oracle/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Para adicionar mais espaço no Oracle digite o seguinte comando:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="k">ALTER</span> <span class="n">TABLESPACE</span> <span class="o">&lt;</span><span class="n">Nome</span><span class="o">&gt;</span>
+</span><span class='line'> <span class="k">ADD</span> <span class="n">DATAFILE</span> <span class="s1">&#39;&lt;Caminho do local onde será salvo&gt;&#39;</span> <span class="k">SIZE</span><span class="o">&lt;</span><span class="n">tamanho</span> <span class="n">em</span> <span class="n">mb</span><span class="o">&gt;</span> <span class="n">M</span>
+</span><span class='line'> <span class="n">AUTOEXTEND</span> <span class="k">ON</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Por Exemplo:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="k">ALTER</span> <span class="n">TABLESPACE</span> <span class="k">SYSTEM</span><span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+</span><span class='line'><span class="k">ADD</span> <span class="n">DATAFILE</span> <span class="s1">&#39;E:OracleDBtarefa.dbf&#39;</span> <span class="k">SIZE</span> <span class="mi">2000</span><span class="n">M</span>
+</span><span class='line'><span class="n">AUTOEXTEND</span> <span class="k">ON</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Para verificar quanto espaço temos alocado basta digitar o comando:</p>
+
+<p>&mdash;Espaço utilizado no BD</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="k">select</span> <span class="n">nvl</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="n">tablespace_name</span><span class="p">,</span> <span class="n">nvl</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">tablespace_name</span><span class="p">,</span><span class="s1">&#39;UNKNOWN&#39;</span><span class="p">))</span> <span class="ss">&quot;Tablespace&quot;</span><span class="p">,</span> <span class="n">kbytes_alloc</span> <span class="ss">&quot;Allocated MB&quot;</span><span class="p">,</span> <span class="n">kbytes_alloc</span><span class="o">-</span><span class="n">nvl</span><span class="p">(</span><span class="n">kbytes_free</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="ss">&quot;Used MB&quot;</span><span class="p">,</span>
+</span><span class='line'> <span class="n">nvl</span><span class="p">(</span><span class="n">kbytes_free</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="ss">&quot;Free MB&quot;</span><span class="p">,</span> <span class="p">((</span><span class="n">kbytes_alloc</span><span class="o">-</span><span class="n">nvl</span><span class="p">(</span><span class="n">kbytes_free</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span><span class="o">/</span><span class="n">kbytes_alloc</span><span class="p">)</span> <span class="ss">&quot;Used&quot;</span><span class="p">,</span> <span class="n">data_files</span> <span class="ss">&quot;Data Files&quot;</span> <span class="k">from</span> <span class="p">(</span> <span class="k">select</span> <span class="k">sum</span><span class="p">(</span><span class="n">bytes</span><span class="p">)</span><span class="o">/</span><span class="mi">1024</span><span class="o">/</span><span class="mi">1024</span> <span class="n">Kbytes_free</span><span class="p">,</span>
+</span><span class='line'> <span class="k">max</span><span class="p">(</span><span class="n">bytes</span><span class="p">)</span><span class="o">/</span><span class="mi">1024</span><span class="o">/</span><span class="mi">1024</span> <span class="n">largest</span><span class="p">,</span> <span class="n">tablespace_name</span> <span class="k">from</span> <span class="n">sys</span><span class="p">.</span><span class="n">dba_free_space</span> <span class="k">group</span> <span class="k">by</span> <span class="n">tablespace_name</span> <span class="p">)</span> <span class="n">a</span><span class="p">,</span> <span class="p">(</span> <span class="k">select</span> <span class="k">sum</span><span class="p">(</span><span class="n">bytes</span><span class="p">)</span><span class="o">/</span><span class="mi">1024</span><span class="o">/</span><span class="mi">1024</span> <span class="n">Kbytes_alloc</span><span class="p">,</span> <span class="n">tablespace_name</span><span class="p">,</span>
+</span><span class='line'> <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="n">data_files</span> <span class="k">from</span> <span class="n">sys</span><span class="p">.</span><span class="n">dba_data_files</span> <span class="k">group</span> <span class="k">by</span> <span class="n">tablespace_name</span> <span class="p">)</span> <span class="n">b</span> <span class="k">where</span> <span class="n">a</span><span class="p">.</span><span class="n">tablespace_name</span> <span class="p">(</span><span class="o">+</span><span class="p">)</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">tablespace_name</span> <span class="k">order</span> <span class="k">by</span> <span class="mi">1</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/09/04/configurando-java_home-no-mac/">Configurando JAVA_HOME no Mac</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-04T14:19:03+00:00" pubdate data-updated="true">Sep 4<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/metodologias/'>Metodologias</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/09/04/configurando-java_home-no-mac/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Digite no Terminal:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo su
+</span><span class='line'>vim ~/.bash_profile
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Adicione ao final do arquivo</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="n">export</span> <span class="n">JAVA_HOME</span><span class="o">=`/</span><span class="n">usr</span><span class="o">/</span><span class="n">libexec</span><span class="o">/</span><span class="n">java_home</span> <span class="o">-</span><span class="n">v</span> <span class="mi">1</span><span class="p">.</span><span class="mi">6</span><span class="o">`</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Pressione Esc digite :wq
+(W de Write e Q de Quit)</p>
+
+<p>Pronto!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/08/31/twitter-bootstrap/">Adicionando Funcionalidades ao BootStrap Twitter.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-31T09:59:39+00:00" pubdate data-updated="true">Aug 31<span>st</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/metodologias/'>Metodologias</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/08/31/twitter-bootstrap/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Para aqueles como eu que gostam de programar mas não tem muito talento para deixar a interface muuuuuito da hora e sempre fica aquela coisa meio &ldquo;Bicheira&rdquo; rs eu recomendo que conheçam o BootStrap! :D O Bootstrap é uma ferramenta que foi construída pelos Designers do Twitter e facilmente você consegue dar um toque mega profissional para aquele site bicheira que vc fez pro tiozinho do bar da esquina, então eu recomendo que vocês dêem uma olhada neste link:</p>
+
+<p><a href="http://twitter.github.com/bootstrap/">Bootstrap Twitter</a> CSS S2 ! :D</p>
+
+<p>Encontrei <a href="http://designshack.net/articles/css/20-awesome-resources-for-twitter-bootstrap-lovers/">neste site</a> alguns recursos interessantíssimos par aumentar a produtividade de quem utiliza esta ferramenta.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/blog/2012/08/31/twitter-bootstrap/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/08/30/mudar-a-senha-do-usuario-no-oracle/">Mudar a senha do usuário no Oracle</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-30T18:08:26+00:00" pubdate data-updated="true">Aug 30<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/banco-de-dados/'>Banco de Dados</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/08/30/mudar-a-senha-do-usuario-no-oracle/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Abra o cmd e digite:</p>
+
+<p>Path default no Windows da instalação é o &ldquo;C:oraclexeapporacleproduct11.2.0serverbin&rdquo;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sqlplus / as sysdba
+</span><span class='line'>alter user identified by
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Exemplo:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sql'><span class='line'><span class="k">alter</span> <span class="k">user</span> <span class="k">system</span> <span class="n">identified</span> <span class="k">by</span> <span class="n">root</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/08/30/padroes-de-interfaces-graficas-para-desenvolvimento-mobile/">Padrões de Interfaces Gráficas para desenvolvimento mobile</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-30T12:44:19+00:00" pubdate data-updated="true">Aug 30<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/mobile/'>Mobile</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/08/30/padroes-de-interfaces-graficas-para-desenvolvimento-mobile/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Geralmente programadores não tem muita noção de Interfaces Gráficas, eu pelo menos, não tenho muito talento com front-end, no entanto para facilitar as coisas e dar algumas idéias de padrões de UI para mobile eis que passarei alguns links abaixo, <del>copie </del>inspire-se nos designs já existentes e seja um programador feliz! :D retirei os links <a href="http://uxmovement.com/resources/best-collection-of-mobile-user-interface-patterns/">deste site</a>.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/blog/2012/08/30/padroes-de-interfaces-graficas-para-desenvolvimento-mobile/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/08/26/gerar-chaves-ssh-linux/">Gerar chaves SSH Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-26T18:03:14+00:00" pubdate data-updated="true">Aug 26<span>th</span>, 2012</time>
+        
+
+
+        
+          <a href="/blog/blog/2012/08/26/gerar-chaves-ssh-linux/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Abra o terminal e digite >>></p>
+
+<pre><code>``` bash
+ssh-keygen -t rsa
+sudo apt-get install xclip
+cat ~/.ssh/id_rsa.pub | xclip -sel clip
+ 
+```
+
+Att,
+Paulo Luan
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/08/26/comecando-com-nosql-mongodb-pymongo/">Começando com NoSQL - MongoDB + PyMongo</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-26T15:48:28+00:00" pubdate data-updated="true">Aug 26<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/banco-de-dados/'>Banco de Dados</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/08/26/comecando-com-nosql-mongodb-pymongo/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Este tutorial foi realizado no sistema operacional Ubuntu 12.04, mas os comandos são parecidos em todas as plataformas.</p>
+
+<p>Para começar acesse o site oficial e faça o download dos binários para sua plataforma:</p>
+
+<p><a href="http://www.mongodb.org/downloads">http://www.mongodb.org/downloads</a></p>
+
+<p>Logo em seguida, descompacte o conteúdo do arquivo mongodb-linux-x86_64-2.0.7.tgz em uma pasta qualquer que no meu caso é a</p>
+
+<figure class='code'><figcaption><span>/home//Desenvolvimento/mongo &#8220;`</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>&lt;!-- more --&gt;
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>Em seguida crie uma pasta necessária para o funcionamento <span class="k">do </span>MongoDB:
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> bash</p>
+
+<p>sudo mkdir /data</p>
+
+<p>cd /data</p>
+
+<p>sudo mkdir db</p>
+
+<figure class='code'><figcaption><span>/home//Desenvolvimento/mongo &#8220;`</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Para iniciar o seu banco de dados acesse o terminal apertando CTRL+ALT+T digite o comando
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> bash cd ~/Desenvolvimento/mongo/mongodb-linux-x86_64-2.0.7/bin &#8220;`</p>
+
+<p>(este ~ é equivalente a /home/<NOME DE SEU USUARIO>/) logo depois, digite</p>
+
+<figure class='code'><figcaption><span>sudo ./mongod &#8220;`</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>abra outro terminal digitando
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> bash
+cd ~/Desenvolvimento/mongo/mongodb-linux-x86_64-2.0.7/bin</p>
+
+<p>mongo</p>
+
+<figure class='code'><figcaption><span>sudo ./mongod &#8220;`</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>se aparecer algo como isto:
+</span><span class='line'>
+</span><span class='line'><span class="o">[</span>!<span class="o">[](</span>http://javalees.files.wordpress.com/2012/08/mongo-funcionando.png<span class="o">)](</span>http://javalees.files.wordpress.com/2012/08/mongo-funcionando.png<span class="o">)</span>
+</span><span class='line'>
+</span><span class='line'>parabéns você conseguiu instalar! rs
+</span><span class='line'>
+</span><span class='line'>Instalando o PyMongo:
+</span><span class='line'>
+</span><span class='line'>Acesse a página oficial neste link: <span class="o">[</span>https://github.com/mongodb/mongo-python-driver<span class="o">](</span>https://github.com/mongodb/mongo-python-driver<span class="o">)</span>
+</span><span class='line'>
+</span><span class='line'>Comandos utlizados:
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> bash
+sudo su</p>
+
+<p>apt-get install build-essential python-dev</p>
+
+<p>apt-get install git</p>
+
+<p>cd ~/</p>
+
+<p>git clone git://github.com/mongodb/mongo-python-driver.git pymongo</p>
+
+<p>cd pymongo/</p>
+
+<p>python setup.py install</p>
+
+<figure class='code'><figcaption><span>sudo ./mongod &#8220;`</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Instalado!! agora vamos brincar um pouco com o mongoDB no Python:
+</span><span class='line'>
+</span><span class='line'>digite na linha de comando:
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> bash</p>
+
+<blockquote><blockquote><blockquote><p>python
+import pymongo
+connection = pymongo.Connection(&ldquo;localhost&rdquo;, 27017)
+db = connection.test
+db.name
+u&#8217;test&#8217;
+db.my_collection
+Collection(Database(Connection(&lsquo;localhost&rsquo;, 27017), u&#8217;test&#8217;), u&#8217;my_collection&#8217;)
+db.my_collection.save({&ldquo;x&rdquo;: 10})
+ObjectId(&lsquo;4aba15ebe23f6b53b0000000&rsquo;)
+db.my_collection.save({&ldquo;x&rdquo;: 8})
+ObjectId(&lsquo;4aba160ee23f6b543e000000&rsquo;)
+db.my_collection.save({&ldquo;x&rdquo;: 11})
+ObjectId(&lsquo;4aba160ee23f6b543e000002&rsquo;)
+db.my_collection.find_one()
+{u&#8217;x&#8217;: 10, u&#8217;_id&#8217;: ObjectId(&lsquo;4aba15ebe23f6b53b0000000&rsquo;)}
+for item in db.my_collection.find():
+&hellip;     print item[&ldquo;x&rdquo;]
+&hellip;
+10
+8
+11
+db.my_collection.create_index(&ldquo;x&rdquo;)
+u&#8217;x_1&#8217;
+for item in db.my_collection.find().sort(&ldquo;x&rdquo;, pymongo.ASCENDING):
+&hellip;     print item[&ldquo;x&rdquo;]
+&hellip;
+8
+10
+11
+[item[&ldquo;x&rdquo;] for item in db.my_collection.find().limit(2).skip(1)]
+[8, 11]</p></blockquote></blockquote></blockquote>
+
+<figure class='code'><figcaption><span>sudo ./mongod &#8220;`</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> bash >>> [item[&ldquo;x&rdquo;] for item in db.my_collection.find().limit(2).skip(1)] &#8220;`</p>
+
+<p>Nesta página você pode conferir todos os releases das documentações do MongoDB, na data deste post o último release é o <a href="http://downloads.mongodb.org/docs/mongodb-docs-2012-08-26.pdf">http://downloads.mongodb.org/docs/mongodb-docs-2012-08-26.pdf</a> o legal é que dá pra baixar o PDF para futuras consultas sem a necessidade de internet.</p>
+
+<p>Para iniciarmos com mongoDB existe um Shell interessantíssimo do qual você pode utilizar os comandos e ver como funcionam os CRUDs (Inserção, Remoção e Atualização) básicos no Mongo, para isto clique em “Try It Now” na página oficial <a href="http://www.mongodb.org/">http://www.mongodb.org/</a>.</p>
+
+<p>Um caso interessante de sucesso na implementação do MongoDB é o CartolaFC da Globo.com, confira o artigo na integra neste link: <a href="http://www.gonow.com.br/blog/2011/07/29/o-mongodb-aplicado-ao-cartolafc-da-globo-com/">http://www.gonow.com.br/blog/2011/07/29/o-mongodb-aplicado-ao-cartolafc-da-globo-com/</a></p>
+
+<p>Parabéns! Agora você pode incluir no currículo que mexeu com MongoDB! :D</p>
+
+<p>Abraços!</p>
+
+<p>Paulo Luan.</p>
+
+<p>pesquisas futuras:</p>
+
+<p><a href="http://www.tornadoweb.org/">http://www.tornadoweb.org/</a></p>
+
+<p><a href="https://github.com/bitly/asyncmongo">https://github.com/bitly/asyncmongo</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/08/24/mega-tutorial-de-git/">Mega Tutorial de GIT</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-24T09:15:20+00:00" pubdate data-updated="true">Aug 24<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/metodologias/'>Metodologias</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/08/24/mega-tutorial-de-git/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Encontrei este artigo, muuuuuuuuuito completo sobre GIT:</p>
+
+<p><a href="http://blog.santiagobasulto.com.ar/2011/11/27/tutorial-de-git/">http://blog.santiagobasulto.com.ar/2011/11/27/tutorial-de-git/</a></p>
+
+<p>Como não gosto de reinventar a roda é só acessar o link e curtir rs quando eu estiver inspirado eu faço um artigo com os principais comandos mas por enquanto utilize o google translate HAUSHSA se bem que espanhol dá até pra se virar.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/08/03/criando-apresentacoes-de-slides-e-efeitos-incriveis-com-javascript/">Criando apresentações de slides e efeitos incríveis com JavaScript.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-08-03T11:03:17+00:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/novidades/'>Novidades</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/08/03/criando-apresentacoes-de-slides-e-efeitos-incriveis-com-javascript/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Estava eu navegando pelo site <a href="http://microjs.com/">MicroJS</a> pesquisando por alguns frameworks leves para utilizar em páginas mobile, quando me deparo com seguinte framework <a href="https://github.com/bartaz/impress.js"> Impress.js</a> trata-se de um framework javascript para a criação de apresentações de Slides incríveis utilizando HTML5 e CSS3, vejam por exemplo <a href="http://exequiel09.github.com/symposium-presentation/#/title">esta apresentação</a> que interessante! Todos os exemplos estão <a href="https://github.com/bartaz/impress.js/wiki/Examples-and-demos">neste link</a>.</p>
+
+<p>Divirta-se! :D</p>
+
+<p>Abraços! att, Paulo Luan.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/blog/2012/08/03/criando-apresentacoes-de-slides-e-efeitos-incriveis-com-javascript/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/07/30/variaveis-de-ambiente-e-alguns-erros-comuns/">Variáveis de ambiente e alguns erros comuns.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-30T19:35:11+00:00" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/metodologias/'>Metodologias</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/07/30/variaveis-de-ambiente-e-alguns-erros-comuns/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Estava eu programando no WINDOWS sim, WINDOWS (SDK de uma ferramenta que só funciona no Windows) :(( rs quando eu me deparei com o seguinte erro com a plataforma Titanium:</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/blog/2012/07/30/variaveis-de-ambiente-e-alguns-erros-comuns/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/07/19/aprendendo-a-programar-com-o-codecademy/">Aprendendo a Programar com o CodeCademy</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-19T15:21:07+00:00" pubdate data-updated="true">Jul 19<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/metodologias/'>Metodologias</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/07/19/aprendendo-a-programar-com-o-codecademy/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Depois que conheci o <a href="http://khanacademy.com/">KhanAcademy</a> Fiquei apaixonado pela idéia de aprender com o conhecimento das outras pessoas através de plataformas de ensino à distância, o legal é que você que coordena o seu tempo de aprendizado a quantidade de horas que você vai investir enfim, é você que manda quando que vai aprender e a que ritmo, mas deixando de blablabla vamos direto ao ponto, tem um site que se chama <a href="http://www.codecademy.com/pt">CodeCademy</a> que é uma plataforma de ensino extremamente didática para o aprendizado da programação, coisa lindíssima!! parece com o KhanAcademy mas com o foco em programação, acesse o site e veja você mesmo! e bom aprendizado!</p>
+
+<p>Att, Paulo Luan.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/07/15/introducao-ao-sistema-de-controle-de-versao-git/">Introdução ao Sistema de controle de versão GIT.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-15T13:47:04+00:00" pubdate data-updated="true">Jul 15<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/metodologias/'>Metodologias</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/07/15/introducao-ao-sistema-de-controle-de-versao-git/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Primeiro de tudo, se você está lendo este post, é porque você tem interesse em aprender a utilizar o GIT, como pré-requisito deixo bem claro que você não deve ter preguiça!!! rs lendo e acompanhando tudo o que passarei neste post você vai ficar fera para começar com GIT e aprender demais com o mundo open-Source do <a href="https://github.com/">GITHUB</a>.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/blog/2012/07/15/introducao-ao-sistema-de-controle-de-versao-git/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/07/15/o-que-e-dropbox-e-como-ele-pode-mudar-minha-vida/">O que é DropBox? e como ele pode mudar minha vida?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-15T12:26:17+00:00" pubdate data-updated="true">Jul 15<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/voce-nao-pode-morrer-sem-saber/'>Você não pode morrer sem saber!</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/07/15/o-que-e-dropbox-e-como-ele-pode-mudar-minha-vida/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>//
+//</p>
+
+<p>DropBox é um sistema de armazenamento de arquivos na nuvem! é perfeito pois você pode acessar seus documentos de qualquer computador em qualquer lugar!! além disto, é possível fazer sincronização de vários computadores de forma automática, por exemplo, se você tem um computador no trabalho e o seu computador pessoal mas gostaria de que os dois sempre tivesse os mesmos arquivos sempre sincronizados o DropBox faz isso pra você! :D</p>
+
+<p>Você nunca mais vai perder os arquivos pois, caso aconteça algum dano no seu computador os seus arquivos estarão backupeados online!  <a href="http://db.tt/TlpQui7">acesse este Link</a> e faça a sua conta, é grátis! :D</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/blog/2012/07/15/o-que-e-dropbox-e-como-ele-pode-mudar-minha-vida/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/07/15/cursos-gratuitos-desenvolvimento-web-logica-de-programacao-e-sistemas-linux-de-ead/">Cursos Gratuitos (Desenvolvimento Web, Lógica de Programação e Sistemas Linux de EAD)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-15T12:16:03+00:00" pubdate data-updated="true">Jul 15<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/programacao/'>Programação</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/07/15/cursos-gratuitos-desenvolvimento-web-logica-de-programacao-e-sistemas-linux-de-ead/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>A ActiveInfo, consultoria de treinamentos, disponibilizou gratuitamente alguns de seus cursos, todos eles são interessantíssimos!! :D eu comecei a ler o de criação de sites e eles possuem ótima didática e bastante organização no conteúdo do curso. Quem quiser conferir e fazer os treinamentos é só acessar as URLs abaixo:</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/blog/2012/07/15/cursos-gratuitos-desenvolvimento-web-logica-de-programacao-e-sistemas-linux-de-ead/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/03/28/nginx-como-listar-suas-pastas-autoindex-na-pagina-inicial/">Nginx - Como Listar suas pastas (AutoIndex) na página inicial.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-28T11:48:04+00:00" pubdate data-updated="true">Mar 28<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/metodologias/'>Metodologias</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/03/28/nginx-como-listar-suas-pastas-autoindex-na-pagina-inicial/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>O Nginx por default não lista as pastas do seus projetos que ficam em (/usr/share/nginx/www/), por exemplo, se você tiver apenas pastas com os seus projetos sem nenhuma página inicial o Nginx lançará um erro 403 pois não encontrará uma página inicial para acessar e não listará as pastas que existem neste diretório. Para solucionar este problema, modifique o arquivo de configurações do seu Nginx com o seguinte comando:</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/blog/2012/03/28/nginx-como-listar-suas-pastas-autoindex-na-pagina-inicial/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/03/06/site-com-diversos-exemplos-de-modelagem-de-bancos-de-dados/">Site com diversos exemplos de Modelagem de Bancos de Dados.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-06T12:24:02+00:00" pubdate data-updated="true">Mar 6<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/voce-nao-pode-morrer-sem-saber/'>Você não pode morrer sem saber!</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/03/06/site-com-diversos-exemplos-de-modelagem-de-bancos-de-dados/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Para aqueles que assim como eu gostam de obter idéias a partir de exemplos prontos, eu indico um super site (esse vai mudar sua vida também hein!)</p>
+
+<p>é o <a href="http://www.databaseanswers.org/data_models/index.htm">Data Base Answers!</a> (<a href="http://www.databaseanswers.org/data_models/index.htm">http://www.databaseanswers.org/data_models/index.htm</a>)</p>
+
+<p>Nele você encontra modelos prontos de Banco de Dados para todos os tipos de sistemas! :D eu estou impressionado com a quantidade de coisas que tem lá, são mais de 900 Base de dados modeladas para você tirar uma idéia e criar a modelagem de seu banco de dados.</p>
+
+<p>Aproveitem! gostou? comente ;) um grande abraço!</p>
+
+<p>Att,
+Paulo Luan</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/blog/2012/02/17/como-aprender-a-programar/">Como aprender a programar.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-17T08:35:51+00:00" pubdate data-updated="true">Feb 17<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/programacao/'>Programação</a>
+  
+</span>
+
+
+        
+          <a href="/blog/blog/2012/02/17/como-aprender-a-programar/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Programar é algo realmente prazeroso! É incrível e realmente espetacular ter uma idéia, pensar e construir do zero um programa.</p>
+
+<p>Aliás se você nunca programou já imaginou como funciona a construção de um software? Quem se simpatiza por informática com certeza se dará bem com programação, que é uma área bastante interessante, muda constantemente (sempre você aprende coisas novas, o seu trabalho nunca vai ser igual! :D), ganha bastante dinheiro (ebaaa rs), é divertido! E a demanda de mercado é bastante grande pra esta área.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/blog/2012/02/17/como-aprender-a-programar/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      
+        <a class="prev" href="/blog/">&larr; Prev</a>
+      
+      
+        
+        
+          
+        
+        
+          <a href="/blog/">1</a>
+        
+      
+        
+        
+        
+          <span>2</span>
+        
+      
+        
+        
+        
+          <a href="/blog/blog/page/3">3</a>
+        
+      
+      
+        <a class="next" href="/blog/blog/page/3/">Next &rarr;</a>
+      
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/blog/2015/04/28/apt-get-no-windows/">Apt-get no Windows</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/blog/2013/11/11/did-these-guys-just-reinvent-the-web/">Did these guys just reinvent the Web?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/blog/2013/11/11/node-web-modules/">Node web modules</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/blog/2013/11/07/aumente-o-desempenho-do-mac-removendo-efeitos-de-animacao/">Aumente o desempenho do Mac Removendo efeitos de animação</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/blog/2013/11/04/configurando-ambiente-para-desenvolvimento-android/">Configurando ambiente para desenvolvimento Android</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/http://github.com/PauloLuan/">@http://github.com/PauloLuan/</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'http://github.com/PauloLuan/',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/blog/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>Copyright &copy; 2015 Paulo Luan</p>
+<p>Produced in Portland, Oregon. Powered by <a href="http://octopress.org">Octopress</a> and <a href="https://github.com/vladigleba/readify">Readify</a>.</p>
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'diariodeprogramador';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+</body>
+</html>

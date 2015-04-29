@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Topic: Novidades | Diário de programador]]></title>
+  <link href="http://PauloLuan.github.io//github/blog/categories/novidades/atom.xml" rel="self"/>
+  <link href="http://PauloLuan.github.io//github/"/>
+  <updated>2015-04-29T11:53:11+00:00</updated>
+  <id>http://PauloLuan.github.io//github/</id>
+  <author>
+    <name><![CDATA[Paulo Luan]]></name>
+    <email><![CDATA[pauloluan.inova@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Criando apresentações de slides e efeitos incríveis com JavaScript.]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2012/08/03/criando-apresentacoes-de-slides-e-efeitos-incriveis-com-javascript/"/>
+    <updated>2012-08-03T11:03:17+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/08/03/criando-apresentacoes-de-slides-e-efeitos-incriveis-com-javascript</id>
+    <content type="html"><![CDATA[<p>Estava eu navegando pelo site <a href="http://microjs.com/">MicroJS</a> pesquisando por alguns frameworks leves para utilizar em páginas mobile, quando me deparo com seguinte framework <a href="https://github.com/bartaz/impress.js"> Impress.js</a> trata-se de um framework javascript para a criação de apresentações de Slides incríveis utilizando HTML5 e CSS3, vejam por exemplo <a href="http://exequiel09.github.com/symposium-presentation/#/title">esta apresentação</a> que interessante! Todos os exemplos estão <a href="https://github.com/bartaz/impress.js/wiki/Examples-and-demos">neste link</a>.</p>
+
+<p>Divirta-se! :D</p>
+
+<p>Abraços! att, Paulo Luan.</p>
+
+<!-- more -->
+
+
+<p>//
+//</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Salman Khan o melhor professor do mundo.]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2012/01/30/salman-khan-o-melhor-professor-do-mundo/"/>
+    <updated>2012-01-30T09:23:36+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/01/30/salman-khan-o-melhor-professor-do-mundo</id>
+    <content type="html"><![CDATA[<p>Navegando pela internet me deparei com a capa da Veja de janeiro de 2012 falando sobre o professor Salman Khan, o cara é um gênio que resolveu dedicar-se a ensinar as pessoas através de seus vídeos pela internet (recebendo como apoio alguns milhões do google :p ). O cara dá aulas de várias matérias e você pode conferir o canal oficial dele <a href="http://www.khanacademy.org/#browse">aqui</a>.</p>
+
+<!-- more -->
+
+
+<p>//
+//</p>
+
+<p>A fundação Lemann em parceria com a intel mantém um <a href="http://www.youtube.com/playlist?list=PL5EC0291F3B7451E2&amp;feature=plcp">canal no youtube</a> com a tradução dos vídeos do professor.</p>
+
+<p>Tem também aulas de <a href="http://www.khanacademy.org/video/recursive-fibonacci-example?playlist=Computer+Science">Ciências da Computação</a> em Python no site dele :D .</p>
+
+<p><a href="http://www.khanacademy.org/contribute">Neste Link</a> é possível contribuir com traduções para os vídeos do professor ;)</p>
+]]></content>
+  </entry>
+  
+</feed>

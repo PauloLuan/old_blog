@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Variáveis de ambiente e alguns erros comuns. - Diário de programador</title>
+  <meta name="author" content="Paulo Luan">
+
+  
+  <meta name="description" content="O mundo precisa saber disto...">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://PauloLuan.github.io//github/blog/2012/07/30/variaveis-de-ambiente-e-alguns-erros-comuns">
+  <link href="/blog/favicon.png" rel="icon">
+  <link href="/blog/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/blog/atom.xml" rel="alternate" title="Diário de programador" type="application/atom+xml">
+  <script src="/blog/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/blog/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-41007005-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/blog/">Diário de programador</a></h1>
+  
+    <h2>Códigos, anotações e pensamentos.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation">  
+  
+  
+<ul class="main-navigation">
+  <li><a href="/blog/blog/archives">Blog</a></li>
+  <li><a href="/blog/about">Sobre o Autor</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Variáveis de ambiente e alguns erros comuns.</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-30T19:35:11+00:00" pubdate data-updated="true">Jul 30<span>th</span>, 2012</time>
+        
+
+<span class="categories">
+  published in 
+  
+    <a class='category' href='/blog/blog/categories/metodologias/'>Metodologias</a>
+  
+</span>
+
+
+        
+          <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Estava eu programando no WINDOWS sim, WINDOWS (SDK de uma ferramenta que só funciona no Windows) :(( rs quando eu me deparei com o seguinte erro com a plataforma Titanium:</p>
+
+<!-- more -->
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[</span>INFO<span class="o">]</span> <span class="nv">logfile</span> <span class="o">=</span> C:UsersPauloLuanDropboxSource CodesOnibusSJCworkTitaniumOnibusSJCbuild.log
+</span><span class='line'><span class="o">[</span>INFO<span class="o">]</span> Launching Android emulator...one moment
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> <span class="s1">&#39;xcopy&#39;</span> não é reconhecido como um comando interno
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> ou externo, um programa operável ou um arquivo em lotes.
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> Exception occured <span class="k">while </span>building Android project:
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> File <span class="s2">&quot;C:UsersPauloLuanAppDataRoamingTitaniummobilesdkwin322.1.0.GAandroidbuilder.py&quot;</span>, line 2199, in
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> s.run_emulator<span class="o">(</span>avd_id, avd_skin, avd_name, avd_abi, add_args<span class="o">)</span>
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> File <span class="s2">&quot;C:UsersPauloLuanAppDataRoamingTitaniummobilesdkwin322.1.0.GAandroidbuilder.py&quot;</span>, line 476, in run_emulator
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> <span class="nv">avd_name</span> <span class="o">=</span> self.create_avd<span class="o">(</span>avd_id, avd_skin, avd_abi<span class="o">)</span>
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> File <span class="s2">&quot;C:UsersPauloLuanAppDataRoamingTitaniummobilesdkwin322.1.0.GAandroidbuilder.py&quot;</span>, line 399, in create_avd
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> <span class="nv">available_avds</span> <span class="o">=</span> avd.get_avds<span class="o">(</span>self.sdk<span class="o">)</span>
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> File <span class="s2">&quot;C:UsersPauloLuanAppDataRoamingTitaniummobilesdkwin322.1.0.GAandroidavd.py&quot;</span>, line 23, in get_avds
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> <span class="k">for </span>line in run.run<span class="o">([</span>sdk.get_android<span class="o">()</span>,<span class="s1">&#39;list&#39;</span>,<span class="s1">&#39;target&#39;</span><span class="o">]</span>,debug<span class="o">=</span>False<span class="o">)</span>.split<span class="o">(</span><span class="s2">&quot;n&quot;</span><span class="o">)</span>:
+</span><span class='line'><span class="o">[</span>ERROR<span class="o">]</span> AttributeError: <span class="s1">&#39;NoneType&#39;</span> object has no attribute <span class="s1">&#39;split&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>//
+//</p>
+
+<p>No começo não sabia o que fazer, mas ao analisar a terceira linha vi que a mensagem dizia: &ldquo;&lsquo;xcopy&rsquo; não é reconhecido como um comando interno&rdquo; estranhei porque xcopy é um comando do windows no cmd para copia de arquivos, pois bem, o problema que ocasionou este erro na minha IDE é que as variáveis de ambiente do windows estavam desconfiguradas, eu acho que de tanto mexer pra configurar o meu Java (é que estava tendo alguns problemas), no entanto, se você quiser saber mais sobre as variáveis de ambiente leia <a href="http://pt.wikipedia.org/wiki/Vari%C3%A1vel_de_ambiente">este</a> e <a href="http://technet.microsoft.com/pt-br/library/cc668471.aspx">este</a> artigo.</p>
+
+<p>Por exemplo, quando retiramos a propriedade &ldquo;C:WindowsSystem32&rdquo; das variáveis de Path teremos alguns erros como os seguintes:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="s1">&#39;xcopy&#39;</span> não é reconhecido como um comando interno ou externo, um programa operável ou um arquivo em lotes.
+</span><span class='line'><span class="s1">&#39;ipconfig&#39;</span> não é reconhecido como um comando interno ou externo, um programa operável ou um arquivo em lotes.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>semelhante a imagem:</p>
+
+<p>[caption id=&ldquo;attachment_671&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;676&rdquo;]<a href="http://javalees.files.wordpress.com/2012/07/erros-cmd-nc3a3o-reconhece.png"><img src="http://javalees.files.wordpress.com/2012/07/erros-cmd-nc3a3o-reconhece.png" alt="Erro: cmd não reconhece comandos." /></a> Erro: cmd não reconhece comandos.[/caption]</p>
+
+<p>pois todos os programas que estavam mapeados agora não estão mais, as variáveis de ambiente são importantes e é só você colocar o diretório onde estão os executáveis que o sistema mapeará e deixará disponível para uso no terminal.</p>
+
+<p>Então para configurar basta pressionar o &ldquo;logo do windows + pause break&rdquo; ou ir no painel de controle &mdash;> Sistema &mdash;> variáveis de ambiente. O importante é chegar nesta tela:</p>
+
+<p>[caption id=&ldquo;attachment_672&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;421&rdquo;]<a href="http://javalees.files.wordpress.com/2012/07/propriedades-do-sistema.png"><img src="http://javalees.files.wordpress.com/2012/07/propriedades-do-sistema.png" alt="Propriedades do Sistema" /></a> Propriedades do Sistema[/caption]</p>
+
+<p>Depois clique em variáveis de ambiente:</p>
+
+<p>[caption id=&ldquo;attachment_673&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;393&rdquo;]<a href="http://javalees.files.wordpress.com/2012/07/varic3a1veis-de-ambiente.png"><img src="http://javalees.files.wordpress.com/2012/07/varic3a1veis-de-ambiente.png" alt="Variáveis de ambiente" /></a> Variáveis de ambiente[/caption]</p>
+
+<p>e depois é só clicar em &ldquo;editar&rdquo; sobre a variável de ambiente PATH e colar o local a ser mapeado por exemplo, se você quiser que o Java seja mapeado coloque o diretório da instalação (geralmente é o &ldquo;C:Program Files (x86)Javajdk1.7.0_05bin;&rdquo; ou algo parecido ;) ) e lembre-se de separar as pastas com &ldquo;;&rdquo; ,logo, para resolver aquele problema da minha IDE era só colocar o caminho &ldquo;C:WindowsSystem32&rdquo; na variável PATH como na imagem:</p>
+
+<p>com as variáveis de ambiente configuradas olha que bonito que ficou meu CMD executando o comando xcopy e ipconfig:</p>
+
+<p>[caption id=&ldquo;attachment_670&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;677&rdquo;]<a href="http://javalees.files.wordpress.com/2012/07/cmd-feliz.png"><img src="http://javalees.files.wordpress.com/2012/07/cmd-feliz.png" alt="cmd feliz" /></a> cmd feliz[/caption]</p>
+
+<p>Att, Paulo Luan.</p>
+</div>
+
+
+  <footer>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://PauloLuan.github.io//github/blog/2012/07/30/variaveis-de-ambiente-e-alguns-erros-comuns/" data-via="" data-counturl="http://PauloLuan.github.io//github/blog/2012/07/30/variaveis-de-ambiente-e-alguns-erros-comuns/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/blog/2012/07/19/aprendendo-a-programar-com-o-codecademy/" title="Previous Post: Aprendendo a Programar com o CodeCademy">&laquo; Aprendendo a Programar com o CodeCademy</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/blog/2012/08/03/criando-apresentacoes-de-slides-e-efeitos-incriveis-com-javascript/" title="Next Post: Criando apresentações de slides e efeitos incríveis com JavaScript.">Criando apresentações de slides e efeitos incríveis com JavaScript. &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/blog/2015/04/28/apt-get-no-windows/">Apt-get no Windows</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/blog/2013/11/11/did-these-guys-just-reinvent-the-web/">Did these guys just reinvent the Web?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/blog/2013/11/11/node-web-modules/">Node web modules</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/blog/2013/11/07/aumente-o-desempenho-do-mac-removendo-efeitos-de-animacao/">Aumente o desempenho do Mac Removendo efeitos de animação</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/blog/2013/11/04/configurando-ambiente-para-desenvolvimento-android/">Configurando ambiente para desenvolvimento Android</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/http://github.com/PauloLuan/">@http://github.com/PauloLuan/</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'http://github.com/PauloLuan/',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/blog/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>Copyright &copy; 2015 Paulo Luan</p>
+<p>Produced in Portland, Oregon. Powered by <a href="http://octopress.org">Octopress</a> and <a href="https://github.com/vladigleba/readify">Readify</a>.</p>
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'diariodeprogramador';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://PauloLuan.github.io//github/blog/2012/07/30/variaveis-de-ambiente-e-alguns-erros-comuns/';
+        var disqus_url = 'http://PauloLuan.github.io//github/blog/2012/07/30/variaveis-de-ambiente-e-alguns-erros-comuns/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+</body>
+</html>

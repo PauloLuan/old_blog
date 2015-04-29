@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Diário de programador]]></title>
+  <link href="http://PauloLuan.github.io//github/atom.xml" rel="self"/>
+  <link href="http://PauloLuan.github.io//github/"/>
+  <updated>2015-04-29T11:53:11+00:00</updated>
+  <id>http://PauloLuan.github.io//github/</id>
+  <author>
+    <name><![CDATA[Paulo Luan]]></name>
+    <email><![CDATA[pauloluan.inova@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Apt-get no Windows]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2015/04/28/apt-get-no-windows/"/>
+    <updated>2015-04-28T20:23:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2015/04/28/apt-get-no-windows</id>
+    <content type="html"><![CDATA[<p>Transforme o seu windows em um Linux-Like com o chocolatey, com ele você poderá instalar vários aplicativos através de um comando simples no terminal. Nunca mais instale o asktoolbar (ou hao123) por engano ;)</p>
+
+<!-- more -->
+
+
+<p>Abra o cmd com privilégios de administrador, e digite:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bat'><span class='line'><span class="p">@</span>powershell -NoProfile -ExecutionPolicy unrestricted -Command <span class="s2">&quot;iex ((new-object net.webclient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))&quot;</span> &amp;&amp; <span class="k">SET</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">%PATH%</span>;<span class="nv">%ALLUSERSPROFILE%</span>\chocolatey\bin
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Agora você pode instalar qualquer um dos pacotes disponíveis no site oficial. Para procurar os pacotes basta acessar o <a href="https://chocolatey.org/packages">site oficial</a>  e procurar, você pode instalar o chrome (não precisa mais usar o internet explorer para isto), firefox, sumatrapdf, java, flash, nodejs, git, svn e muitos outros, tudo via choco install!</p>
+
+<p>para instalar o git por exemplo:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bat'><span class='line'>choco install git -y
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ele vai instalar tudo automáticamente, a opção -y é para que ele instale sem perguntar nada, por default ele exibe o script que vai ser executado na sua máquina, pois todos os pacotes são feitos pela comunidade, logo, pode ser que dentro do script que será executado possa ter algum tipo de requisição que você não queria que seja executada, o que é muito raro, já que todos os pacotes passam por um processo de aprovação rígido pelos admins do projeto, o que por vezes gera certa lentidão na aprovação de um pacote no caso de você criar um.</p>
+
+<p>Adicionalmente, as mesmas instruções estão no site do <a href="https://chocolatey.org/">chocolatey</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Did these guys just reinvent the Web?]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/11/11/did-these-guys-just-reinvent-the-web/"/>
+    <updated>2013-11-11T08:42:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/11/11/did-these-guys-just-reinvent-the-web</id>
+    <content type="html"><![CDATA[<p>San Francisco startup Famo.us is doing amazing things with JavaScript, radically raising the bar on what cross-platform Web and mobile apps can do</p>
+
+<p>&ldquo;40-60fps on phones, tablets, PCs, and televisions mod a template, or piece together components no plug-ins, no WebGL, no Canvas works on modern browserseverything is DOM 65KB footprint&rdquo;</p>
+
+<p>example page: <a href="http://famo.us/">http://famo.us/</a></p>
+
+<p><a href="http://www.infoworld.com/t/application-development/did-these-guys-just-reinvent-the-web-228713?page=0,1">http://www.infoworld.com/t/application-development/did-these-guys-just-reinvent-the-web-228713?page=0,1</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Node web modules]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/11/11/node-web-modules/"/>
+    <updated>2013-11-11T08:40:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/11/11/node-web-modules</id>
+    <content type="html"><![CDATA[<p>Uma coleção de web frameworks para Node.js</p>
+
+<p><a href="http://nodewebmodules.com">http://nodewebmodules.com</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Aumente o desempenho do Mac Removendo efeitos de animação]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/11/07/aumente-o-desempenho-do-mac-removendo-efeitos-de-animacao/"/>
+    <updated>2013-11-07T17:17:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/11/07/aumente-o-desempenho-do-mac-removendo-efeitos-de-animacao</id>
+    <content type="html"><![CDATA[<p>Utilize os comandos abaixo para remover os efeitos do Mac e aumentar o seu desempenho.</p>
+
+<!-- more -->
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># opening and closing windows and popovers</span>
+</span><span class='line'>defaults write -g NSAutomaticWindowAnimationsEnabled -bool <span class="nb">false</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># smooth scrolling</span>
+</span><span class='line'>defaults write -g NSScrollAnimationEnabled -bool <span class="nb">false</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># showing and hiding sheets, resizing preference windows, zooming windows</span>
+</span><span class='line'><span class="c"># float 0 doesn&#39;t work</span>
+</span><span class='line'>defaults write -g NSWindowResizeTime -float 0.001
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># opening and closing Quick Look windows</span>
+</span><span class='line'>defaults write -g QLPanelAnimationDuration -float 0
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># rubberband scrolling (doesn&#39;t affect web views)</span>
+</span><span class='line'>defaults write -g NSScrollViewRubberbanding -bool <span class="nb">false</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># resizing windows before and after showing the version browser</span>
+</span><span class='line'><span class="c"># also disabled by NSWindowResizeTime -float 0.001</span>
+</span><span class='line'>defaults write -g NSDocumentRevisionsWindowTransformAnimation -bool <span class="nb">false</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># showing a toolbar or menu bar in full screen</span>
+</span><span class='line'>defaults write -g NSToolbarFullScreenAnimationDuration -float 0
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># scrolling column views</span>
+</span><span class='line'>defaults write -g NSBrowserColumnAnimationSpeedMultiplier -float 0
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># showing the Dock</span>
+</span><span class='line'>defaults write com.apple.dock autohide-time-modifier -float 0
+</span><span class='line'>defaults write com.apple.dock autohide-delay -float 0
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># showing and hiding Mission Control, command+numbers</span>
+</span><span class='line'>defaults write com.apple.dock expose-animation-duration -float 0
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># showing and hiding Launchpad</span>
+</span><span class='line'>defaults write com.apple.dock springboard-show-duration -float 0
+</span><span class='line'>defaults write com.apple.dock springboard-hide-duration -float 0
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># changing pages in Launchpad</span>
+</span><span class='line'>defaults write com.apple.dock springboard-page-duration -float 0
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># at least AnimateInfoPanes</span>
+</span><span class='line'>defaults write com.apple.finder DisableAllAnimations -bool <span class="nb">true</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c"># sending messages and opening windows for replies</span>
+</span><span class='line'>defaults write com.apple.Mail DisableSendAnimations -bool <span class="nb">true</span>
+</span><span class='line'>defaults write com.apple.Mail DisableReplyAnimations -bool <span class="nb">true</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>killall Dock
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sources:</p>
+
+<p><a href="http://www.chriswrites.com/2012/01/turn-off-animations-eye-candy-effects-in-mac-os-x-lion/">http://www.chriswrites.com/2012/01/turn-off-animations-eye-candy-effects-in-mac-os-x-lion/</a></p>
+
+<p><a href="http://unsanity.com/haxies/shadowkiller">http://unsanity.com/haxies/shadowkiller</a></p>
+
+<p><a href="http://apple.stackexchange.com/questions/14001/how-to-turn-off-all-the-animation-effect-on-mac-os">http://apple.stackexchange.com/questions/14001/how-to-turn-off-all-the-animation-effect-on-mac-os</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Configurando ambiente para desenvolvimento Android]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/11/04/configurando-ambiente-para-desenvolvimento-android/"/>
+    <updated>2013-11-04T17:18:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/11/04/configurando-ambiente-para-desenvolvimento-android</id>
+    <content type="html"><![CDATA[<p>Fontes:</p>
+
+<p><a href="http://spring.io/guides/gs/android/">http://spring.io/guides/gs/android/</a>
+<a href="http://spring.io/guides/gs/maven-android/">http://spring.io/guides/gs/maven-android/</a>
+<a href="https://github.com/mosabua/maven-android-sdk-deployer">https://github.com/mosabua/maven-android-sdk-deployer</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Introdução ao RingoJS - Aplicações WEB com Javascript Server Side]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/10/28/introducao-ao-ringojs-aplicacoes-web-com-javascript-server-side/"/>
+    <updated>2013-10-28T16:07:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/10/28/introducao-ao-ringojs-aplicacoes-web-com-javascript-server-side</id>
+    <content type="html"><![CDATA[<p>RingoJS</p>
+
+<p>Ringo is a CommonJS-based JavaScript runtime written in Java and based on the Mozilla Rhino JavaScript engine. It takes a pragmatical and non-dogmatic stance on things like I/O paradigms. Blocking and asynchronous I/O both have their strengths and weaknesses in different areas.</p>
+
+<!-- more -->
+
+
+<p><a href="http://ringojs.org/">http://ringojs.org/</a>
+<a href="http://ringojs.org/documentation/">http://ringojs.org/documentation/</a></p>
+
+<figure class='code'><figcaption><span>Clone o repositório</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone https://github.com/ringo/ringojs.git
+</span><span class='line'><span class="nb">cd </span>ringojs/
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Execute este comando para ver as possíveis funções a serem executadas.</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ant
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Compilando o Ringo.</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ant update <span class="o">&amp;&amp;</span> ant jar <span class="o">&amp;&amp;</span> ant compile
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Execute o Modo iterativo</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>./bin/ringo
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>nano ~/.bashrc <span class="c"># linux</span>
+</span><span class='line'>nano ~/.bash_profile <span class="c"># mac</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Adicione na última linha do arquivo os executáveis</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;$PATH:&lt;SEU_PATH_AQUI&gt;&quot;</span>
+</span><span class='line'>
+</span><span class='line'>exemplo:
+</span><span class='line'>
+</span><span class='line'><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;$PATH:/Users/funcatemobile/Desktop/jug-ringo/ringojs/bin/&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Aperte CTRL + X para salvar e sair.</p>
+
+<figure class='code'><figcaption><span>Imprimindo um arquivo de texto</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>var <span class="nv">fs</span> <span class="o">=</span> require<span class="o">(</span><span class="s1">&#39;fs&#39;</span><span class="o">)</span>;
+</span><span class='line'>var <span class="nv">file</span> <span class="o">=</span> fs.read<span class="o">(</span><span class="s1">&#39;teste.txt&#39;</span><span class="o">)</span>;
+</span><span class='line'>print<span class="o">(</span>file<span class="o">)</span>;
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Criando app com o ringo-admin</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>./ringojs/bin/ringo-admin create jug-teste
+</span><span class='line'><span class="nb">cd </span>jug-teste
+</span><span class='line'>tree
+</span><span class='line'>../ringojs/bin/ringo main.js
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Clonando o repositório com o template do maven.</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone https://github.com/PauloLuan/ringo-maven.git
+</span><span class='line'>ant
+</span><span class='line'>mvn clean install
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Colocando em produção no Tomcat</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>cp target/ringo-maven.war ~/Documents/Desenvolvimento/Tomcat/apache-tomcat-7.0.32/webapps/
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Módulo de autenticação Social utilizando um projeto Java.</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone https://github.com/PauloLuan/ringo-socialauth.git
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Crud com MongoDB usando Java Driver!</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone https://github.com/PauloLuan/ringo-mongodb.git
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Baixe os Slides: https://gist.github.com/PauloLuan/7123760
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Aprenda GIT em 5 minutos! ]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/05/16/aprenda-git-em-5-minutos/"/>
+    <updated>2013-05-16T11:20:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/05/16/aprenda-git-em-5-minutos</id>
+    <content type="html"><![CDATA[<p>Guia de sobrevivência para aprender git em alguns passos bem rápidos.</p>
+
+<!-- more -->
+
+
+<p>Linux:</p>
+
+<figure class='code'><figcaption><span>Instale o GIT via apt-get</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> sudo apt-get install git <span class="c"># Linux</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<p>configure para que a cada commit que você fizer fique com seu nome e email:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> git config --global user.name <span class="s2">&quot;SEU NOME AQUI&quot;</span>
+</span><span class='line'> git config --global user.email <span class="s2">&quot;seuemail@example.com&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>clonando um repositório remoto (cópia do repositório remoto na sua máquina).</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> git clone url_do_repositorio
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>exemplo:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> git clone https://github.com/PauloLuan/ProjetosPoliticosSJC.git <span class="c"># cópia do repositório remoto na sua máquina</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>para commitar e enviar para o servidor:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> git add . <span class="c"># adiciona todos os arquivos para serem commitados</span>
+</span><span class='line'> git commit -a -m <span class="s2">&quot;mensagem de seu commit&quot;</span> <span class="c"># faz um novo commit das suas modificações</span>
+</span><span class='line'> git push origin master <span class="c"># envia pro servidor as modificações</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Receber modificações do repositório remoto, caso alguém tenha commitado algo:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git pull
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Quer saber tudo de GIT? Leia os tutoriais e livros abaixo!</p>
+
+<p>1 &ndash; <a href="http://git-scm.com/book/pt-br">livro ProGIT</a> gratuito, e em Pt-BR.</p>
+
+<p>2 &ndash; <a href="http://pcottle.github.io/learnGitBranching/">learnGitBranching</a></p>
+
+<p>3 &ndash; <a href="http://rogerdudler.github.io/git-guide/index.pt_BR.html">Aprendendo Git Sem Complicações</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Pesquisar recursivamente em pastas via terminal]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/05/16/pesquisar-recursivamente-em-pastas-via-terminal/"/>
+    <updated>2013-05-16T10:46:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/05/16/pesquisar-recursivamente-em-pastas-via-terminal</id>
+    <content type="html"><![CDATA[<p>comando:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> grep -R <span class="s2">&quot;o que eu quero pesquisar&quot;</span> path_da_sua_pasta
+</span></code></pre></td></tr></table></div></figure>
+
+
+<!-- more -->
+
+
+<p></p>
+
+<p>exemplo:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'> grep -R <span class="s2">&quot;texto de exemplo&quot;</span> ~/Documents
+</span><span class='line'> grep -R <span class="s2">&quot;&lt;html&gt;ele também procura em arquivos de textos por qualquer tipo!&lt;/html&gt;&quot;</span> <span class="nb">source</span>/
+</span><span class='line'> grep -R <span class="s2">&quot;pode ser um texto em txt, um doc, enfim, ele vai achar...&quot;</span> <span class="nb">source</span>/
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Pesquisar por comandos digitados no terminal]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/05/16/pesquisar-por-comandos-digitados-no-terminal/"/>
+    <updated>2013-05-16T10:46:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/05/16/pesquisar-por-comandos-digitados-no-terminal</id>
+    <content type="html"><![CDATA[<p>Aprenda a recuperar comandos que você já digitou anteriormente no terminal.</p>
+
+<!-- more -->
+
+
+<p>comando:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>   <span class="nb">history</span> | grep comando_que_você_digitou anteriormente
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>por exemplo:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>   <span class="nb">history</span> | grep commit
+</span><span class='line'>   <span class="nb">history</span> | grep scp
+</span><span class='line'>   <span class="nb">history</span> | grep <span class="nb">cd</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Enviando chaves ssh para o servidor remoto com apenas um comando]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/05/16/enviando-chaves-ssh-para-o-servidor-remoto-com-apenas-um-comando/"/>
+    <updated>2013-05-16T10:22:00+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/05/16/enviando-chaves-ssh-para-o-servidor-remoto-com-apenas-um-comando</id>
+    <content type="html"><![CDATA[<p>Gere chaves SSH da sua máquina e envie para o servidor remoto com o seguinte comando:</p>
+
+<figure class='code'><figcaption><span>Comando: </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ssh-keygen -t rsa <span class="o">&amp;&amp;</span> cat ~/.ssh/id_rsa.pub | ssh &lt;user&gt;@&lt;hostname&gt; <span class="s1">&#39;cat &gt;&gt; ~/.ssh/authorized_keys&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Debbuger do SERVIDOR no Chrome]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/04/15/debbuger-do-servidor-no-chrome/"/>
+    <updated>2013-04-15T11:37:14+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/04/15/debbuger-do-servidor-no-chrome</id>
+    <content type="html"><![CDATA[<p>Veja <a href="http://craig.is/writing/chrome-logger">esta ferramenta</a> que te permite Debugar todos os objetos do servidor através do chrome!</p>
+
+<p>Você pode debbugar projetos Django, PHP entre diversos outros.</p>
+
+<!-- more -->
+
+
+<p>&ldquo;É tão bom usar o console do chrome para ver erros de client, que foi criado um projeto para ver erros de server também.&rdquo;</p>
+
+<p>Isto é perfeito! particularmente eu uso demasiadamente o console do Chrome para debuggar JS no cliente, e algumas ferramentas de debug do servidor as vezes carecem de recursos, que são supridos de maneira muito elegante no console do Chrome.</p>
+
+<p><a href="http://globodev.tumblr.com/post/47711164407/chrome-logger-for-django#.UWwPZit4aFd">Fonte</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cuidados com WHOIS, não comprem na Hostgator.]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/04/01/cuidados-com-whois-nao-comprem-na-hostgator/"/>
+    <updated>2013-04-01T18:18:37+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/04/01/cuidados-com-whois-nao-comprem-na-hostgator</id>
+    <content type="html"><![CDATA[<p>Há tempos atrás eu havia registrado um domínio na Hostgator bem como o seu plano de hospedagem, o que eu não sabia era do temeroso &ldquo;Who Is&rdquo;.</p>
+
+<!-- more -->
+
+
+<p>Segunda a Wikipedia:</p>
+
+<blockquote><p><strong>WHOIS</strong> (<em>pronuncia-se &ldquo;ruís&rdquo; no Brasil</em>) é um protocolo <a href="http://pt.wikipedia.org/wiki/Protocolo_TCP">TCP</a> (porta 43) específico para consultar informações de contato e <a href="http://pt.wikipedia.org/wiki/DNS">DNS</a> sobre entidades na <a href="http://pt.wikipedia.org/wiki/Internet">internet</a>. Uma entidade na internet pode ser um nome de <a href="http://pt.wikipedia.org/wiki/Dom%C3%ADnio">domínio</a>, um endereço <a href="http://pt.wikipedia.org/wiki/IP">IP</a> ou um <a href="http://pt.wikipedia.org/wiki/AS">AS</a> (Sistema Autônomo). O protocolo WHOIS apresenta três tipos de contatos para uma entidade: Contato Administrativo (<em>Admin Contact</em>), Contato Técnico (<em>Technical Contact</em>) e Contato de Cobrança (<em>Registrant Contact</em>). Estes contatos são informações de responsabilidade do provedor de internet, que as nomeia de acordo com as políticas internas de sua rede.</p></blockquote>
+
+<p>Pois bem, quando você registra um domínio você coloca diversas informações pessoais como endereço, telefone e nome completo, achando que a empresa que está lhe fornecendo os serviços de hospdagem guardará os seus dados com toda a segurança. Isto NÃO acontece. Acontece que a empresa coloca estas informações nos dados do WhoIS de seu site, o que significa que todos os seus dados pessoais estarão livres para o mundo inteiro consultar.</p>
+
+<p>Entrei em contato com a empresa para solicitar a remoção destes dados, e depois de muitas conversas, muita enrolação, muito blablabla eles NÃO resolveram o meu problema, eles disseram que a proteção do WhoIS era um produto adicional e que custaria R$18,00 (e eu já tinha pago R$30,00 no domínio fora os R$ 203,88/ano que paguei na hospedagem) o fato é que eles não informam em nenhum momento (e em nenhum local do contrato de prestação de serviços) que os dados dos clientes são expostos no WhoIS.</p>
+
+<p>Sinceramente Desisti, só prejuízo&hellip;</p>
+
+<p>Pois bem, caso algum dia você queira fazer um site, compre o domínio na <a href="http://www.superdominios.org/home/aff.php?aff=3716">SuperDomínios, lá o domínio é muuuuuito mais barato e ainda tem a proteção do WhoIS gratuita!</a>, e como hospedagem utilizem o <a href="http://api.hostinger.com.br/redir/1043293">HostInger, que é de graça e ainda conta com vários itens que a hostgator não tem&hellip;</a> Lá a hospedagem é com PHP + MySQL, mas se for um site comum, como um portfólio, já é mais do que suficiente.</p>
+
+<p>Não errem como eu errei, conselhos sinceros de um programador que foi lesado por essas empresas FDPs.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Demanda de programadores no mundo]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/03/29/demanda-de-programadores-no-mundo/"/>
+    <updated>2013-03-29T15:31:18+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/03/29/demanda-de-programadores-no-mundo</id>
+    <content type="html"><![CDATA[<p>Vídeo interessantíssimo sobre a arte de programar, bem como sua demanda futura&hellip;</p>
+
+<iframe width="560" height="349" src="http://www.youtube.com/embed/19cTdFlDFI4" frameborder="0" allowfullscreen></iframe>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Como remover submódulo do GIT]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/03/26/como-remover-submodulo-do-git/"/>
+    <updated>2013-03-26T11:19:22+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/03/26/como-remover-submodulo-do-git</id>
+    <content type="html"><![CDATA[<p>To remove a submodule you need to:</p>
+
+<pre><code>1. Delete the relevant section from the ".gitmodules" file.
+2. Delete the relevant section from ".git/config".
+3. Run "git rm --cached path_to_submodule" (no trailing slash).
+4. Commit
+5. Delete the now untracked submodule files: "rm -rf path_to_submodule"
+</code></pre>
+
+<!-- more -->
+
+
+<p><a href="http://stackoverflow.com/questions/1260748/how-do-i-remove-a-git-submodule">Fonte</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Melhor livro de GIt]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/02/14/melhor-livro-de-git/"/>
+    <updated>2013-02-14T14:45:08+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/02/14/melhor-livro-de-git</id>
+    <content type="html"><![CDATA[<p>Quer saber tudo de GIT? Leia o <a href="http://git-scm.com/book/pt-br">livro ProGIT</a> é gratuito.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[HTML5 Up and Running!]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/02/14/html5-up-and-running/"/>
+    <updated>2013-02-14T14:42:29+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/02/14/html5-up-and-running</id>
+    <content type="html"><![CDATA[<p>Quer aprender HTML5 direto da fonte, de maneira organizada e muito didática?</p>
+
+<p>Leia o livro <a href="http://diveintohtml5.com.br/">Dive into HTML5</a> traduzido pela comunidade de software livre, o livro é muito completo e aborda os principais conteúdos do novo padrão, talvez um dos melhores materias abordados sobre o assunto.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Forçar git a remover modificações locais em um pull]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/02/07/forcar-git-a-remover-modificacoes-locais-em-um-pull/"/>
+    <updated>2013-02-07T11:27:35+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/02/07/forcar-git-a-remover-modificacoes-locais-em-um-pull</id>
+    <content type="html"><![CDATA[<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git fetch --all <span class="o">&amp;&amp;</span> git reset --hard origin/master
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://stackoverflow.com/questions/1125968/force-git-to-overwrite-local-files-on-pull">fonte</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Faculdade de graça EAD]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/01/28/faculdade-de-graca-ead/"/>
+    <updated>2013-01-28T14:46:01+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/01/28/faculdade-de-graca-ead</id>
+    <content type="html"><![CDATA[<p>A <a href="http://www.cederj.edu.br/">Fundação CECIERJ/Consórcio CEDERJ</a> disponibiliza aqui as videoaulas do curso de <a href="http://www.cederj.edu.br/cederj/index.php?option=com_content&amp;view=frontpage&amp;Itemid=16">Tecnologia em Sistemas de Computação</a>.</p>
+
+<p>Este é um curso de nível superior que adota a metodologia semipresencial e conta com videoaulas especialmente produzidas neste contexto.</p>
+
+<p>O curso tem como objetivo formar profissionais com competência para realizar, entre outras tarefas, instalações de redes locais; desenvolvimento de pequenos programas; instalação de sistemas operacionais para máquinas de pequeno porte; manutenção de banco de dados em computadores pessoais destinados a pequenas corporações; e criação e manutenção de sites na web.</p>
+
+<!-- more -->
+
+
+<p></p>
+
+<p><a href="http://www.cederj.edu.br/videoaulas/">http://www.cederj.edu.br/videoaulas/</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Clonando apenas um subdiretório no GIT]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2013/01/21/clonando-apenas-um-subdiretorio-no-git/"/>
+    <updated>2013-01-21T09:42:10+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2013/01/21/clonando-apenas-um-subdiretorio-no-git</id>
+    <content type="html"><![CDATA[<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone &lt; URL DO REPOSITÓRIO &gt;
+</span><span class='line'><span class="nb">cd</span> &lt; DIRETÓRIO &gt;
+</span><span class='line'>git config core.sparsecheckout <span class="nb">true</span>
+</span><span class='line'><span class="nb">echo</span> &lt;NOME DA PASTA QUE VOCÊ QUER&gt; &gt;&gt; .git/info/sparse-checkout
+</span><span class='line'>git <span class="nb">read</span>-tree -m -u HEAD
+</span></code></pre></td></tr></table></div></figure>
+
+
+<!-- more -->
+
+
+<p></p>
+
+<p><a href="http://eminetto.github.com/blog/2012/04/25/git-sparse-checkouts/">Fonte</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Verificando diferença de horário em Java]]></title>
+    <link href="http://PauloLuan.github.io//github/blog/2012/12/04/verificando-diferenca-de-horario-em-java/"/>
+    <updated>2012-12-04T10:46:50+00:00</updated>
+    <id>http://PauloLuan.github.io//github/blog/2012/12/04/verificando-diferenca-de-horario-em-java</id>
+    <content type="html"><![CDATA[<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">verificaDiferenca</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">String</span> <span class="n">data</span> <span class="o">=</span> <span class="s">&quot;08/12/2003&quot;</span><span class="o">;</span>
+</span><span class='line'>      <span class="n">String</span> <span class="n">hora_saida</span> <span class="o">=</span> <span class="s">&quot;19:00:00&quot;</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">SimpleDateFormat</span> <span class="n">sdf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimpleDateFormat</span><span class="o">(</span><span class="s">&quot;dd/MM/yyyy HH:mm:ss&quot;</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">SimpleDateFormat</span> <span class="n">df</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SimpleDateFormat</span><span class="o">(</span><span class="s">&quot;HH:mm:ss&quot;</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">Date</span> <span class="n">hora</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
+</span><span class='line'>      <span class="n">Date</span> <span class="n">horaS</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
+</span><span class='line'>      <span class="n">Date</span> <span class="n">diferenca</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">horaS</span> <span class="o">=</span> <span class="n">sdf</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">data</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">hora_saida</span><span class="o">);</span>
+</span><span class='line'>      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">ParseException</span> <span class="n">p</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">p</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+</span><span class='line'>      <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">diferenca</span><span class="o">.</span><span class="na">setTime</span><span class="o">(</span><span class="n">hora</span><span class="o">.</span><span class="na">getTime</span><span class="o">()</span> <span class="o">-</span> <span class="n">horaS</span><span class="o">.</span><span class="na">getTime</span><span class="o">());</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;hora saida &quot;</span> <span class="o">+</span> <span class="n">sdf</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">horaS</span><span class="o">));</span>
+</span><span class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;hora retorno &quot;</span> <span class="o">+</span> <span class="n">sdf</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">hora</span><span class="o">));</span>
+</span><span class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;diferenca &quot;</span> <span class="o">+</span> <span class="n">df</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">diferenca</span><span class="o">));</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="kt">long</span> <span class="n">difMilli</span> <span class="o">=</span> <span class="n">hora</span><span class="o">.</span><span class="na">getTime</span><span class="o">()</span> <span class="o">-</span> <span class="n">horaS</span><span class="o">.</span><span class="na">getTime</span><span class="o">();</span>
+</span><span class='line'>      <span class="kt">int</span> <span class="n">timeInSeconds</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">difMilli</span> <span class="o">/</span> <span class="mi">1000</span><span class="o">;</span>
+</span><span class='line'>      <span class="kt">int</span> <span class="n">hours</span><span class="o">,</span> <span class="n">minutes</span><span class="o">,</span> <span class="n">seconds</span><span class="o">;</span>
+</span><span class='line'>      <span class="n">hours</span> <span class="o">=</span> <span class="n">timeInSeconds</span> <span class="o">/</span> <span class="mi">3600</span><span class="o">;</span>
+</span><span class='line'>      <span class="n">timeInSeconds</span> <span class="o">=</span> <span class="n">timeInSeconds</span> <span class="o">-</span> <span class="o">(</span><span class="n">hours</span> <span class="o">*</span> <span class="mi">3600</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">minutes</span> <span class="o">=</span> <span class="n">timeInSeconds</span> <span class="o">/</span> <span class="mi">60</span><span class="o">;</span>
+</span><span class='line'>      <span class="n">timeInSeconds</span> <span class="o">=</span> <span class="n">timeInSeconds</span> <span class="o">-</span> <span class="o">(</span><span class="n">minutes</span> <span class="o">*</span> <span class="mi">60</span><span class="o">);</span>
+</span><span class='line'>      <span class="n">seconds</span> <span class="o">=</span> <span class="n">timeInSeconds</span><span class="o">;</span>
+</span><span class='line'>      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">hours</span> <span class="o">+</span> <span class="s">&quot; hour(s) &quot;</span> <span class="o">+</span> <span class="n">minutes</span> <span class="o">+</span> <span class="s">&quot; minute(s) &quot;</span><span class="o">+</span> <span class="n">seconds</span> <span class="o">+</span> <span class="s">&quot; second(s)&quot;</span><span class="o">);</span>
+</span><span class='line'>  <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Fonte: <a href="http://javafree.uol.com.br/topic-2263-diferencas-entre-data-e-horarios.html">http://javafree.uol.com.br/topic-2263-diferencas-entre-data-e-horarios.html</a></p>
+]]></content>
+  </entry>
+  
+</feed>
