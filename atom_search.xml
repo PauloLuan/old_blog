@@ -4,7 +4,7 @@
   <title><![CDATA[Diário de programador]]></title>
   <link href="http://PauloLuan.github.io//github/atom.xml" rel="self"/>
   <link href="http://PauloLuan.github.io//github/"/>
-  <updated>2015-04-29T14:41:32+00:00</updated>
+  <updated>2015-04-29T14:51:57+00:00</updated>
   <id>http://PauloLuan.github.io//github/</id>
   <author>
     <name><![CDATA[Paulo Luan]]></name>
@@ -35,7 +35,7 @@
 
 <p>Titanium Mobile é uma plataforma híbrida nativa que permite que a aplicação seja compilada para as plataformas Android e IOS, além de um esforço inicial para BlackBerry. Utiliza a linguagem de programação javascript, mas, apesar desta premissa os aplicativos não são executados por meio de um navegador, em vez disto a arquitetura da linguagem de programação é utilizada para interpretar os códigos desenvolvidos.</p>
 
-<p>O funcionamento básico de uma aplicação Titanium é uma base de código javascript que é interpretada em tempo de execução por um interpretador que é embutido na aplicação no momento de sua compilação. Já o código-fonte visual é compilado para a respectiva plataforma, mantendo o comportamento e aparência da plataforma de destino, como explícito no capítulo de arquiteturas híbridas de interfaces gráficas nativas.</p>
+<p>O funcionamento básico de uma aplicação Titanium é uma base de código javascript que é interpretada em tempo de execução por um interpretador que é embutido na aplicação no momento de sua compilação. Já o código-fonte visual é compilado para a respectiva plataforma, mantendo o comportamento e aparência da plataforma de destino.</p>
 
 <p>Em uma aplicação Titanium grande parte do código-fonte é utilizado por ambas as plataformas, mas como cada sistema operacional possui alguns comportamentos e funcionalidades específicas, estes códigos podem ser tratados de maneira separada, de forma a permitir a exploração de determinada funcionalidade sem comprometer o restante da aplicação.</p>
 
